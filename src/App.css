@@ -1,3 +1,8 @@
+html {
+  background-color: rgb(23, 23, 23);
+  color: white;
+}
+
 /* MAIN */
 
 .main-parent-container {
@@ -20,7 +25,7 @@
 
 .main-items-container {
   display: flex;
-  background-color: beige;
+  background-color: rgb(27, 27, 27);
 }
 
 /* ITEM SELECTION */
@@ -62,15 +67,16 @@
   width: 50%;
   height: 100%;
   border-radius: 5px;
+  background-color: rgb(55, 113, 168);
   transition: 100ms;
 }
 
 .inventory-titles:hover {
-  background-color: beige;
+  background-color: rgb(42, 93, 141);
 }
 
 .inventory-selected {
-  background-color: aliceblue;
+  background-color: rgb(25, 65, 99);
 }
 
 /* INVENTORY ITEMS DISPLAY */
@@ -79,7 +85,9 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: aqua;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgb(73, 192, 192);
 }
 
 .inventory-items-content {
@@ -97,6 +105,14 @@
 .inventory-items-input {
   width: 40px;
   height: 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(208, 208, 208);
+}
+
+.inventory-items-input:focus {
+  outline: 3px solid rgb(58, 113, 121);
+  transition: 100ms;
 }
 
 /* SCREEN RES BREAKPOINTS */
