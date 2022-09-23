@@ -3,7 +3,6 @@ import { inventoryMaterials } from "../../libs/data";
 function Materials() {
   return (
     <div>
-      {" "}
       <div className="inventory-items-container">
         {inventoryMaterials.map((item, index) => {
           return (

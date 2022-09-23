@@ -2,11 +2,11 @@ import { itemTypes } from "./types";
 
 export const inventoryItems: itemTypes = [
   {
-    name: "Red Extract",
+    name: "RedExtract",
     image: "Red_Extract.png",
   },
   {
-    name: "Blue Extract",
+    name: "BlueExtract",
     image: "Blue_Extract.png",
   },
   {
@@ -30,39 +30,39 @@ export const inventoryItems: itemTypes = [
     image: "Glitter.png",
   },
   {
-    name: "Tropical Drink",
+    name: "TropicalDrink",
     image: "TropicalDrink.png",
   },
   {
-    name: "Purple Potion",
+    name: "PurplePotion",
     image: "PurplePotion.png",
   },
   {
-    name: "Soft Wax",
+    name: "SoftWax",
     image: "SoftWax.png",
   },
   {
-    name: "Hard Wax",
+    name: "HardWax",
     image: "HardWax.png",
   },
   {
-    name: "Swirled Wax",
+    name: "SwirledWax",
     image: "SwirledWax.png",
   },
   {
-    name: "Caustic Wax",
+    name: "CausticWax",
     image: "CausticWax.png",
   },
   {
-    name: "Field Dice",
+    name: "FieldDice",
     image: "FieldDice.png",
   },
   {
-    name: "Smooth Dice",
+    name: "SmoothDice",
     image: "SmoothDice.png",
   },
   {
-    name: "Loaded Dice",
+    name: "LoadedDice",
     image: "LoadedDice.png",
   },
   {
@@ -70,7 +70,7 @@ export const inventoryItems: itemTypes = [
     image: "Turpentine.png",
   },
   {
-    name: "Super Smoothie",
+    name: "SuperSmoothie",
     image: "SuperSmoothie.png",
   },
 ];
@@ -97,7 +97,7 @@ export const inventoryMaterials: itemTypes = [
     image: "Coconuts.png",
   },
   {
-    name: "Magic Beans",
+    name: "MagicBeans",
     image: "MagicBeans.png",
   },
   {
@@ -105,23 +105,23 @@ export const inventoryMaterials: itemTypes = [
     image: "Moon.png",
   },
   {
-    name: "Royal Jelly",
+    name: "RoyalJelly",
     image: "RoyalJelly.png",
   },
   {
-    name: "Star Jelly",
+    name: "StarJelly",
     image: "StarJelly.png",
   },
   {
-    name: "Gold Eggs",
+    name: "GoldEggs",
     image: "GoldEgg.png",
   },
   {
-    name: "Diamond Eggs",
+    name: "DiamondEggs",
     image: "DiamondEgg.png",
   },
   {
-    name: "Spirit Petal",
+    name: "SpiritPetal",
     image: "SpiritPetal.png",
   },
 ];
