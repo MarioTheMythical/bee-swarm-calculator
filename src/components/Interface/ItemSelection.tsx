@@ -14,7 +14,7 @@ function ItemSelection({ changeUserDisplaySelection }: Props) {
     "Planters",
   ];
   return (
-    <div>
+    <div className="item-select-container">
       {items.map((item, index) => {
         return (
           <div
