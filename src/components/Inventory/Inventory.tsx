@@ -30,7 +30,7 @@ function Inventory() {
         </div>
       </div>
       {userInventorySelection === 0 && <Items />}
-      {userInventorySelection === 0 && <Materials />}
+      {userInventorySelection === 1 && <Materials />}
     </div>
   );
 }
