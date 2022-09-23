@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
-}
+/* MAIN */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-parent-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100vw;
+  background-color: aqua;
 }
 
-.App-link {
-  color: #61dafb;
+.main-container {
+  width: 50vw;
+  background-color: rgb(16, 111, 111);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.main-title {
+  text-align: center;
+  font-size: 1.3em;
+  padding: 10px;
+}
+
+.main-items-container {
+  display: flex;
+  background-color: beige;
+}
+
+/* ITEM SELECTION */
+
+.item-select-text {
+  cursor: pointer;
+  padding: 5px;
+  background-color: rgb(21, 84, 89);
+}
+
+.item-select-text:hover {
+  background-color: rgb(97, 190, 190);
+}
+
+/* ITEM DISPLAY */
+
+.display-container {
+  width: 100%;
+  margin: 10px;
+  padding: 5px;
+  background-color: brown;
+}
+
+/* INVENTORY DISPLAY */
+
+.inventory-titles-container {
+  display: flex;
+  justify-content: space-around;
+  height: 40px;
+  padding-bottom: 10px;
+}
+
+.inventory-titles {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5px;
+  width: 50%;
+  height: 100%;
+  border-radius: 5px;
+  transition: 100ms;
+}
+
+.inventory-titles:hover {
+  background-color: beige;
+}
+
+.inventory-selected {
+  background-color: aliceblue;
+}
+
+/* INVENTORY ITEMS DISPLAY */
+
+.inventory-items-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: aqua;
+}
+
+.inventory-items-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.inventory-items-input-container {
+  padding: 10px;
+  width: 40px;
+}
+
+.inventory-items-input {
+  width: 40px;
+  height: 25px;
+}
+
+/* SCREEN RES BREAKPOINTS */
+
+@media (max-width: 80rem) {
+  .main-container {
+    width: 70vw;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 60rem) {
+  .main-container {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 40rem) {
+  .main-container {
+    width: 95vw;
   }
 }
