@@ -1,4 +1,5 @@
 import { recipeMaterial } from "libs/types";
+import { useEffect } from "react";
 
 type Props = {
   item: recipeMaterial;
@@ -8,9 +9,29 @@ type Props = {
     value: string | number;
     subValues: string[];
   }[];
+  subValueCraftableCheck: (check: boolean) => void;
 };
 
-function HoneySub({ item, subIndex, materialValueCheck }: Props) {
+function HoneySub({
+  item,
+  subIndex,
+  materialValueCheck,
+  subValueCraftableCheck,
+}: Props) {
+  useEffect(() => {
+    let subCheck = materialValueCheck.filter((item) => {
+      return item.check !== true;
+    });
+
+    subCheck[0].subValues.filter(
+      (item) => Number(item.split(" /")[0]) < Number(item.split("/ ")[1])
+    ).length > 0
+      ? subValueCraftableCheck(false)
+      : subValueCraftableCheck(true);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [materialValueCheck]);
+
   return (
     <div className="item-display-subrecipe">
       {item.subRecipe?.map((item, index) => {
@@ -28,6 +49,16 @@ function HoneySub({ item, subIndex, materialValueCheck }: Props) {
             <div className="item-display-content">
               {materialValueCheck[subIndex].subValues[index]}
             </div>
+            {Number(
+              materialValueCheck[subIndex].subValues[index].split(" /")[0]
+            ) >=
+            Number(
+              materialValueCheck[subIndex].subValues[index].split("/ ")[1]
+            ) ? (
+              <div>✔️</div>
+            ) : (
+              ""
+            )}
           </div>
         );
       })}

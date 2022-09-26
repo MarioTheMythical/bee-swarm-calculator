@@ -31,8 +31,6 @@ function Honey() {
       finalValue = abbreviateNumbers(item.value);
       finalUserValue = abbreviateNumbers(userInventoryValue);
 
-      console.log(finalValue);
-
       if (Number(userInventoryValue) >= item.value) {
         userValues.push({
           check: true,
@@ -68,13 +66,17 @@ function Honey() {
     });
 
     setMaterialValueCheck(userValues);
-
-    userValues.filter((item) => item.check !== true).length > 0
-      ? setCraftableCheck(false)
-      : setCraftableCheck(true);
   }, []);
 
-  // Abbreviated long honey numbers to be more readable
+  const subValueCraftableCheck = (check: boolean) => {
+    console.log(check);
+    if (materialValueCheck) {
+      if (check) {
+        return setCraftableCheck(true);
+      }
+    }
+    setCraftableCheck(false);
+  };
 
   return (
     <div className="item-display-container">
@@ -105,6 +107,7 @@ function Honey() {
                     item={item}
                     subIndex={index}
                     materialValueCheck={materialValueCheck}
+                    subValueCraftableCheck={subValueCraftableCheck}
                   />
                 )}
             </div>
