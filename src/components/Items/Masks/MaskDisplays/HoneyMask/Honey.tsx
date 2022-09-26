@@ -5,7 +5,7 @@ import HoneySub from "./HoneySub";
 type userMatValues = {
   check: boolean;
   value: string | number;
-  subValues?: number[];
+  subValues: number[];
 }[];
 
 function Honey() {
@@ -23,7 +23,7 @@ function Honey() {
       );
 
       if (Number(userInventoryValue) >= item.value) {
-        userValues.push({ check: true, value: item.value });
+        userValues.push({ check: true, value: item.value, subValues: [] });
       } else {
         if (item.subRecipe) {
           subValues = [];
@@ -40,6 +40,7 @@ function Honey() {
         userValues.push({
           check: false,
           value: `${userInventoryValue} / ${item.value.toLocaleString()}`,
+          subValues: [],
         });
       }
     });
@@ -70,7 +71,11 @@ function Honey() {
                 )}
               </div>
               {materialValueCheck && materialValueCheck[index].subValues && (
-                <HoneySub item={item} materialValueCheck={materialValueCheck} />
+                <HoneySub
+                  item={item}
+                  subIndex={index}
+                  materialValueCheck={materialValueCheck}
+                />
               )}
             </div>
           );

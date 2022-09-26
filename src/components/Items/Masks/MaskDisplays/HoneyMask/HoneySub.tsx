@@ -1,18 +1,16 @@
-import React from "react";
 import { recipeMaterial } from "libs/types";
 
 type Props = {
   item: recipeMaterial;
-  materialValueCheck:
-    | {
-        check: boolean;
-        value: string | number;
-        subValues?: number[];
-      }[]
-    | undefined;
+  subIndex: number;
+  materialValueCheck: {
+    check: boolean;
+    value: string | number;
+    subValues: number[];
+  }[];
 };
 
-function HoneySub({ item, materialValueCheck }: Props) {
+function HoneySub({ item, subIndex, materialValueCheck }: Props) {
   return (
     <div className="item-display-subrecipe">
       {item.subRecipe?.map((item, index) => {
@@ -27,7 +25,11 @@ function HoneySub({ item, materialValueCheck }: Props) {
             <div className="item-display-subcontent">
               <span>{item.material}:</span>
             </div>
-            <div className="item-display-content">{item.value}</div>
+            {materialValueCheck[subIndex].subValues && (
+              <div className="item-display-content">
+                {materialValueCheck[subIndex].subValues[index]}
+              </div>
+            )}
           </div>
         );
       })}
