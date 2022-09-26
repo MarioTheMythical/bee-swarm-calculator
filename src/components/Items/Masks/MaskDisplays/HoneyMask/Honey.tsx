@@ -1,24 +1,49 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { maskRecipes } from "libs/data";
 import HoneySub from "./HoneySub";
-import { useEffect } from "react";
+
+type userMatValues = {
+  check: boolean;
+  value: number;
+  subValues?: number[];
+}[];
 
 function Honey() {
-  const [recipeMaterialValue, setRecipeMaterialValue] = useState(0);
+  const [materialValueCheck, setMaterialValueCheck] = useState<userMatValues>();
 
+  // Checks inital user values from local storage and compares if > or = to required amount
   useEffect(() => {
-    let userValues: (number | string)[] = [];
+    let userInventoryValue = 0;
+    let userValues: userMatValues = [];
+    let subValues: number[] = [];
 
     maskRecipes[0].honey.forEach((item) => {
-      if (localStorage.getItem(item.material)) {
-        userValues.push(
-          Number(JSON.parse(localStorage.getItem(item.material) || ""))
-        );
+      userInventoryValue = Number(
+        JSON.parse(localStorage.getItem(item.material) || "0")
+      );
+
+      if (Number(userInventoryValue) >= item.value) {
+        userValues.push({ check: true, value: item.value });
       } else {
-        userValues.push(0);
+        if (item.subRecipe) {
+          subValues = [];
+          item.subRecipe?.forEach((subItem) => {
+            subValues.push((item.value - userInventoryValue) * subItem.value);
+          });
+
+          return userValues.push({
+            check: false,
+            value: userInventoryValue,
+            subValues: subValues,
+          });
+        }
+        userValues.push({
+          check: false,
+          value: userInventoryValue,
+        });
       }
     });
-    console.log(userValues);
+    setMaterialValueCheck(userValues);
   }, []);
 
   return (
@@ -34,12 +59,14 @@ function Honey() {
                   alt={item.material}
                   style={{ width: 30 }}
                 />
-                <div className="item-display-content">{item.material}</div>
+                <div className="item-display-content">{item.material}:</div>
                 <div className="item-display-content">
                   {item.value.toLocaleString()}
                 </div>
               </div>
-              {item.subRecipe && <HoneySub item={item} />}
+              {item.subRecipe && (
+                <HoneySub item={item} materialValueCheck={materialValueCheck} />
+              )}
             </div>
           );
         })}
