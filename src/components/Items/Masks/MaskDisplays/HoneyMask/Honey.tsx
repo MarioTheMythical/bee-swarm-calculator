@@ -4,7 +4,7 @@ import HoneySub from "./HoneySub";
 
 type userMatValues = {
   check: boolean;
-  value: number;
+  value: string | number;
   subValues?: number[];
 }[];
 
@@ -33,18 +33,20 @@ function Honey() {
 
           return userValues.push({
             check: false,
-            value: userInventoryValue,
+            value: `${userInventoryValue} / ${item.value.toLocaleString()}`,
             subValues: subValues,
           });
         }
         userValues.push({
           check: false,
-          value: userInventoryValue,
+          value: `${userInventoryValue} / ${item.value.toLocaleString()}`,
         });
       }
     });
     setMaterialValueCheck(userValues);
   }, []);
+
+  console.log(materialValueCheck);
 
   return (
     <div className="item-display-container">
@@ -61,10 +63,15 @@ function Honey() {
                 />
                 <div className="item-display-content">{item.material}:</div>
                 <div className="item-display-content">
-                  {item.value.toLocaleString()}
+                  {materialValueCheck && materialValueCheck[index].value}
                 </div>
+                {materialValueCheck && materialValueCheck[index].check ? (
+                  <div>true</div>
+                ) : (
+                  ""
+                )}
               </div>
-              {item.subRecipe && (
+              {materialValueCheck && materialValueCheck[index].subValues && (
                 <HoneySub item={item} materialValueCheck={materialValueCheck} />
               )}
             </div>

@@ -6,7 +6,7 @@ type Props = {
   materialValueCheck:
     | {
         check: boolean;
-        value: number;
+        value: string | number;
         subValues?: number[];
       }[]
     | undefined;
