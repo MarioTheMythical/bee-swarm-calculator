@@ -11,7 +11,7 @@ type userMatValues = {
 
 function Honey() {
   const [materialValueCheck, setMaterialValueCheck] = useState<userMatValues>();
-  const [craftableCheck, setCraftableCheck] = useState(true);
+  const [craftableCheck, setCraftableCheck] = useState(false);
 
   // Checks inital user values from local storage and compares if > or = to required amount
   useEffect(() => {
@@ -64,6 +64,15 @@ function Honey() {
         });
       }
     });
+
+    if (
+      materialValueCheck &&
+      materialValueCheck?.filter((item) => {
+        return item.check !== true;
+      }).length === 0
+    ) {
+      setCraftableCheck(true);
+    }
 
     setMaterialValueCheck(userValues);
   }, []);

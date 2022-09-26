@@ -19,13 +19,24 @@ function HoneySub({
   subValueCraftableCheck,
 }: Props) {
   useEffect(() => {
+    let finalSubCheck: string[] = [];
     let subCheck = materialValueCheck.filter((item) => {
       return item.check !== true;
     });
 
-    subCheck[0].subValues.filter(
-      (item) => Number(item.split(" /")[0]) < Number(item.split("/ ")[1])
-    ).length > 0
+    subCheck.forEach((item) => {
+      if (item.subValues.length > 0) {
+        item.subValues.forEach((subItem) => {
+          finalSubCheck.push(subItem);
+        });
+      } else {
+        finalSubCheck.push(item.value.toString());
+      }
+    });
+
+    return finalSubCheck.filter((item) => {
+      return Number(item.split(" /")[0]) < Number(item.split("/ ")[1]);
+    }).length > 0
       ? subValueCraftableCheck(false)
       : subValueCraftableCheck(true);
   }, [materialValueCheck, subValueCraftableCheck]);
