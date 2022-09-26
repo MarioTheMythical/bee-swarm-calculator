@@ -125,3 +125,18 @@ export const inventoryMaterials: itemTypes = [
     image: "SpiritPetal.png",
   },
 ];
+
+export const masks: itemTypes = [
+  {
+    name: "Gummy",
+    image: "GummyMask.png",
+  },
+  {
+    name: "Diamond",
+    image: "DiamondMask.png",
+  },
+  {
+    name: "Demon",
+    image: "DemonMask.png",
+  },
+];

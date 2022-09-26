@@ -108,7 +108,7 @@ input[type="number"] {
   background-color: rgb(73, 192, 192);
 }
 
-.inventory-items-content { 
+.inventory-items-content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,6 +131,35 @@ input[type="number"] {
 .inventory-items-input:focus {
   outline: 3px solid rgb(118, 207, 220);
   transition: 100ms;
+}
+
+/* MASKS DISPLAY */
+
+.masks-container {
+  background-color: aqua;
+  margin: 0px 5px 0px 5px;
+  padding: 5px;
+}
+
+.masks-title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  background-color: rgb(50, 55, 53);
+}
+
+/* GLOBAL ITEMS */
+
+.items-titles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  margin: 5px;
+  padding: 5px;
+  background-color: brown;
+  border-radius: 5px;
 }
 
 /* SCREEN RES BREAKPOINTS */
