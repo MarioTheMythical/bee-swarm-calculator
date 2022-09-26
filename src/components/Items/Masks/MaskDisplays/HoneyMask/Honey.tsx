@@ -46,8 +46,6 @@ function Honey() {
     setMaterialValueCheck(userValues);
   }, []);
 
-  console.log(materialValueCheck);
-
   return (
     <div className="item-display-container">
       <div>
@@ -66,7 +64,7 @@ function Honey() {
                   {materialValueCheck && materialValueCheck[index].value}
                 </div>
                 {materialValueCheck && materialValueCheck[index].check ? (
-                  <div>true</div>
+                  <div>✔️</div>
                 ) : (
                   ""
                 )}
