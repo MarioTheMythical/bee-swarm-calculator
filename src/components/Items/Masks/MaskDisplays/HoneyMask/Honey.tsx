@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { maskRecipes } from "libs/data";
 import HoneySub from "./HoneySub";
+import abbreviateNumbers from "custom/AbbreviateNumbers";
 
 type userMatValues = {
   check: boolean;
@@ -18,16 +19,24 @@ function Honey() {
     let userValues: userMatValues = [];
     let subUserInventoryValue = 0;
     let subValues: string[] = [];
+    let finalValue = "";
+    let finalUserValue = "";
+    let finalSubValue = "";
+    let finalUserSubValue = "";
 
     maskRecipes[0].honey.forEach((item) => {
       userInventoryValue = Number(
         JSON.parse(localStorage.getItem(item.material) || "0")
       );
+      finalValue = abbreviateNumbers(item.value);
+      finalUserValue = abbreviateNumbers(userInventoryValue);
+
+      console.log(finalValue);
 
       if (Number(userInventoryValue) >= item.value) {
         userValues.push({
           check: true,
-          value: `${userInventoryValue} / ${item.value}`,
+          value: `${finalUserValue} / ${finalValue}`,
           subValues: [],
         });
       } else {
@@ -37,22 +46,22 @@ function Honey() {
             subUserInventoryValue = Number(
               JSON.parse(localStorage.getItem(subItem.material) || "0")
             );
-            subValues.push(
-              `${subUserInventoryValue} / ${
-                (item.value - userInventoryValue) * subItem.value
-              }`
+            finalSubValue = abbreviateNumbers(
+              (item.value - userInventoryValue) * subItem.value
             );
+            finalUserSubValue = abbreviateNumbers(subUserInventoryValue);
+            subValues.push(`${finalUserSubValue} / ${finalSubValue}`);
           });
 
           return userValues.push({
             check: false,
-            value: `${userInventoryValue} / ${item.value.toLocaleString()}`,
+            value: `${finalUserValue} / ${finalValue}`,
             subValues: subValues,
           });
         }
         userValues.push({
           check: false,
-          value: `${userInventoryValue} / ${item.value.toLocaleString()}`,
+          value: `${finalUserValue} / ${finalValue}`,
           subValues: [],
         });
       }
@@ -64,6 +73,8 @@ function Honey() {
       ? setCraftableCheck(false)
       : setCraftableCheck(true);
   }, []);
+
+  // Abbreviated long honey numbers to be more readable
 
   return (
     <div className="item-display-container">
