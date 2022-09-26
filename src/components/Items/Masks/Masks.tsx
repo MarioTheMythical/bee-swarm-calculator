@@ -1,7 +1,8 @@
 import { useState } from "react";
-import Demon from "./Demon";
-import Diamond from "./Diamond";
-import Gummy from "./Gummy";
+import Demon from "./MaskDisplays/Demon";
+import Diamond from "./MaskDisplays/Diamond";
+import Gummy from "./MaskDisplays/Gummy";
+import Honey from "./MaskDisplays/Honey";
 import MaskSelection from "./MaskSelection";
 
 function Masks() {
@@ -17,9 +18,10 @@ function Masks() {
         maskSelection={maskSelection}
         changeMaskSelection={changeMaskSelection}
       />
-      {maskSelection === 0 && <Gummy />}
-      {maskSelection === 1 && <Diamond />}
-      {maskSelection === 2 && <Demon />}
+      {maskSelection === 0 && <Honey />}
+      {maskSelection === 1 && <Gummy />}
+      {maskSelection === 2 && <Diamond />}
+      {maskSelection === 3 && <Demon />}
     </div>
   );
 }

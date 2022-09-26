@@ -1,4 +1,4 @@
-import { masks } from "../../../libs/data";
+import { masks } from "libs/data";
 
 type Props = {
   maskSelection: number;
@@ -23,7 +23,7 @@ function MaskSelection({ maskSelection, changeMaskSelection }: Props) {
               <span>{mask.name}</span>
             </div>
             <img
-              src={require(`../../../images/${mask.image}`)}
+              src={require(`images/${mask.image}`)}
               alt={mask.name}
               style={{ width: 50 }}
             />

@@ -1,6 +1,10 @@
-import { itemTypes } from "./types";
+import { itemTypes, recipe } from "./types";
 
 export const inventoryItems: itemTypes = [
+  {
+    name: "Honey",
+    image: "Honey.png",
+  },
   {
     name: "RedExtract",
     image: "Red_Extract.png",
@@ -142,5 +146,17 @@ export const masks: itemTypes = [
   {
     name: "Demon",
     image: "DemonMask.png",
+  },
+];
+
+export const maskRecipes: recipe = [
+  {
+    honey: [
+      { material: "Honey", value: 100000000, image: "Honey.png" },
+      { material: "Treats", value: 9999, image: "Treats.png" },
+      { material: "Oil", value: 50, image: "Oil.png" },
+      { material: "Enzymes", value: 25, image: "Enzymes.png" },
+      { material: "Gold Eggs", value: 5, image: "GoldEgg.png" },
+    ],
   },
 ];

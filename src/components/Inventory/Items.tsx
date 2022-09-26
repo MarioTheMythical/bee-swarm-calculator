@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { inventoryItems } from "../../libs/data";
+import { inventoryItems } from "libs/data";
 
 function Items() {
   const [itemQuantity, setItemQuantity] = useState<number[]>([]);
@@ -33,7 +33,7 @@ function Items() {
         return (
           <div key={index} className="inventory-items-content">
             <img
-              src={require(`../../images/${item.image}`)}
+              src={require(`images/${item.image}`)}
               alt={item.name}
               style={{ width: 50 }}
             />
