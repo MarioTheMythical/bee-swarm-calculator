@@ -75,6 +75,7 @@ function Honey() {
     }
 
     setMaterialValueCheck(userValues);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const subValueCraftableCheck = (check: boolean) => {

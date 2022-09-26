@@ -37,7 +37,7 @@ input[type="number"] {
 
 .main-items-container {
   display: flex;
-  width: 100%;
+  width: 100;
   background-color: rgb(124, 213, 110);
 }
 
@@ -250,7 +250,7 @@ input[type="number"] {
 
 @media (max-width: 44rem) {
   .main-container {
-    width: 95vw;
+    width: 100vw;
   }
   .items-content span {
     display: none;
