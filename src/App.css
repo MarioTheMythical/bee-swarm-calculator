@@ -92,6 +92,10 @@ input[type="number"] {
   background-color: rgb(42, 93, 141);
 }
 
+.inventory-titles:active {
+  background-color: rgb(27, 61, 93);
+}
+
 .inventory-selected {
   background-color: rgb(25, 65, 99);
 }
@@ -136,30 +140,41 @@ input[type="number"] {
 /* MASKS DISPLAY */
 
 .masks-container {
-  background-color: aqua;
-  margin: 0px 5px 0px 5px;
-  padding: 5px;
+  padding: 0px 3px 0px 3px;
 }
 
 .masks-title-container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
-  background-color: rgb(50, 55, 53);
 }
 
-/* GLOBAL ITEMS */
+/* GLOBAL STYLES */
 
 .items-titles {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 20%;
-  margin: 5px;
-  padding: 5px;
-  background-color: brown;
+  padding: 6px 11px 6px 11px;
+  background-color: rgb(55, 113, 168);
   border-radius: 5px;
+  transition: 100ms;
+}
+
+.items-titles:hover {
+  cursor: pointer;
+  background-color: rgb(42, 93, 141);
+}
+
+.items-titles:active {
+  background-color: rgb(27, 61, 93);
+}
+
+.items-titles-selected {
+  background-color: rgb(30, 76, 116);
 }
 
 /* SCREEN RES BREAKPOINTS */
@@ -176,8 +191,14 @@ input[type="number"] {
   }
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 44rem) {
   .main-container {
     width: 95vw;
+  }
+  .items-content span {
+    display: none;
+  }
+  .items-content {
+    content: "";
   }
 }

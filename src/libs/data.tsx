@@ -128,6 +128,10 @@ export const inventoryMaterials: itemTypes = [
 
 export const masks: itemTypes = [
   {
+    name: "Honey",
+    image: "HoneyMask.png",
+  },
+  {
     name: "Gummy",
     image: "GummyMask.png",
   },
