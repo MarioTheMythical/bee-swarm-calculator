@@ -69,7 +69,6 @@ function Honey() {
   }, []);
 
   const subValueCraftableCheck = (check: boolean) => {
-    console.log(check);
     if (materialValueCheck) {
       if (check) {
         return setCraftableCheck(true);

@@ -28,9 +28,7 @@ function HoneySub({
     ).length > 0
       ? subValueCraftableCheck(false)
       : subValueCraftableCheck(true);
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [materialValueCheck]);
+  }, [materialValueCheck, subValueCraftableCheck]);
 
   return (
     <div className="item-display-subrecipe">
