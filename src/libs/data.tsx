@@ -154,7 +154,23 @@ export const maskRecipes: recipe = [
     honey: [
       { material: "Honey", value: 100000000, image: "Honey.png" },
       { material: "Treats", value: 9999, image: "Treats.png" },
-      { material: "Oil", value: 50, image: "Oil.png" },
+      {
+        material: "Oil",
+        value: 50,
+        image: "Oil.png",
+        subRecipe: [
+          {
+            material: "Sunflower Seeds",
+            value: 50,
+            image: "SunflowerSeeds.png",
+          },
+          {
+            material: "Royal Jellies",
+            value: 10,
+            image: "RoyalJellies.png",
+          },
+        ],
+      },
       { material: "Enzymes", value: 25, image: "Enzymes.png" },
       { material: "Gold Eggs", value: 5, image: "GoldEgg.png" },
     ],
