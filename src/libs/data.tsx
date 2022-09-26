@@ -165,13 +165,29 @@ export const maskRecipes: recipe = [
             image: "SunflowerSeeds.png",
           },
           {
-            material: "Royal Jellies",
+            material: "Royal Jelly",
             value: 10,
-            image: "RoyalJellies.png",
+            image: "RoyalJelly.png",
           },
         ],
       },
-      { material: "Enzymes", value: 25, image: "Enzymes.png" },
+      {
+        material: "Enzymes",
+        value: 25,
+        image: "Enzymes.png",
+        subRecipe: [
+          {
+            material: "Pineapples",
+            value: 50,
+            image: "Pineapples.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
       { material: "Gold Eggs", value: 5, image: "GoldEgg.png" },
     ],
   },

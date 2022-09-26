@@ -2,7 +2,7 @@ import { useState } from "react";
 import Demon from "./MaskDisplays/Demon";
 import Diamond from "./MaskDisplays/Diamond";
 import Gummy from "./MaskDisplays/Gummy";
-import Honey from "./MaskDisplays/Honey";
+import Honey from "./MaskDisplays/HoneyMask/Honey";
 import MaskSelection from "./MaskSelection";
 
 function Masks() {

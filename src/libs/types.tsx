@@ -3,13 +3,13 @@ export type itemTypes = {
   image: string;
 }[];
 
-type subRecipe = {
+export type subRecipe = {
   material: string;
   value: number;
   image: string;
 };
 
-type recipeMaterial = {
+export type recipeMaterial = {
   material: string;
   value: number;
   image: string;
