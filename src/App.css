@@ -225,6 +225,14 @@ input[type="number"] {
   padding: 0px 5px 0px 5px;
 }
 
+.item-craftable {
+  text-align: center;
+  margin: 5px 3px 5px 2px;
+  padding: 7px;
+  border-radius: 5px;
+  background-color: rgb(62, 227, 59);
+}
+
 /* SCREEN RES BREAKPOINTS */
 
 @media (max-width: 80rem) {

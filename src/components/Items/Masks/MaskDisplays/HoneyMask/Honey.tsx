@@ -5,17 +5,19 @@ import HoneySub from "./HoneySub";
 type userMatValues = {
   check: boolean;
   value: string | number;
-  subValues: number[];
+  subValues: string[];
 }[];
 
 function Honey() {
   const [materialValueCheck, setMaterialValueCheck] = useState<userMatValues>();
+  const [craftableCheck, setCraftableCheck] = useState(true);
 
   // Checks inital user values from local storage and compares if > or = to required amount
   useEffect(() => {
     let userInventoryValue = 0;
     let userValues: userMatValues = [];
-    let subValues: number[] = [];
+    let subUserInventoryValue = 0;
+    let subValues: string[] = [];
 
     maskRecipes[0].honey.forEach((item) => {
       userInventoryValue = Number(
@@ -23,12 +25,23 @@ function Honey() {
       );
 
       if (Number(userInventoryValue) >= item.value) {
-        userValues.push({ check: true, value: item.value, subValues: [] });
+        userValues.push({
+          check: true,
+          value: `${userInventoryValue} / ${item.value}`,
+          subValues: [],
+        });
       } else {
         if (item.subRecipe) {
           subValues = [];
           item.subRecipe?.forEach((subItem) => {
-            subValues.push((item.value - userInventoryValue) * subItem.value);
+            subUserInventoryValue = Number(
+              JSON.parse(localStorage.getItem(subItem.material) || "0")
+            );
+            subValues.push(
+              `${subUserInventoryValue} / ${
+                (item.value - userInventoryValue) * subItem.value
+              }`
+            );
           });
 
           return userValues.push({
@@ -44,7 +57,12 @@ function Honey() {
         });
       }
     });
+
     setMaterialValueCheck(userValues);
+
+    userValues.filter((item) => item.check !== true).length > 0
+      ? setCraftableCheck(false)
+      : setCraftableCheck(true);
   }, []);
 
   return (
@@ -70,17 +88,19 @@ function Honey() {
                   ""
                 )}
               </div>
-              {materialValueCheck && materialValueCheck[index].subValues && (
-                <HoneySub
-                  item={item}
-                  subIndex={index}
-                  materialValueCheck={materialValueCheck}
-                />
-              )}
+              {materialValueCheck &&
+                materialValueCheck[index].subValues.length > 0 && (
+                  <HoneySub
+                    item={item}
+                    subIndex={index}
+                    materialValueCheck={materialValueCheck}
+                  />
+                )}
             </div>
           );
         })}
       </div>
+      {craftableCheck && <div className="item-craftable">🎉 Craftable! 🎉</div>}
     </div>
   );
 }

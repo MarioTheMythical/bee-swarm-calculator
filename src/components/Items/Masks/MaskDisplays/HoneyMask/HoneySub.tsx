@@ -6,7 +6,7 @@ type Props = {
   materialValueCheck: {
     check: boolean;
     value: string | number;
-    subValues: number[];
+    subValues: string[];
   }[];
 };
 
@@ -25,11 +25,9 @@ function HoneySub({ item, subIndex, materialValueCheck }: Props) {
             <div className="item-display-subcontent">
               <span>{item.material}:</span>
             </div>
-            {materialValueCheck[subIndex].subValues && (
-              <div className="item-display-content">
-                {materialValueCheck[subIndex].subValues[index]}
-              </div>
-            )}
+            <div className="item-display-content">
+              {materialValueCheck[subIndex].subValues[index]}
+            </div>
           </div>
         );
       })}
