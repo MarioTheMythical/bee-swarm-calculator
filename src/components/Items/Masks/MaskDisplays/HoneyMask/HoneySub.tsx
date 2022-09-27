@@ -7,7 +7,7 @@ type Props = {
   materialValueCheck: {
     check: boolean;
     value: string | number;
-    subValues: string[];
+    subValues: { displayValue: string; actualValue: string }[];
   }[];
   subValueCraftableCheck: (check: boolean) => void;
 };
@@ -27,7 +27,7 @@ function HoneySub({
     subCheck.forEach((item) => {
       if (item.subValues.length > 0) {
         item.subValues.forEach((subItem) => {
-          finalSubCheck.push(subItem);
+          finalSubCheck.push(subItem.actualValue);
         });
       } else {
         finalSubCheck.push(item.value.toString());
@@ -56,13 +56,17 @@ function HoneySub({
               <span>{item.material}:</span>
             </div>
             <div className="item-display-content">
-              {materialValueCheck[subIndex].subValues[index]}
+              {materialValueCheck[subIndex].subValues[index].displayValue}
             </div>
             {Number(
-              materialValueCheck[subIndex].subValues[index].split(" /")[0]
+              materialValueCheck[subIndex].subValues[index].actualValue.split(
+                " /"
+              )[0]
             ) >=
             Number(
-              materialValueCheck[subIndex].subValues[index].split("/ ")[1]
+              materialValueCheck[subIndex].subValues[index].actualValue.split(
+                "/ "
+              )[1]
             ) ? (
               <div>✔️</div>
             ) : (

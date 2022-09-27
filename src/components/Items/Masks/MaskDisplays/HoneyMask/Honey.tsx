@@ -6,7 +6,7 @@ import abbreviateNumbers from "custom/AbbreviateNumbers";
 type userMatValues = {
   check: boolean;
   value: string | number;
-  subValues: string[];
+  subValues: { displayValue: string; actualValue: string }[];
 }[];
 
 function Honey() {
@@ -18,7 +18,6 @@ function Honey() {
     let userInventoryValue = 0;
     let userValues: userMatValues = [];
     let subUserInventoryValue = 0;
-    let subValues: string[] = [];
     let finalValue = "";
     let finalUserValue = "";
     let finalSubValue = "";
@@ -39,7 +38,8 @@ function Honey() {
         });
       } else {
         if (item.subRecipe) {
-          subValues = [];
+          let subValues: { displayValue: string; actualValue: string }[] = [];
+
           item.subRecipe?.forEach((subItem) => {
             subUserInventoryValue = Number(
               JSON.parse(localStorage.getItem(subItem.material) || "0")
@@ -48,7 +48,12 @@ function Honey() {
               (item.value - userInventoryValue) * subItem.value
             );
             finalUserSubValue = abbreviateNumbers(subUserInventoryValue);
-            subValues.push(`${finalUserSubValue} / ${finalSubValue}`);
+            subValues.push({
+              displayValue: `${finalUserSubValue} / ${finalSubValue}`,
+              actualValue: `${subUserInventoryValue} / ${
+                (item.value - userInventoryValue) * subItem.value
+              }`,
+            });
           });
 
           return userValues.push({
