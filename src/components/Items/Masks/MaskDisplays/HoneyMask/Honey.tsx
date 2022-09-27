@@ -65,16 +65,16 @@ function Honey() {
       }
     });
 
+    setMaterialValueCheck(userValues);
+
     if (
-      materialValueCheck &&
-      materialValueCheck?.filter((item) => {
+      userValues?.filter((item) => {
         return item.check !== true;
       }).length === 0
     ) {
       setCraftableCheck(true);
     }
 
-    setMaterialValueCheck(userValues);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
