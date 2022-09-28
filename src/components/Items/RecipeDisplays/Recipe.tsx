@@ -85,7 +85,9 @@ function Recipe({ recipeData }: Props) {
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [recipeData]);
+
+  console.log(materialValueCheck);
 
   const subValueCraftableCheck = (check: boolean) => {
     if (materialValueCheck) {

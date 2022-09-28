@@ -129,6 +129,10 @@ export const inventoryMaterials: itemTypes = [
     image: "Stingers.png",
   },
   {
+    name: "Neon Berries",
+    image: "NeonBerries.png",
+  },
+  {
     name: "Gold Eggs",
     image: "GoldEgg.png",
   },
@@ -419,7 +423,146 @@ export const toolRecipes: recipe = [
   {
     petal: [
       { material: "Honey", value: 1500000000, image: "Honey.png" },
-
+      {
+        material: "Enzymes",
+        value: 75,
+        image: "Enzymes.png",
+        subRecipe: [
+          {
+            material: "Pineapples",
+            value: 50,
+            image: "Pineapples.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Glitter",
+        value: 100,
+        image: "Glitter.png",
+        subRecipe: [
+          {
+            material: "Moon Charms",
+            value: 25,
+            image: "Moon.png",
+          },
+          {
+            material: "Magic Bean",
+            value: 1,
+            image: "MagicBean.png",
+          },
+        ],
+      },
+      {
+        material: "Star Jelly",
+        value: 10,
+        image: "StarJelly.png",
+      },
+      { material: "Spirit Petal", value: 1, image: "SpiritPetal.png" },
+    ],
+  },
+  {
+    gummy: [
+      { material: "Honey", value: 10000000000000, image: "Honey.png" },
+      {
+        material: "Glue",
+        value: 1500,
+        image: "Glue.png",
+        subRecipe: [
+          {
+            material: "Gumdrops",
+            value: 50,
+            image: "Gumdrops.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Caustic Wax",
+        value: 50,
+        image: "CausticWax.png",
+        subRecipe: [
+          {
+            material: "Hard Wax",
+            value: 5,
+            image: "HardWax.png",
+          },
+          {
+            material: "Enzymes",
+            value: 5,
+            image: "Enzymes.png",
+          },
+          {
+            material: "Neon Berries",
+            value: 25,
+            image: "NeonBerries.png",
+          },
+        ],
+      },
+      {
+        material: "Star Jelly",
+        value: 10,
+        image: "StarJelly.png",
+      },
+      { material: "Spirit Petal", value: 1, image: "SpiritPetal.png" },
+    ],
+  },
+  {
+    tide: [
+      { material: "Honey", value: 1500000000, image: "Honey.png" },
+      {
+        material: "Enzymes",
+        value: 75,
+        image: "Enzymes.png",
+        subRecipe: [
+          {
+            material: "Pineapples",
+            value: 50,
+            image: "Pineapples.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Glitter",
+        value: 100,
+        image: "Glitter.png",
+        subRecipe: [
+          {
+            material: "Moon Charms",
+            value: 25,
+            image: "Moon.png",
+          },
+          {
+            material: "Magic Bean",
+            value: 1,
+            image: "MagicBean.png",
+          },
+        ],
+      },
+      {
+        material: "Star Jelly",
+        value: 10,
+        image: "StarJelly.png",
+      },
+      { material: "Spirit Petal", value: 1, image: "SpiritPetal.png" },
+    ],
+  },
+  {
+    scythe: [
+      { material: "Honey", value: 1500000000, image: "Honey.png" },
       {
         material: "Enzymes",
         value: 75,

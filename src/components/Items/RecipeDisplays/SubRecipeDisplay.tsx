@@ -41,9 +41,12 @@ function SubRecipeDisplay({
       : subValueCraftableCheck(true);
   }, [materialValueCheck, subValueCraftableCheck]);
 
+  console.log(item.subRecipe);
+
   return (
     <div className="item-display-subrecipe">
       {item.subRecipe?.map((item, index) => {
+        console.log(item);
         return (
           <div key={index} className="item-display-subrecipe-content">
             <img
@@ -56,15 +59,15 @@ function SubRecipeDisplay({
               <span>{item.material}:</span>
             </div>
             <div className="item-display-content">
-              {materialValueCheck[subIndex].subValues[index].displayValue}
+              {materialValueCheck[subIndex].subValues[index]?.displayValue}
             </div>
             {Number(
-              materialValueCheck[subIndex].subValues[index].actualValue.split(
+              materialValueCheck[subIndex].subValues[index]?.actualValue.split(
                 " /"
               )[0]
             ) >=
             Number(
-              materialValueCheck[subIndex].subValues[index].actualValue.split(
+              materialValueCheck[subIndex].subValues[index]?.actualValue.split(
                 "/ "
               )[1]
             ) ? (

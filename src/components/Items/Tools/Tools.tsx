@@ -22,7 +22,7 @@ function Tools() {
         return setRecipeData(toolRecipes[2].tide);
 
       case 3:
-        return setRecipeData(toolRecipes[3].dark);
+        return setRecipeData(toolRecipes[3].scythe);
     }
   }, [toolSelection]);
 
