@@ -113,6 +113,13 @@ input[type="number"] {
   background-color: rgb(73, 192, 192);
 }
 
+.inventory-items-content-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
 .inventory-items-content {
   display: flex;
   justify-content: center;

@@ -24,7 +24,6 @@ function Materials() {
     ) {
       finalValue =
         numberAbbreviation?.slice(0, 4) + letterAbbreviation?.slice(0, 1);
-      console.log(finalValue);
 
       return localStorage.setItem(name, JSON.stringify(finalValue));
     }
@@ -58,28 +57,31 @@ function Materials() {
 
   return (
     <div className="inventory-items-container">
-      {inventoryMaterials.map((item, index) => {
-        return (
-          <div key={index} className="inventory-items-content">
-            <img
-              src={require(`images/${item.image}`)}
-              alt={item.name}
-              style={{ width: 50 }}
-            />
-            <div className="inventory-items-input-container">
-              <input
-                placeholder={
-                  itemQuantity.length > 0 ? String(itemQuantity[index]) : "0"
-                }
-                className="inventory-items-input"
-                onChange={(event) =>
-                  changeItemQuantity(item.name, event.target.value)
-                }
+      <div className="inventory-items-content-container">
+        {inventoryMaterials.map((item, index) => {
+          return (
+            <div key={index} className="inventory-items-content">
+              <img
+                src={require(`images/${item.image}`)}
+                alt={item.name}
+                style={{ width: 50 }}
               />
+              <div className="inventory-items-input-container">
+                <input
+                  placeholder={
+                    itemQuantity.length > 0 ? String(itemQuantity[index]) : "0"
+                  }
+                  className="inventory-items-input"
+                  onChange={(event) =>
+                    changeItemQuantity(item.name, event.target.value)
+                  }
+                />
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
+      <div>Reset</div>
     </div>
   );
 }
