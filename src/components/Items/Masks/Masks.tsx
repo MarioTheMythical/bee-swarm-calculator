@@ -1,7 +1,7 @@
 import { useState } from "react";
-import MaskSelection from "./MaskSelection";
-import { maskRecipes } from "libs/data";
+import { maskRecipes, masks } from "libs/data";
 import Recipe from "../RecipeDisplays/Recipe";
+import ItemSelection from "../ItemSelection";
 
 function Masks() {
   const [maskSelection, setMaskSelection] = useState(0);
@@ -12,9 +12,10 @@ function Masks() {
 
   return (
     <div className="masks-container">
-      <MaskSelection
-        maskSelection={maskSelection}
-        changeMaskSelection={changeMaskSelection}
+      <ItemSelection
+        itemData={masks}
+        itemSelection={maskSelection}
+        changeItemSelection={changeMaskSelection}
       />
       {maskSelection === 0 && <Recipe recipeData={maskRecipes[0].honey} />}
       {maskSelection === 1 && <Recipe recipeData={maskRecipes[1].gummy} />}
