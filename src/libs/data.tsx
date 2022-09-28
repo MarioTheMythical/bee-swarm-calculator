@@ -1,5 +1,7 @@
 import { itemTypes, recipe } from "./types";
 
+// ITEMS //
+
 export const inventoryItems: itemTypes = [
   {
     name: "Honey",
@@ -79,6 +81,8 @@ export const inventoryItems: itemTypes = [
   },
 ];
 
+// MATERIALS //
+
 export const inventoryMaterials: itemTypes = [
   {
     name: "Strawberries",
@@ -137,6 +141,8 @@ export const inventoryMaterials: itemTypes = [
     image: "SpiritPetal.png",
   },
 ];
+
+// MASKS //
 
 export const masks: itemTypes = [
   {
@@ -376,6 +382,53 @@ export const maskRecipes: recipe = [
             material: "Gumdrops",
             value: 50,
             image: "Gumdrops.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+    ],
+  },
+];
+
+// TOOLS //
+
+export const tools: itemTypes = [
+  {
+    name: "Petal Wand",
+    image: "PetalWand.png",
+  },
+  {
+    name: "Gummy Baller",
+    image: "GummyBaller.png",
+  },
+  {
+    name: "Tide Popper",
+    image: "TidePopper.png",
+  },
+  {
+    name: "Dark Scythe",
+    image: "DarkScythe.png",
+  },
+];
+
+export const toolRecipes: recipe = [
+  {
+    petal: [
+      { material: "Honey", value: 1500000000, image: "Honey.png" },
+      { material: "Spirit Petal", value: 1, image: "SpiritPetal.png" },
+      {
+        material: "Oil",
+        value: 50,
+        image: "Oil.png",
+        subRecipe: [
+          {
+            material: "Sunflower Seeds",
+            value: 50,
+            image: "SunflowerSeeds.png",
           },
           {
             material: "Royal Jelly",
