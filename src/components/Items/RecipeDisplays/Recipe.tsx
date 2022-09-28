@@ -111,16 +111,16 @@ function Recipe({ recipeData }: Props) {
                 />
                 <div className="item-display-content">{item.material}:</div>
                 <div className="item-display-content">
-                  {materialValueCheck && materialValueCheck[index].value}
+                  {materialValueCheck && materialValueCheck[index]?.value}
                 </div>
-                {materialValueCheck && materialValueCheck[index].check ? (
+                {materialValueCheck && materialValueCheck[index]?.check ? (
                   <div>✔️</div>
                 ) : (
                   ""
                 )}
               </div>
               {materialValueCheck &&
-                materialValueCheck[index].subValues.length > 0 && (
+                materialValueCheck[index]?.subValues.length > 0 && (
                   <SubRecipeDisplay
                     item={item}
                     subIndex={index}

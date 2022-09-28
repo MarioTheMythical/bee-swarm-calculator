@@ -24,8 +24,6 @@ function SubRecipeDisplay({
       return item.check !== true;
     });
 
-    console.log(subCheck.filter((item) => item.subValues.length === 0));
-
     if (subCheck.filter((item) => item.subValues.length === 0).length > 0) {
       return subValueCraftableCheck(false);
     }
