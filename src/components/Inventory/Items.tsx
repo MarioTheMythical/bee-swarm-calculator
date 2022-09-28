@@ -63,6 +63,10 @@ function Items() {
 
   return (
     <div className="inventory-items-container">
+      <div className="inventory-desc">
+        Enter either a full or abbreviated value. <br /> Example: 1000 or 1k,
+        100000000 or 100m etc.
+      </div>
       <div className="inventory-items-content-container">
         {inventoryItems.map((item, index) => {
           return (
