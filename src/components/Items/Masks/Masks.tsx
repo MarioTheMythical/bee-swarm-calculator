@@ -1,10 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { maskRecipes, masks } from "libs/data";
 import Recipe from "../RecipeDisplays/Recipe";
 import ItemSelection from "../ItemSelection";
+import { recipeMaterial } from "libs/types";
 
 function Masks() {
   const [maskSelection, setMaskSelection] = useState(0);
+  const [recipeData, setRecipeData] = useState<recipeMaterial[]>(
+    maskRecipes[0].honey
+  );
+
+  useEffect(() => {
+    switch (maskSelection) {
+      case 0:
+        return setRecipeData(maskRecipes[0].honey);
+
+      case 1:
+        return setRecipeData(maskRecipes[1].gummy);
+
+      case 2:
+        return setRecipeData(maskRecipes[2].diamond);
+
+      case 3:
+        return setRecipeData(maskRecipes[3].demon);
+    }
+  }, [maskSelection]);
 
   const changeMaskSelection = (selection: number) => {
     setMaskSelection(selection);
@@ -17,10 +37,7 @@ function Masks() {
         itemSelection={maskSelection}
         changeItemSelection={changeMaskSelection}
       />
-      {maskSelection === 0 && <Recipe recipeData={maskRecipes[0].honey} />}
-      {maskSelection === 1 && <Recipe recipeData={maskRecipes[1].gummy} />}
-      {maskSelection === 2 && <Recipe recipeData={maskRecipes[1].gummy} />}
-      {maskSelection === 3 && <Recipe recipeData={maskRecipes[1].gummy} />}
+      <Recipe recipeData={recipeData} />
     </div>
   );
 }
