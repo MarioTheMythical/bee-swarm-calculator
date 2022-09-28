@@ -522,7 +522,7 @@ export const toolRecipes: recipe = [
   },
   {
     tide: [
-      { material: "Honey", value: 1500000000, image: "Honey.png" },
+      { material: "Honey", value: 2500000000000, image: "Honey.png" },
       {
         material: "Enzymes",
         value: 75,

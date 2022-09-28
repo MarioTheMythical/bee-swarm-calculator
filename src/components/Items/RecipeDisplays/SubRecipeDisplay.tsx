@@ -24,13 +24,17 @@ function SubRecipeDisplay({
       return item.check !== true;
     });
 
+    console.log(subCheck.filter((item) => item.subValues.length === 0));
+
+    if (subCheck.filter((item) => item.subValues.length === 0).length > 0) {
+      return subValueCraftableCheck(false);
+    }
+
     subCheck.forEach((item) => {
       if (item.subValues.length > 0) {
         item.subValues.forEach((subItem) => {
           finalSubCheck.push(subItem.actualValue);
         });
-      } else {
-        finalSubCheck.push(item.value.toString());
       }
     });
 
@@ -41,12 +45,9 @@ function SubRecipeDisplay({
       : subValueCraftableCheck(true);
   }, [materialValueCheck, subValueCraftableCheck]);
 
-  console.log(item.subRecipe);
-
   return (
     <div className="item-display-subrecipe">
       {item.subRecipe?.map((item, index) => {
-        console.log(item);
         return (
           <div key={index} className="item-display-subrecipe-content">
             <img
