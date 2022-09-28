@@ -2,24 +2,52 @@ import { useState, useEffect } from "react";
 import { inventoryItems } from "libs/data";
 
 function Items() {
-  const [itemQuantity, setItemQuantity] = useState<number[]>([]);
+  const [itemQuantity, setItemQuantity] = useState<string[]>([]);
 
   const changeItemQuantity = (name: string, value: string) => {
-    if ((Number(value) >= 0 && value) || value === "") {
-      localStorage.setItem(name, JSON.stringify(value));
+    if (!/^[A-Za-z0-9.]*$/.test(value)) {
+      return;
+    }
+
+    let numberAbbreviation = value.match(/\d+/g)?.join();
+    let letterAbbreviation = value
+      .toLocaleLowerCase()
+      .match(/[k, m, b, t, q]+/g)
+      ?.join()
+      .slice(0, 1);
+    let finalValue = "";
+
+    if (
+      numberAbbreviation?.includes(",") &&
+      letterAbbreviation &&
+      numberAbbreviation.length < 5
+    ) {
+      finalValue =
+        numberAbbreviation?.slice(0, 4) + letterAbbreviation?.slice(0, 1);
+
+      return localStorage.setItem(name, JSON.stringify(finalValue));
+    }
+
+    if (numberAbbreviation && letterAbbreviation) {
+      finalValue =
+        numberAbbreviation?.slice(0, 3) + letterAbbreviation?.slice(0, 1);
+
+      return localStorage.setItem(name, JSON.stringify(finalValue));
+    }
+
+    if (/^\d+$/.test(value)) {
+      return localStorage.setItem(name, JSON.stringify(value));
     }
   };
 
   useEffect(() => {
     const initialItemQuantity = () => {
-      let quantity: number[] = [];
+      let quantity: string[] = [];
       inventoryItems.forEach((item) => {
         if (localStorage.getItem(item.name)) {
-          quantity?.push(
-            Number(JSON.parse(localStorage.getItem(item.name) || ""))
-          );
+          quantity?.push(JSON.parse(localStorage.getItem(item.name) || ""));
         } else {
-          quantity?.push(0);
+          quantity?.push("0");
         }
       });
       setItemQuantity(quantity);
@@ -39,7 +67,6 @@ function Items() {
             />
             <div className="inventory-items-input-container">
               <input
-                type="number"
                 placeholder={
                   itemQuantity.length > 0 ? String(itemQuantity[index]) : "0"
                 }

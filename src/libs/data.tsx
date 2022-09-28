@@ -549,7 +549,7 @@ export const toolRecipes: recipe = [
         image: "Turpentine.png",
         subRecipe: [
           {
-            material: "Super Smoothie",
+            material: "Super Smoothies",
             value: 10,
             image: "SuperSmoothie.png",
           },

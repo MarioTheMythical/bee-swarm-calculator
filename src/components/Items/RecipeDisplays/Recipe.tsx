@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import SubRecipeDisplay from "./SubRecipeDisplay";
 import abbreviateNumbers from "custom/AbbreviateNumbers";
 import { recipeMaterial } from "libs/types";
+import ConvertNumbers from "custom/ConvertNumbers";
 
 type userMatValues = {
   check: boolean;
@@ -28,7 +29,7 @@ function Recipe({ recipeData }: Props) {
     let finalUserSubValue = "";
 
     recipeData.forEach((item) => {
-      userInventoryValue = Number(
+      userInventoryValue = ConvertNumbers(
         JSON.parse(localStorage.getItem(item.material) || "0")
       );
       finalValue = abbreviateNumbers(item.value);
@@ -45,7 +46,7 @@ function Recipe({ recipeData }: Props) {
           let subValues: { displayValue: string; actualValue: string }[] = [];
 
           item.subRecipe?.forEach((subItem) => {
-            subUserInventoryValue = Number(
+            subUserInventoryValue = ConvertNumbers(
               JSON.parse(localStorage.getItem(subItem.material) || "0")
             );
             finalSubValue = abbreviateNumbers(
