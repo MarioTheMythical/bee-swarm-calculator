@@ -195,4 +195,13 @@ export const maskRecipes: recipe = [
       { material: "Gold Eggs", value: 5, image: "GoldEgg.png" },
     ],
   },
+  {
+    gummy: [
+      { material: "Honey", value: 5000000000, image: "Honey.png" },
+      { material: "Glue", value: 250, image: "Glue.png" },
+      { material: "Enzymes", value: 100, image: "Enzymes.png" },
+      { material: "Oil", value: 100, image: "Oil.png" },
+      { material: "Glitter", value: 100, image: "Glitter.png" },
+    ],
+  },
 ];

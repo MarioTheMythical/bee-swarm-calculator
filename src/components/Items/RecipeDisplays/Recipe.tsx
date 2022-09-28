@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { maskRecipes } from "libs/data";
-import HoneySub from "./HoneySub";
+import SubRecipeDisplay from "./SubRecipeDisplay";
 import abbreviateNumbers from "custom/AbbreviateNumbers";
+import { recipeMaterial } from "libs/types";
 
 type userMatValues = {
   check: boolean;
@@ -9,7 +9,11 @@ type userMatValues = {
   subValues: { displayValue: string; actualValue: string }[];
 }[];
 
-function Honey() {
+type Props = {
+  recipeData: recipeMaterial[];
+};
+
+function Recipe({ recipeData }: Props) {
   const [materialValueCheck, setMaterialValueCheck] = useState<userMatValues>();
   const [craftableCheck, setCraftableCheck] = useState(false);
 
@@ -23,7 +27,7 @@ function Honey() {
     let finalSubValue = "";
     let finalUserSubValue = "";
 
-    maskRecipes[0].honey.forEach((item) => {
+    recipeData.forEach((item) => {
       userInventoryValue = Number(
         JSON.parse(localStorage.getItem(item.material) || "0")
       );
@@ -95,7 +99,7 @@ function Honey() {
   return (
     <div className="item-display-container">
       <div>
-        {maskRecipes[0].honey.map((item, index) => {
+        {recipeData.map((item, index) => {
           return (
             <div key={index} className="item-display-recipe-container">
               <div className="item-display-recipe">
@@ -117,7 +121,7 @@ function Honey() {
               </div>
               {materialValueCheck &&
                 materialValueCheck[index].subValues.length > 0 && (
-                  <HoneySub
+                  <SubRecipeDisplay
                     item={item}
                     subIndex={index}
                     materialValueCheck={materialValueCheck}
@@ -133,4 +137,4 @@ function Honey() {
   );
 }
 
-export default Honey;
+export default Recipe;

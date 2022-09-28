@@ -12,7 +12,7 @@ type Props = {
   subValueCraftableCheck: (check: boolean) => void;
 };
 
-function HoneySub({
+function SubRecipeDisplay({
   item,
   subIndex,
   materialValueCheck,
@@ -79,4 +79,4 @@ function HoneySub({
   );
 }
 
-export default HoneySub;
+export default SubRecipeDisplay;
