@@ -76,7 +76,7 @@ export const inventoryItems: itemTypes = [
     image: "Turpentine.png",
   },
   {
-    name: "Super Smoothie",
+    name: "Super Smoothies",
     image: "SuperSmoothie.png",
   },
 ];
@@ -505,14 +505,19 @@ export const toolRecipes: recipe = [
             value: 25,
             image: "NeonBerries.png",
           },
+          {
+            material: "Royal Jelly",
+            value: 5252,
+            image: "RoyalJelly.png",
+          },
         ],
       },
       {
-        material: "Star Jelly",
+        material: "Super Smoothies",
         value: 10,
-        image: "StarJelly.png",
+        image: "SuperSmoothie.png",
       },
-      { material: "Spirit Petal", value: 1, image: "SpiritPetal.png" },
+      { material: "Turpentine", value: 5, image: "Turpentine.png" },
     ],
   },
   {
