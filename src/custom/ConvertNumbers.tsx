@@ -2,8 +2,6 @@ function ConvertNumbers(number: string) {
   let newNumber = number.match(/\d+/g)?.join();
   let finalNumber = "";
 
-  console.log(number);
-
   if (/^\d+$/.test(number)) {
     finalNumber = number;
   }

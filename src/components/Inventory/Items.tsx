@@ -25,8 +25,6 @@ function Items() {
       finalValue =
         numberAbbreviation?.slice(0, 4) + letterAbbreviation?.slice(0, 1);
 
-      console.log(finalValue);
-
       return localStorage.setItem(name, JSON.stringify(finalValue));
     }
 
@@ -56,6 +54,13 @@ function Items() {
     initialItemQuantity();
   }, []);
 
+  const resetItemValues = () => {
+    inventoryItems.forEach((item) => {
+      localStorage.setItem(item.name, JSON.stringify("0"));
+    });
+    setItemQuantity([]);
+  };
+
   return (
     <div className="inventory-items-container">
       <div className="inventory-items-content-container">
@@ -82,7 +87,9 @@ function Items() {
           );
         })}
       </div>
-      <div>Reset</div>
+      <div className="inventory-reset-button" onClick={resetItemValues}>
+        Reset
+      </div>
     </div>
   );
 }

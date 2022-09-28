@@ -55,6 +55,13 @@ function Materials() {
     initialItemQuantity();
   }, []);
 
+  const resetItemValues = () => {
+    inventoryMaterials.forEach((item) => {
+      localStorage.setItem(item.name, JSON.stringify("0"));
+    });
+    setItemQuantity([]);
+  };
+
   return (
     <div className="inventory-items-container">
       <div className="inventory-items-content-container">
@@ -81,7 +88,9 @@ function Materials() {
           );
         })}
       </div>
-      <div>Reset</div>
+      <div className="inventory-reset-button" onClick={resetItemValues}>
+        Reset
+      </div>
     </div>
   );
 }
