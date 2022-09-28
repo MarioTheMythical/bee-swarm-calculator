@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { maskRecipes, tools } from "libs/data";
+import { toolRecipes, tools } from "libs/data";
 import Recipe from "../RecipeDisplays/Recipe";
 import ItemSelection from "../ItemSelection";
 import { recipeMaterial } from "libs/types";
@@ -7,22 +7,22 @@ import { recipeMaterial } from "libs/types";
 function Tools() {
   const [toolSelection, setToolSelection] = useState(0);
   const [recipeData, setRecipeData] = useState<recipeMaterial[]>(
-    maskRecipes[0].honey
+    toolRecipes[0].petal
   );
 
   useEffect(() => {
     switch (toolSelection) {
       case 0:
-        return setRecipeData(maskRecipes[0].honey);
+        return setRecipeData(toolRecipes[0].petal);
 
       case 1:
-        return setRecipeData(maskRecipes[1].gummy);
+        return setRecipeData(toolRecipes[1].gummy);
 
       case 2:
-        return setRecipeData(maskRecipes[2].diamond);
+        return setRecipeData(toolRecipes[2].tide);
 
       case 3:
-        return setRecipeData(maskRecipes[3].demon);
+        return setRecipeData(toolRecipes[3].dark);
     }
   }, [toolSelection]);
 

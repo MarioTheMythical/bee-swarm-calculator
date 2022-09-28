@@ -419,16 +419,16 @@ export const toolRecipes: recipe = [
   {
     petal: [
       { material: "Honey", value: 1500000000, image: "Honey.png" },
-      { material: "Spirit Petal", value: 1, image: "SpiritPetal.png" },
+
       {
-        material: "Oil",
-        value: 50,
-        image: "Oil.png",
+        material: "Enzymes",
+        value: 75,
+        image: "Enzymes.png",
         subRecipe: [
           {
-            material: "Sunflower Seeds",
+            material: "Pineapples",
             value: 50,
-            image: "SunflowerSeeds.png",
+            image: "Pineapples.png",
           },
           {
             material: "Royal Jelly",
@@ -437,6 +437,29 @@ export const toolRecipes: recipe = [
           },
         ],
       },
+      {
+        material: "Glitter",
+        value: 100,
+        image: "Glitter.png",
+        subRecipe: [
+          {
+            material: "Moon Charms",
+            value: 25,
+            image: "Moon.png",
+          },
+          {
+            material: "Magic Bean",
+            value: 1,
+            image: "MagicBean.png",
+          },
+        ],
+      },
+      {
+        material: "Star Jelly",
+        value: 10,
+        image: "StarJelly.png",
+      },
+      { material: "Spirit Petal", value: 1, image: "SpiritPetal.png" },
     ],
   },
 ];
