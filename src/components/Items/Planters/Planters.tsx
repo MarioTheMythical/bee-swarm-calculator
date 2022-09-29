@@ -26,6 +26,9 @@ function Boots() {
 
       case 4:
         return setRecipeData(planterRecipes[4].pesticide);
+
+      case 5:
+        return setRecipeData(planterRecipes[5].petal);
     }
   }, [planterSelection]);
 

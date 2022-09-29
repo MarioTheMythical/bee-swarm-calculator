@@ -1764,4 +1764,82 @@ export const planterRecipes: recipe = [
       { material: "Magic Beans", value: 25, image: "MagicBean.png" },
     ],
   },
+  {
+    petal: [
+      { material: "Honey", value: 5000000000000, image: "Honey.png" },
+      { material: "Neonberries", value: 25, image: "NeonBerries.png" },
+      {
+        material: "Glue",
+        value: 15,
+        image: "Glue.png",
+        subRecipe: [
+          {
+            material: "Gumdrops",
+            value: 50,
+            image: "Gumdrops.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Hard Wax",
+        value: 5,
+        image: "HardWax.png",
+        subRecipe: [
+          {
+            material: "Bitterberries",
+            value: 33,
+            image: "Bitterberries.png",
+          },
+          {
+            material: "Soft Wax",
+            value: 3,
+            image: "SoftWax.png",
+          },
+          {
+            material: "Enzymes",
+            value: 1,
+            image: "Enzymes.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 33,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Caustic Wax",
+        value: 3,
+        image: "CausticWax.png",
+        subRecipe: [
+          {
+            material: "Neonberries",
+            value: 25,
+            image: "NeonBerries.png",
+          },
+          {
+            material: "Hard Wax",
+            value: 5,
+            image: "HardWax.png",
+          },
+          {
+            material: "Enzymes",
+            value: 5,
+            image: "Enzymes.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 5252,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      { material: "Magic Beans", value: 100, image: "MagicBean.png" },
+    ],
+  },
 ];
