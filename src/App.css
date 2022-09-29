@@ -47,22 +47,27 @@ input[type="number"] {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 10px;
-  background-color: rgb(153, 32, 177);
+  padding: 10px 0px 10px 0px;
+  margin: 10px 0px 10px 0px;
 }
 
 .item-select-text {
+  text-align: center;
   cursor: pointer;
   margin: 5px 5px 5px 5px;
-  padding: 8px;
+  padding: 5px 5px 10px 5px;
   border-radius: 5px;
   min-width: 80px;
-  background-color: rgb(21, 84, 89);
+  background-color: rgb(55, 113, 168);
   transition: 100ms;
 }
 
 .item-select-text:hover {
-  background-color: rgb(97, 190, 190);
+  background-color: rgb(42, 93, 141);
+}
+
+.item-select-text:active {
+  background-color: rgb(27, 61, 93);
 }
 
 /* ITEM DISPLAY */

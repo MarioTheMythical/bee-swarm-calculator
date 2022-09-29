@@ -15,6 +15,7 @@ function Main() {
         <div className="main-title">Bee Swarm Sim Calculator</div>
         <div className="main-items-container">
           <ItemSelection
+            displaySelection={displaySelection}
             changeUserDisplaySelection={changeUserDisplaySelection}
           />
           <ItemDisplay displaySelection={displaySelection} />

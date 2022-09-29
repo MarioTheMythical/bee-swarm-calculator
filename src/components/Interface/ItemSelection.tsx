@@ -1,8 +1,12 @@
 type Props = {
+  displaySelection: number;
   changeUserDisplaySelection: (selection: number) => void;
 };
 
-function ItemSelection({ changeUserDisplaySelection }: Props) {
+function ItemSelection({
+  displaySelection,
+  changeUserDisplaySelection,
+}: Props) {
   const items = [
     "Inventory",
     "Tools",
@@ -19,7 +23,11 @@ function ItemSelection({ changeUserDisplaySelection }: Props) {
         return (
           <div
             key={index}
-            className="item-select-text"
+            className={
+              displaySelection === index
+                ? "item-select-text inventory-selected"
+                : "item-select-text"
+            }
             onClick={() => changeUserDisplaySelection(index)}
           >
             {item}
