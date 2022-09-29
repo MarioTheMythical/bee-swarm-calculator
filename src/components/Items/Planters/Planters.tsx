@@ -16,10 +16,16 @@ function Boots() {
         return setRecipeData(planterRecipes[0].candy);
 
       case 1:
-        return setRecipeData(planterRecipes[1].coconut);
+        return setRecipeData(planterRecipes[1].blue);
 
       case 2:
-        return setRecipeData(planterRecipes[2].gummy);
+        return setRecipeData(planterRecipes[2].red);
+
+      case 3:
+        return setRecipeData(planterRecipes[3].tacky);
+
+      case 4:
+        return setRecipeData(planterRecipes[4].pesticide);
     }
   }, [planterSelection]);
 

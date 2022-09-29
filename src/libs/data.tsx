@@ -101,12 +101,16 @@ export const inventoryMaterials: itemTypes = [
     image: "SunflowerSeeds.png",
   },
   {
-    name: "Coconuts",
-    image: "Coconuts.png",
+    name: "Neonberries",
+    image: "NeonBerries.png",
   },
   {
-    name: "Magic Bean",
-    image: "MagicBean.png",
+    name: "Bitterberries",
+    image: "Bitterberries.png",
+  },
+  {
+    name: "Coconuts",
+    image: "Coconuts.png",
   },
   {
     name: "Moon Charms",
@@ -117,24 +121,24 @@ export const inventoryMaterials: itemTypes = [
     image: "Treats.png",
   },
   {
+    name: "Stingers",
+    image: "Stingers.png",
+  },
+  {
+    name: "Honeysuckle",
+    image: "HoneySuckle.png",
+  },
+  {
+    name: "Magic Bean",
+    image: "MagicBean.png",
+  },
+  {
     name: "Royal Jelly",
     image: "RoyalJelly.png",
   },
   {
     name: "Star Jelly",
     image: "StarJelly.png",
-  },
-  {
-    name: "Stingers",
-    image: "Stingers.png",
-  },
-  {
-    name: "Neon Berries",
-    image: "NeonBerries.png",
-  },
-  {
-    name: "Honey Suckle",
-    image: "HoneySuckle.png",
   },
   {
     name: "Gold Eggs",
@@ -506,7 +510,7 @@ export const toolRecipes: recipe = [
             image: "Enzymes.png",
           },
           {
-            material: "Neon Berries",
+            material: "Neonberries",
             value: 25,
             image: "NeonBerries.png",
           },
@@ -523,7 +527,7 @@ export const toolRecipes: recipe = [
         image: "SuperSmoothie.png",
         subRecipe: [
           {
-            material: "Neon Berries",
+            material: "Neonberries",
             value: 3,
             image: "NeonBerries.png",
           },
@@ -648,7 +652,7 @@ export const toolRecipes: recipe = [
         image: "SuperSmoothie.png",
         subRecipe: [
           {
-            material: "Neon Berries",
+            material: "Neonberries",
             value: 3,
             image: "NeonBerries.png",
           },
@@ -708,7 +712,7 @@ export const toolRecipes: recipe = [
             image: "Enzymes.png",
           },
           {
-            material: "Neon Berries",
+            material: "Neonberries",
             value: 33,
             image: "NeonBerries.png",
           },
@@ -735,7 +739,7 @@ export const toolRecipes: recipe = [
             image: "Enzymes.png",
           },
           {
-            material: "Neon Berries",
+            material: "Neonberries",
             value: 25,
             image: "NeonBerries.png",
           },
@@ -752,7 +756,7 @@ export const toolRecipes: recipe = [
         image: "SuperSmoothie.png",
         subRecipe: [
           {
-            material: "Neon Berries",
+            material: "Neonberries",
             value: 3,
             image: "NeonBerries.png",
           },
@@ -1442,135 +1446,26 @@ export const planters: itemTypes = [
 export const planterRecipes: recipe = [
   {
     candy: [
-      { material: "Honey", value: 15000000, image: "Honey.png" },
+      { material: "Honey", value: 5000000, image: "Honey.png" },
       {
-        material: "Red Extract",
+        material: "Soft Wax",
         value: 3,
-        image: "RedExtract.png",
+        image: "SoftWax.png",
         subRecipe: [
           {
-            material: "Strawberries",
-            value: 50,
-            image: "Strawberries.png",
-          },
-          {
-            material: "Royal Jelly",
-            value: 10,
-            image: "RoyalJelly.png",
-          },
-        ],
-      },
-      {
-        material: "Blue Extract",
-        value: 3,
-        image: "BlueExtract.png",
-        subRecipe: [
-          {
-            material: "Blueberries",
-            value: 50,
-            image: "Blueberries.png",
-          },
-          {
-            material: "Royal Jelly",
-            value: 10,
-            image: "RoyalJelly.png",
-          },
-        ],
-      },
-      {
-        material: "Oil",
-        value: 5,
-        image: "Oil.png",
-        subRecipe: [
-          {
-            material: "Sunflower Seeds",
-            value: 50,
-            image: "SunflowerSeeds.png",
-          },
-          {
-            material: "Royal Jelly",
-            value: 10,
-            image: "RoyalJelly.png",
-          },
-        ],
-      },
-      { material: "Stingers", value: 10, image: "Stingers.png" },
-    ],
-  },
-  {
-    coconut: [
-      { material: "Honey", value: 10000000000, image: "Honey.png" },
-      { material: "Coconuts", value: 150, image: "Coconuts.png" },
-      {
-        material: "Glue",
-        value: 100,
-        image: "Glue.png",
-        subRecipe: [
-          {
-            material: "Gumdrops",
-            value: 50,
-            image: "Gumdrops.png",
-          },
-          {
-            material: "Royal Jelly",
-            value: 10,
-            image: "RoyalJelly.png",
-          },
-        ],
-      },
-      {
-        material: "Oil",
-        value: 100,
-        image: "Oil.png",
-        subRecipe: [
-          {
-            material: "Sunflower Seeds",
-            value: 50,
-            image: "SunflowerSeeds.png",
-          },
-          {
-            material: "Royal Jelly",
-            value: 10,
-            image: "RoyalJelly.png",
-          },
-        ],
-      },
-      {
-        material: "Tropical Drink",
-        value: 50,
-        image: "TropicalDrink.png",
-        subRecipe: [
-          {
-            material: "Coconuts",
-            value: 10,
-            image: "Coconuts.png",
+            material: "Honeysuckle",
+            value: 5,
+            image: "HoneySuckle.png",
           },
           {
             material: "Oil",
-            value: 2,
+            value: 1,
             image: "Oil.png",
           },
           {
             material: "Enzymes",
-            value: 2,
+            value: 1,
             image: "Enzymes.png",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    gummy: [
-      { material: "Honey", value: 100000000000, image: "Honey.png" },
-      {
-        material: "Red Extract",
-        value: 250,
-        image: "RedExtract.png",
-        subRecipe: [
-          {
-            material: "Strawberries",
-            value: 50,
-            image: "Strawberries.png",
           },
           {
             material: "Royal Jelly",
@@ -1580,8 +1475,36 @@ export const planterRecipes: recipe = [
         ],
       },
       {
+        material: "Gumdrops",
+        value: 30,
+        image: "Gumdrops.png",
+        subRecipe: [
+          {
+            material: "Blueberries",
+            value: 3,
+            image: "Blueberries.png",
+          },
+          {
+            material: "Strawberries",
+            value: 3,
+            image: "Strawberries.png",
+          },
+          {
+            material: "Pineapples",
+            value: 3,
+            image: "Pineapples.png",
+          },
+        ],
+      },
+      { material: "Magic Beans", value: 5, image: "MagicBean.png" },
+    ],
+  },
+  {
+    blue: [
+      { material: "Honey", value: 10000000, image: "Honey.png" },
+      {
         material: "Blue Extract",
-        value: 250,
+        value: 15,
         image: "BlueExtract.png",
         subRecipe: [
           {
@@ -1597,8 +1520,179 @@ export const planterRecipes: recipe = [
         ],
       },
       {
+        material: "Soft Wax",
+        value: 20,
+        image: "SoftWax.png",
+        subRecipe: [
+          {
+            material: "Honeysuckle",
+            value: 5,
+            image: "HoneySuckle.png",
+          },
+          {
+            material: "Oil",
+            value: 1,
+            image: "Oil.png",
+          },
+          {
+            material: "Enzymes",
+            value: 1,
+            image: "Enzymes.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      { material: "Magic Beans", value: 5, image: "MagicBean.png" },
+    ],
+  },
+  {
+    red: [
+      { material: "Honey", value: 10000000, image: "Honey.png" },
+      {
+        material: "Red Extract",
+        value: 15,
+        image: "RedExtract.png",
+        subRecipe: [
+          {
+            material: "Strawberries",
+            value: 50,
+            image: "Strawberries.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Soft Wax",
+        value: 20,
+        image: "SoftWax.png",
+        subRecipe: [
+          {
+            material: "Honeysuckle",
+            value: 5,
+            image: "HoneySuckle.png",
+          },
+          {
+            material: "Oil",
+            value: 1,
+            image: "Oil.png",
+          },
+          {
+            material: "Enzymes",
+            value: 1,
+            image: "Enzymes.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      { material: "Magic Beans", value: 5, image: "MagicBean.png" },
+    ],
+  },
+  {
+    tacky: [
+      { material: "Honey", value: 50000000, image: "Honey.png" },
+      {
+        material: "Soft Wax",
+        value: 20,
+        image: "SoftWax.png",
+        subRecipe: [
+          {
+            material: "Honeysuckle",
+            value: 5,
+            image: "HoneySuckle.png",
+          },
+          {
+            material: "Oil",
+            value: 1,
+            image: "Oil.png",
+          },
+          {
+            material: "Enzymes",
+            value: 1,
+            image: "Enzymes.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Hard Wax",
+        value: 5,
+        image: "HardWax.png",
+        subRecipe: [
+          {
+            material: "Bitterberries",
+            value: 33,
+            image: "Bitterberries.png",
+          },
+          {
+            material: "Soft Wax",
+            value: 3,
+            image: "SoftWax.png",
+          },
+          {
+            material: "Enzymes",
+            value: 1,
+            image: "Enzymes.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 33,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Purple Potion",
+        value: 1,
+        image: "PurplePotion.png",
+        subRecipe: [
+          {
+            material: "Neonberries",
+            value: 3,
+            image: "NeonBerries.png",
+          },
+          {
+            material: "Red Extract",
+            value: 3,
+            image: "RedExtract.png",
+          },
+          {
+            material: "Blue Extract",
+            value: 3,
+            image: "BlueExtract.png",
+          },
+          {
+            material: "Glue",
+            value: 3,
+            image: "Glue.png",
+          },
+        ],
+      },
+      { material: "Magic Beans", value: 10, image: "MagicBean.png" },
+    ],
+  },
+  {
+    pesticide: [
+      { material: "Honey", value: 750000000, image: "Honey.png" },
+      { material: "Neonberries", value: 25, image: "NeonBerries.png" },
+      {
         material: "Glue",
-        value: 500,
+        value: 15,
         image: "Glue.png",
         subRecipe: [
           {
@@ -1614,22 +1708,60 @@ export const planterRecipes: recipe = [
         ],
       },
       {
-        material: "Glitter",
-        value: 250,
-        image: "Glitter.png",
+        material: "Hard Wax",
+        value: 5,
+        image: "HardWax.png",
         subRecipe: [
           {
-            material: "Moon Charms",
-            value: 25,
-            image: "Moon.png",
+            material: "Bitterberries",
+            value: 33,
+            image: "Bitterberries.png",
           },
           {
-            material: "Magic Bean",
+            material: "Soft Wax",
+            value: 3,
+            image: "SoftWax.png",
+          },
+          {
+            material: "Enzymes",
             value: 1,
-            image: "MagicBean.png",
+            image: "Enzymes.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 33,
+            image: "RoyalJelly.png",
           },
         ],
       },
+      {
+        material: "Caustic Wax",
+        value: 3,
+        image: "CausticWax.png",
+        subRecipe: [
+          {
+            material: "Neonberries",
+            value: 25,
+            image: "NeonBerries.png",
+          },
+          {
+            material: "Hard Wax",
+            value: 5,
+            image: "HardWax.png",
+          },
+          {
+            material: "Enzymes",
+            value: 5,
+            image: "Enzymes.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 5252,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      { material: "Magic Beans", value: 25, image: "MagicBean.png" },
     ],
   },
 ];
