@@ -37,7 +37,7 @@ function Boots() {
   };
 
   return (
-    <div className="masks-container">
+    <div className="items-container">
       <ItemSelection
         itemData={planters}
         itemSelection={planterSelection}

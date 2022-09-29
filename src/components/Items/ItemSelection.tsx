@@ -12,7 +12,13 @@ function ItemSelection({
   changeItemSelection,
 }: Props) {
   return (
-    <div className="items-titles-container">
+    <div
+      className={
+        itemData.length > 5
+          ? "items-titles-container items-planters"
+          : "items-titles-container"
+      }
+    >
       {itemData.map((item, index) => {
         return (
           <div
@@ -20,7 +26,7 @@ function ItemSelection({
             className={
               itemSelection === index
                 ? "items-titles items-titles-selected"
-                : "items-titles"
+                : "items-titles "
             }
             onClick={() => changeItemSelection(index)}
           >

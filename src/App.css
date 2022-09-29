@@ -174,15 +174,13 @@ input[type="number"] {
   background-color: green;
 }
 
-/* MASKS DISPLAY */
-
-.masks-container {
-  padding: 0px 3px 0px 3px;
-}
-
 /* GLOBAL STYLES */
 
 /* ITEM TITLES */
+
+.items-container {
+  padding: 0px 3px 0px 3px;
+}
 
 .items-titles-container {
   display: flex;
@@ -190,6 +188,10 @@ input[type="number"] {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+}
+
+.items-planters {
+  justify-content: space-around;
 }
 
 .items-titles {
