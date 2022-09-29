@@ -1,7 +1,42 @@
-import React from "react";
+import { useState, useEffect } from "react";
+import { planterRecipes, boots, planters } from "libs/data";
+import Recipe from "../RecipeDisplays/Recipe";
+import ItemSelection from "../ItemSelection";
+import { recipeMaterial } from "libs/types";
 
-function Planters() {
-  return <div>Planters</div>;
+function Boots() {
+  const [planterSelection, setPlanterSelection] = useState(0);
+  const [recipeData, setRecipeData] = useState<recipeMaterial[]>(
+    planterRecipes[0].candy
+  );
+
+  useEffect(() => {
+    switch (planterSelection) {
+      case 0:
+        return setRecipeData(planterRecipes[0].candy);
+
+      case 1:
+        return setRecipeData(planterRecipes[1].coconut);
+
+      case 2:
+        return setRecipeData(planterRecipes[2].gummy);
+    }
+  }, [planterSelection]);
+
+  const changePlanterSelection = (selection: number) => {
+    setPlanterSelection(selection);
+  };
+
+  return (
+    <div className="masks-container">
+      <ItemSelection
+        itemData={planters}
+        itemSelection={planterSelection}
+        changeItemSelection={changePlanterSelection}
+      />
+      <Recipe recipeData={recipeData} />
+    </div>
+  );
 }
 
-export default Planters;
+export default Boots;

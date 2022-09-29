@@ -180,7 +180,11 @@ input[type="number"] {
   padding: 0px 3px 0px 3px;
 }
 
-.masks-title-container {
+/* GLOBAL STYLES */
+
+/* ITEM TITLES */
+
+.items-titles-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -188,17 +192,15 @@ input[type="number"] {
   width: 100%;
 }
 
-/* GLOBAL STYLES */
-
-/* ITEM TITLES */
-
 .items-titles {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 20%;
+  min-width: 150px;
+  min-height: 50px;
   padding: 6px 11px 6px 11px;
-  margin-bottom: 5px;
+  margin: 0px 5px 5px 0px;
   background-color: rgb(55, 113, 168);
   border-radius: 5px;
   transition: 100ms;
@@ -215,6 +217,10 @@ input[type="number"] {
 
 .items-titles-selected {
   background-color: rgb(30, 76, 116);
+}
+
+.items-content {
+  padding: 10px;
 }
 
 /* ITEM RECIPE DISPLAY */
@@ -293,11 +299,15 @@ input[type="number"] {
   }
   .items-content {
     content: "";
+    padding: 0px;
   }
   .item-display-subcontent span {
     display: none;
   }
   .item-display-subcontent {
     content: "";
+  }
+  .items-titles {
+    min-width: 0px;
   }
 }

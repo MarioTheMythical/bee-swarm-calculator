@@ -346,7 +346,6 @@ export const maskRecipes: recipe = [
   {
     demon: [
       { material: "Honey", value: 5000000000, image: "Honey.png" },
-      { material: "Stingers", value: 500, image: "Stingers.png" },
       {
         material: "Red Extract",
         value: 250,
@@ -356,23 +355,6 @@ export const maskRecipes: recipe = [
             material: "Strawberries",
             value: 50,
             image: "Strawberries.png",
-          },
-          {
-            material: "Royal Jelly",
-            value: 10,
-            image: "RoyalJelly.png",
-          },
-        ],
-      },
-      {
-        material: "Enzymes",
-        value: 150,
-        image: "Enzymes.png",
-        subRecipe: [
-          {
-            material: "Pineapples",
-            value: 50,
-            image: "Pineapples.png",
           },
           {
             material: "Royal Jelly",
@@ -398,6 +380,25 @@ export const maskRecipes: recipe = [
           },
         ],
       },
+      {
+        material: "Enzymes",
+        value: 150,
+        image: "Enzymes.png",
+        subRecipe: [
+          {
+            material: "Pineapples",
+            value: 50,
+            image: "Pineapples.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+
+      { material: "Stingers", value: 500, image: "Stingers.png" },
     ],
   },
 ];
@@ -575,7 +576,6 @@ export const toolRecipes: recipe = [
   {
     tide: [
       { material: "Honey", value: 2500000000000, image: "Honey.png" },
-      { material: "Stingers", value: 200, image: "Stingers.png" },
       {
         material: "Blue Extract",
         value: 1500,
@@ -669,12 +669,12 @@ export const toolRecipes: recipe = [
           },
         ],
       },
+      { material: "Stingers", value: 200, image: "Stingers.png" },
     ],
   },
   {
     scythe: [
       { material: "Honey", value: 2500000000000, image: "Honey.png" },
-      { material: "Stingers", value: 200, image: "Stingers.png" },
       {
         material: "Red Extract",
         value: 1500,
@@ -770,6 +770,863 @@ export const toolRecipes: recipe = [
             material: "Star Jelly",
             value: 3,
             image: "StarJelly.png",
+          },
+        ],
+      },
+      { material: "Stingers", value: 200, image: "Stingers.png" },
+    ],
+  },
+];
+
+// BAGS //
+
+export const bags: itemTypes = [
+  {
+    name: "Coconut Canister",
+    image: "CoconutCanister.png",
+  },
+];
+
+export const bagRecipes: recipe = [
+  {
+    coconut: [
+      { material: "Honey", value: 25000000000, image: "Honey.png" },
+      { material: "Coconuts", value: 150, image: "Coconuts.png" },
+
+      {
+        material: "Red Extract",
+        value: 150,
+        image: "RedExtract.png",
+        subRecipe: [
+          {
+            material: "Strawberries",
+            value: 50,
+            image: "Strawberries.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Blue Extract",
+        value: 150,
+        image: "BlueExtract.png",
+        subRecipe: [
+          {
+            material: "Blueberries",
+            value: 50,
+            image: "Blueberries.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Tropical Drink",
+        value: 50,
+        image: "TropicalDrink.png",
+        subRecipe: [
+          {
+            material: "Coconuts",
+            value: 10,
+            image: "Coconuts.png",
+          },
+          {
+            material: "Oil",
+            value: 2,
+            image: "Oil.png",
+          },
+          {
+            material: "Enzymes",
+            value: 2,
+            image: "Enzymes.png",
+          },
+        ],
+      },
+    ],
+  },
+];
+
+// GUARDS //
+
+export const guards: itemTypes = [
+  {
+    name: "Bucko",
+    image: "BuckoGuard.png",
+  },
+  {
+    name: "Riley",
+    image: "RileyGuard.png",
+  },
+  {
+    name: "Cobalt",
+    image: "CobaltGuard.png",
+  },
+  {
+    name: "Crimson",
+    image: "CrimsonGuard.png",
+  },
+];
+
+export const guardRecipes: recipe = [
+  {
+    bucko: [
+      { material: "Honey", value: 30000000, image: "Honey.png" },
+      { material: "Blueberries", value: 100, image: "Blueberries.png" },
+      {
+        material: "Blue Extract",
+        value: 10,
+        image: "BlueExtract.png",
+        subRecipe: [
+          {
+            material: "Blueberries",
+            value: 50,
+            image: "Blueberries.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Glue",
+        value: 5,
+        image: "Glue.png",
+        subRecipe: [
+          {
+            material: "Gumdrops",
+            value: 50,
+            image: "Gumdrops.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      { material: "Moon Charms", value: 75, image: "Moon.png" },
+    ],
+  },
+  {
+    riley: [
+      { material: "Honey", value: 30000000, image: "Honey.png" },
+      { material: "Strawberries", value: 100, image: "Strawberries.png" },
+      {
+        material: "Red Extract",
+        value: 10,
+        image: "RedExtract.png",
+        subRecipe: [
+          {
+            material: "Strawberries",
+            value: 50,
+            image: "Strawberries.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Glue",
+        value: 5,
+        image: "Glue.png",
+        subRecipe: [
+          {
+            material: "Gumdrops",
+            value: 50,
+            image: "Gumdrops.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      { material: "Stingers", value: 25, image: "Stingers.png" },
+    ],
+  },
+  {
+    cobalt: [
+      { material: "Honey", value: 200000000, image: "Honey.png" },
+      {
+        material: "Blue Extract",
+        value: 10,
+        image: "BlueExtract.png",
+        subRecipe: [
+          {
+            material: "Blueberries",
+            value: 50,
+            image: "Blueberries.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Enzymes",
+        value: 50,
+        image: "Enzymes.png",
+        subRecipe: [
+          {
+            material: "Pineapples",
+            value: 50,
+            image: "Pineapples.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Glitter",
+        value: 25,
+        image: "Glitter.png",
+        subRecipe: [
+          {
+            material: "Moon Charms",
+            value: 25,
+            image: "Moon.png",
+          },
+          {
+            material: "Magic Bean",
+            value: 1,
+            image: "MagicBean.png",
+          },
+        ],
+      },
+      { material: "Stingers", value: 100, image: "Stingers.png" },
+    ],
+  },
+  {
+    crimson: [
+      { material: "Honey", value: 200000000, image: "Honey.png" },
+      {
+        material: "Red Extract",
+        value: 10,
+        image: "RedExtract.png",
+        subRecipe: [
+          {
+            material: "Strawberries",
+            value: 50,
+            image: "Strawberries.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Oil",
+        value: 50,
+        image: "Oil.png",
+        subRecipe: [
+          {
+            material: "Sunflower Seeds",
+            value: 50,
+            image: "SunflowerSeeds.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Glitter",
+        value: 25,
+        image: "Glitter.png",
+        subRecipe: [
+          {
+            material: "Moon Charms",
+            value: 25,
+            image: "Moon.png",
+          },
+          {
+            material: "Magic Bean",
+            value: 1,
+            image: "MagicBean.png",
+          },
+        ],
+      },
+      { material: "Stingers", value: 100, image: "Stingers.png" },
+    ],
+  },
+];
+
+// BELTS //
+
+export const belts: itemTypes = [
+  {
+    name: "Mondo",
+    image: "MondoBelt.png",
+  },
+  {
+    name: "Honey",
+    image: "HoneycombBelt.png",
+  },
+  {
+    name: "Petal",
+    image: "PetalBelt.png",
+  },
+];
+
+export const beltRecipes: recipe = [
+  {
+    mondo: [
+      { material: "Honey", value: 12400000, image: "Honey.png" },
+      { material: "Pineapples", value: 150, image: "Pineapples.png" },
+      { material: "Sunflower Seeds", value: 150, image: "SunflowerSeeds.png" },
+      { material: "Stingers", value: 10, image: "Stingers.png" },
+    ],
+  },
+  {
+    honeycomb: [
+      { material: "Honey", value: 75000000, image: "Honey.png" },
+      {
+        material: "Glue",
+        value: 50,
+        image: "Glue.png",
+        subRecipe: [
+          {
+            material: "Gumdrops",
+            value: 50,
+            image: "Gumdrops.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Oil",
+        value: 25,
+        image: "Oil.png",
+        subRecipe: [
+          {
+            material: "Sunflower Seeds",
+            value: 50,
+            image: "SunflowerSeeds.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Enzymes",
+        value: 50,
+        image: "Enzymes.png",
+        subRecipe: [
+          {
+            material: "Pineapples",
+            value: 50,
+            image: "Pineapples.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    petal: [
+      { material: "Honey", value: 15000000000, image: "Honey.png" },
+      {
+        material: "Glue",
+        value: 100,
+        image: "Glue.png",
+        subRecipe: [
+          {
+            material: "Gumdrops",
+            value: 50,
+            image: "Gumdrops.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Glitter",
+        value: 50,
+        image: "Glitter.png",
+        subRecipe: [
+          {
+            material: "Moon Charms",
+            value: 25,
+            image: "Moon.png",
+          },
+          {
+            material: "Magic Bean",
+            value: 1,
+            image: "MagicBean.png",
+          },
+        ],
+      },
+      { material: "Star Jelly", value: 25, image: "StarJelly.png" },
+      { material: "Spirit Petal", value: 1, image: "SpiritPetal.png" },
+    ],
+  },
+];
+
+// BOOTS //
+
+export const boots: itemTypes = [
+  {
+    name: "Beekeeper",
+    image: "BeekeeperBoots.png",
+  },
+  {
+    name: "Coconut",
+    image: "CoconutClogs.png",
+  },
+  {
+    name: "Gummy",
+    image: "GummyBoots.png",
+  },
+];
+
+export const bootRecipes: recipe = [
+  {
+    beekeeper: [
+      { material: "Honey", value: 15000000, image: "Honey.png" },
+      {
+        material: "Red Extract",
+        value: 3,
+        image: "RedExtract.png",
+        subRecipe: [
+          {
+            material: "Strawberries",
+            value: 50,
+            image: "Strawberries.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Blue Extract",
+        value: 3,
+        image: "BlueExtract.png",
+        subRecipe: [
+          {
+            material: "Blueberries",
+            value: 50,
+            image: "Blueberries.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Oil",
+        value: 5,
+        image: "Oil.png",
+        subRecipe: [
+          {
+            material: "Sunflower Seeds",
+            value: 50,
+            image: "SunflowerSeeds.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      { material: "Stingers", value: 10, image: "Stingers.png" },
+    ],
+  },
+  {
+    coconut: [
+      { material: "Honey", value: 10000000000, image: "Honey.png" },
+      { material: "Coconuts", value: 150, image: "Coconuts.png" },
+      {
+        material: "Glue",
+        value: 100,
+        image: "Glue.png",
+        subRecipe: [
+          {
+            material: "Gumdrops",
+            value: 50,
+            image: "Gumdrops.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Oil",
+        value: 100,
+        image: "Oil.png",
+        subRecipe: [
+          {
+            material: "Sunflower Seeds",
+            value: 50,
+            image: "SunflowerSeeds.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Tropical Drink",
+        value: 50,
+        image: "TropicalDrink.png",
+        subRecipe: [
+          {
+            material: "Coconuts",
+            value: 10,
+            image: "Coconuts.png",
+          },
+          {
+            material: "Oil",
+            value: 2,
+            image: "Oil.png",
+          },
+          {
+            material: "Enzymes",
+            value: 2,
+            image: "Enzymes.png",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    gummy: [
+      { material: "Honey", value: 100000000000, image: "Honey.png" },
+      {
+        material: "Red Extract",
+        value: 250,
+        image: "RedExtract.png",
+        subRecipe: [
+          {
+            material: "Strawberries",
+            value: 50,
+            image: "Strawberries.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Blue Extract",
+        value: 250,
+        image: "BlueExtract.png",
+        subRecipe: [
+          {
+            material: "Blueberries",
+            value: 50,
+            image: "Blueberries.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Glue",
+        value: 500,
+        image: "Glue.png",
+        subRecipe: [
+          {
+            material: "Gumdrops",
+            value: 50,
+            image: "Gumdrops.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Glitter",
+        value: 250,
+        image: "Glitter.png",
+        subRecipe: [
+          {
+            material: "Moon Charms",
+            value: 25,
+            image: "Moon.png",
+          },
+          {
+            material: "Magic Bean",
+            value: 1,
+            image: "MagicBean.png",
+          },
+        ],
+      },
+    ],
+  },
+];
+
+// PLANTERS //
+
+export const planters: itemTypes = [
+  {
+    name: "Candy",
+    image: "CandyPlanter.png",
+  },
+  {
+    name: "Blue",
+    image: "BlueClayPlanter.png",
+  },
+  {
+    name: "Red",
+    image: "RedClayPlanter.png",
+  },
+  {
+    name: "Tacky",
+    image: "TackyPlanter.png",
+  },
+  {
+    name: "Pesticide",
+    image: "PesticidePlanter.png",
+  },
+  {
+    name: "Petal",
+    image: "PetalPlanter.png",
+  },
+];
+
+export const planterRecipes: recipe = [
+  {
+    candy: [
+      { material: "Honey", value: 15000000, image: "Honey.png" },
+      {
+        material: "Red Extract",
+        value: 3,
+        image: "RedExtract.png",
+        subRecipe: [
+          {
+            material: "Strawberries",
+            value: 50,
+            image: "Strawberries.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Blue Extract",
+        value: 3,
+        image: "BlueExtract.png",
+        subRecipe: [
+          {
+            material: "Blueberries",
+            value: 50,
+            image: "Blueberries.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Oil",
+        value: 5,
+        image: "Oil.png",
+        subRecipe: [
+          {
+            material: "Sunflower Seeds",
+            value: 50,
+            image: "SunflowerSeeds.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      { material: "Stingers", value: 10, image: "Stingers.png" },
+    ],
+  },
+  {
+    coconut: [
+      { material: "Honey", value: 10000000000, image: "Honey.png" },
+      { material: "Coconuts", value: 150, image: "Coconuts.png" },
+      {
+        material: "Glue",
+        value: 100,
+        image: "Glue.png",
+        subRecipe: [
+          {
+            material: "Gumdrops",
+            value: 50,
+            image: "Gumdrops.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Oil",
+        value: 100,
+        image: "Oil.png",
+        subRecipe: [
+          {
+            material: "Sunflower Seeds",
+            value: 50,
+            image: "SunflowerSeeds.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Tropical Drink",
+        value: 50,
+        image: "TropicalDrink.png",
+        subRecipe: [
+          {
+            material: "Coconuts",
+            value: 10,
+            image: "Coconuts.png",
+          },
+          {
+            material: "Oil",
+            value: 2,
+            image: "Oil.png",
+          },
+          {
+            material: "Enzymes",
+            value: 2,
+            image: "Enzymes.png",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    gummy: [
+      { material: "Honey", value: 100000000000, image: "Honey.png" },
+      {
+        material: "Red Extract",
+        value: 250,
+        image: "RedExtract.png",
+        subRecipe: [
+          {
+            material: "Strawberries",
+            value: 50,
+            image: "Strawberries.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Blue Extract",
+        value: 250,
+        image: "BlueExtract.png",
+        subRecipe: [
+          {
+            material: "Blueberries",
+            value: 50,
+            image: "Blueberries.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Glue",
+        value: 500,
+        image: "Glue.png",
+        subRecipe: [
+          {
+            material: "Gumdrops",
+            value: 50,
+            image: "Gumdrops.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Glitter",
+        value: 250,
+        image: "Glitter.png",
+        subRecipe: [
+          {
+            material: "Moon Charms",
+            value: 25,
+            image: "Moon.png",
+          },
+          {
+            material: "Magic Bean",
+            value: 1,
+            image: "MagicBean.png",
           },
         ],
       },

@@ -12,7 +12,7 @@ function ItemSelection({
   changeItemSelection,
 }: Props) {
   return (
-    <div className="masks-title-container">
+    <div className="items-titles-container">
       {itemData.map((item, index) => {
         return (
           <div
