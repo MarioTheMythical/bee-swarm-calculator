@@ -12,13 +12,7 @@ function ItemSelection({
   changeItemSelection,
 }: Props) {
   return (
-    <div
-      className={
-        itemData.length > 5
-          ? "items-titles-container items-planters"
-          : "items-titles-container"
-      }
-    >
+    <div className="items-titles-container">
       {itemData.map((item, index) => {
         return (
           <div
