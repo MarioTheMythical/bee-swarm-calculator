@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { planterRecipes, boots, planters } from "libs/data";
+import { planterRecipes, planters } from "libs/data";
 import Recipe from "../RecipeDisplays/Recipe";
 import ItemSelection from "../ItemSelection";
 import { recipeMaterial } from "libs/types";
