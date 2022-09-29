@@ -83,6 +83,8 @@ function Recipe({ recipeData }: Props) {
       }).length === 0
     ) {
       setCraftableCheck(true);
+    } else {
+      setCraftableCheck(false);
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps

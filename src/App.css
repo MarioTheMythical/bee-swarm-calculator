@@ -48,7 +48,6 @@ input[type="number"] {
   flex-wrap: wrap;
   justify-content: center;
   padding: 10px 0px 10px 0px;
-  margin: 10px 0px 10px 0px;
 }
 
 .item-select-text {
@@ -74,6 +73,7 @@ input[type="number"] {
 
 .display-container {
   width: 100%;
+  padding: 10px 0px 5px 0px;
   background-color: brown;
 }
 
@@ -212,7 +212,7 @@ input[type="number"] {
   min-width: 150px;
   min-height: 50px;
   padding: 6px 11px 6px 11px;
-  margin: 0px 5px 5px 0px;
+  margin: 0px 5px 5px 5px;
   background-color: rgb(55, 113, 168);
   border-radius: 5px;
   transition: 100ms;
@@ -241,6 +241,7 @@ input[type="number"] {
   margin-bottom: 5px;
   padding: 5px;
   border-radius: 5px;
+  margin: 5px;
   background-color: rgb(73, 192, 192);
 }
 

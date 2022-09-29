@@ -1496,7 +1496,7 @@ export const planterRecipes: recipe = [
           },
         ],
       },
-      { material: "Magic Beans", value: 5, image: "MagicBean.png" },
+      { material: "Magic Bean", value: 5, image: "MagicBean.png" },
     ],
   },
   {
@@ -1546,7 +1546,7 @@ export const planterRecipes: recipe = [
           },
         ],
       },
-      { material: "Magic Beans", value: 5, image: "MagicBean.png" },
+      { material: "Magic Bean", value: 5, image: "MagicBean.png" },
     ],
   },
   {
@@ -1596,7 +1596,7 @@ export const planterRecipes: recipe = [
           },
         ],
       },
-      { material: "Magic Beans", value: 5, image: "MagicBean.png" },
+      { material: "Magic Bean", value: 5, image: "MagicBean.png" },
     ],
   },
   {
@@ -1683,7 +1683,7 @@ export const planterRecipes: recipe = [
           },
         ],
       },
-      { material: "Magic Beans", value: 10, image: "MagicBean.png" },
+      { material: "Magic Bean", value: 10, image: "MagicBean.png" },
     ],
   },
   {
@@ -1761,7 +1761,7 @@ export const planterRecipes: recipe = [
           },
         ],
       },
-      { material: "Magic Beans", value: 25, image: "MagicBean.png" },
+      { material: "Magic Bean", value: 25, image: "MagicBean.png" },
     ],
   },
   {
@@ -1833,7 +1833,7 @@ export const planterRecipes: recipe = [
             image: "Moon.png",
           },
           {
-            material: "Magic Beans",
+            material: "Magic Bean",
             value: 1,
             image: "MagicBean.png",
           },
@@ -1861,7 +1861,7 @@ export const planterRecipes: recipe = [
           },
         ],
       },
-      { material: "Magic Beans", value: 100, image: "MagicBean.png" },
+      { material: "Magic Bean", value: 100, image: "MagicBean.png" },
     ],
   },
 ];
