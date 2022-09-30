@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { ThemeContext } from "components/Interface/Main";
 import SubRecipeDisplay from "./SubRecipeDisplay";
 import abbreviateNumbers from "custom/AbbreviateNumbers";
 import { recipeMaterial } from "libs/types";
@@ -17,6 +18,7 @@ type Props = {
 function Recipe({ recipeData }: Props) {
   const [materialValueCheck, setMaterialValueCheck] = useState<userMatValues>();
   const [craftableCheck, setCraftableCheck] = useState(false);
+  const theme = useContext(ThemeContext);
 
   // Checks inital user values from local storage and compares if > or = to required amount
   useEffect(() => {
@@ -100,12 +102,22 @@ function Recipe({ recipeData }: Props) {
   };
 
   return (
-    <div className="item-display-container">
+    <div
+      className={
+        theme ? "item-display-container dark-display" : "item-display-container"
+      }
+    >
       <div>
         {recipeData.map((item, index) => {
           return (
             <div key={index} className="item-display-recipe-container">
-              <div className="item-display-recipe">
+              <div
+                className={
+                  theme
+                    ? "item-display-recipe dark-description"
+                    : "item-display-recipe"
+                }
+              >
                 <img
                   className="item-display-content"
                   src={require(`images/${item.image}`)}

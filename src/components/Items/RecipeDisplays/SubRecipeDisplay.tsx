@@ -1,5 +1,6 @@
+import { useEffect, useContext } from "react";
+import { ThemeContext } from "components/Interface/Main";
 import { recipeMaterial } from "libs/types";
-import { useEffect } from "react";
 
 type Props = {
   item: recipeMaterial;
@@ -18,6 +19,8 @@ function SubRecipeDisplay({
   materialValueCheck,
   subValueCraftableCheck,
 }: Props) {
+  const theme = useContext(ThemeContext);
+
   useEffect(() => {
     let finalSubCheck: string[] = [];
     let subCheck = materialValueCheck.filter((item) => {
@@ -44,7 +47,13 @@ function SubRecipeDisplay({
   }, [materialValueCheck, subValueCraftableCheck]);
 
   return (
-    <div className="item-display-subrecipe">
+    <div
+      className={
+        theme
+          ? "item-display-subrecipe dark-description"
+          : "item-display-subrecipe"
+      }
+    >
       {item.subRecipe?.map((item, index) => {
         return (
           <div key={index} className="item-display-subrecipe-content">
