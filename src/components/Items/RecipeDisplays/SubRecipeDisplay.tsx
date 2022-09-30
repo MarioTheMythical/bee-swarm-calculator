@@ -79,7 +79,7 @@ function SubRecipeDisplay({
                 "/ "
               )[1]
             ) ? (
-              <div>✔️</div>
+              <div>✅</div>
             ) : (
               ""
             )}
