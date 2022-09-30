@@ -8,7 +8,7 @@
   --main-button-selected: ;
   --main-button-selected-hover: ;
   --main-background-color-dark: rgb(40, 40, 40);
-  --main-lighter-background-color-dark: rgb(20, 20, 20);
+  --main-lighter-background-color-dark: rgb(25, 25, 25);
 }
 
 html {
@@ -158,10 +158,11 @@ input[type="number"] {
   justify-content: center;
   align-items: center;
   padding-bottom: 5px;
-  width: 49%;
+  width: 48%;
   height: 100%;
   border-radius: 5px;
   color: white;
+  border: 1px solid rgb(21, 52, 81, 0.7);
   background-color: rgb(55, 113, 168);
   transition: 100ms;
 }
@@ -268,6 +269,7 @@ input[type="number"] {
   min-height: 50px;
   padding: 6px 11px 6px 11px;
   margin: 0px 5px 5px 5px;
+  border: 1px solid rgb(21, 52, 81, 0.7);
   background-color: var(--main-button);
   border-radius: 5px;
   transition: 100ms;
@@ -282,6 +284,7 @@ input[type="number"] {
 }
 
 .items-selected {
+  border: 1px solid rgb(34, 100, 64, 0.7);
   background-color: rgb(53, 151, 97);
 }
 

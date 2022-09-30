@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { ThemeContext } from "components/Interface/Main";
 import Inventory from "../Inventory/Inventory";
 import Bags from "../Items/Bags/Bags";
 import Belts from "../Items/Belts/Belts";
@@ -12,8 +14,14 @@ type Props = {
 };
 
 function ItemDisplay({ displaySelection }: Props) {
+  const theme = useContext(ThemeContext);
+
   return (
-    <div className="display-container">
+    <div
+      className={
+        theme ? "display-container dark-background" : "display-container"
+      }
+    >
       {displaySelection === 0 && <Inventory />}
       {displaySelection === 1 && <Tools />}
       {displaySelection === 2 && <Bags />}
