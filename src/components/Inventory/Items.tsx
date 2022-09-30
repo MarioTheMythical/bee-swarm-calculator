@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { ThemeContext } from "components/Interface/Main";
 import { inventoryItems } from "libs/data";
 
 function Items() {
   const [itemQuantity, setItemQuantity] = useState<string[]>([]);
+  const theme = useContext(ThemeContext);
 
   const changeItemQuantity = (name: string, value: string) => {
     if (!/^[A-Za-z0-9.]*$/.test(value)) {
@@ -62,8 +64,16 @@ function Items() {
   };
 
   return (
-    <div className="inventory-items-container">
-      <div className="inventory-desc">
+    <div
+      className={
+        theme
+          ? "inventory-items-container dark-display"
+          : "inventory-items-container"
+      }
+    >
+      <div
+        className={theme ? "inventory-desc dark-description" : "inventory-desc"}
+      >
         Enter either a full or abbreviated value. <br />
         <span style={{ fontWeight: "bold" }}>
           Example: 1000 or 1k, 100000000 or 100m etc.

@@ -4,7 +4,7 @@
   --main-dark-font: rgb(20, 20, 20);
   --main-button: rgb(97, 163, 225);
   --main-button-hover: rgb(62, 123, 180);
-  --main-button-active: rgb(27, 61, 93);
+  --main-button-active: rgb(35, 79, 121);
   --main-button-selected: ;
   --main-button-selected-hover: ;
   --main-background-color-dark: rgb(40, 40, 40);
@@ -163,16 +163,16 @@ input[type="number"] {
   border-radius: 5px;
   color: white;
   border: 1px solid rgb(21, 52, 81, 0.7);
-  background-color: rgb(55, 113, 168);
+  background-color: var(--main-button);
   transition: 100ms;
 }
 
 .inventory-titles:hover {
-  background-color: rgb(42, 93, 141);
+  background-color: var(--main-button-hover);
 }
 
 .inventory-titles:active {
-  background-color: rgb(27, 61, 93);
+  background-color: var(--main-button-active);
 }
 
 /* INVENTORY ITEMS DISPLAY */
@@ -365,6 +365,14 @@ input[type="number"] {
 
 .dark-font {
   color: white;
+}
+
+.dark-display {
+  background-color: rgb(27, 121, 139);
+}
+
+.dark-description {
+  background-color: rgb(19, 87, 100);
 }
 
 /* SCREEN RES BREAKPOINTS */
