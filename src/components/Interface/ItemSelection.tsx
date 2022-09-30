@@ -25,7 +25,7 @@ function ItemSelection({
             key={index}
             className={
               displaySelection === index
-                ? "item-select-text inventory-selected"
+                ? "item-select-text items-selected"
                 : "item-select-text"
             }
             onClick={() => changeUserDisplaySelection(index)}

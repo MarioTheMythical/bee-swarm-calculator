@@ -11,7 +11,7 @@ function Inventory() {
         <div
           className={
             userInventorySelection === 0
-              ? "inventory-titles inventory-selected"
+              ? "inventory-titles items-selected"
               : "inventory-titles"
           }
           onClick={() => setUserInventorySelection(0)}
@@ -21,7 +21,7 @@ function Inventory() {
         <div
           className={
             userInventorySelection === 1
-              ? "inventory-titles inventory-selected"
+              ? "inventory-titles items-selected"
               : "inventory-titles"
           }
           onClick={() => setUserInventorySelection(1)}

@@ -11,7 +11,7 @@
 
 html {
   background-color: rgb(152, 203, 223);
-  color: var(--main-dark-font);
+  color: white;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -44,6 +44,7 @@ input[type="number"] {
   text-align: center;
   font-size: 1.4em;
   padding: 10px;
+  color: var(--main-dark-font);
 }
 
 .main-subtitle {
@@ -51,6 +52,7 @@ input[type="number"] {
   padding-bottom: 7px;
   opacity: 0.7;
   font-size: 0.9rem;
+  color: var(--main-dark-font);
 }
 
 .main-items-container {
@@ -81,10 +83,9 @@ input[type="number"] {
   text-align: center;
   cursor: pointer;
   margin: 5px 5px 5px 5px;
-  padding: 5px 5px 10px 5px;
+  padding: 5px 5px 7px 5px;
   border-radius: 5px;
   min-width: 80px;
-  color: white;
   border: 1px solid rgb(33, 81, 127, 0.2);
   background-color: rgb(97, 163, 225);
   transition: 100ms;
@@ -102,7 +103,6 @@ input[type="number"] {
 
 .display-container {
   width: 100%;
-  height: 100vh;
   padding: 10px 0px 5px 0px;
   background-color: var(--main-background-color);
 }
@@ -138,14 +138,6 @@ input[type="number"] {
 
 .inventory-titles:active {
   background-color: rgb(27, 61, 93);
-}
-
-.inventory-selected {
-  background-color: rgb(151, 107, 53);
-}
-
-.inventory-selected:hover {
-  background-color: rgb(137, 104, 48);
 }
 
 /* INVENTORY ITEMS DISPLAY */
@@ -197,9 +189,10 @@ input[type="number"] {
 .inventory-reset-button {
   cursor: pointer;
   user-select: none;
-  padding: 3px 6px 3px 6px;
-  margin-bottom: 5px;
+  padding: 1px 10px 4px 10px;
+  margin: 2px 0px 5px 0px;
   border-radius: 3px;
+  border: 2px solid rgb(91, 11, 11, 0.2);
   background-color: rgb(128, 0, 0);
   transition: 100ms;
 }
@@ -217,7 +210,7 @@ input[type="number"] {
   border-radius: 5px;
   padding: 5px 0px 10px 0px;
   margin-bottom: 5px;
-  background-color: green;
+  background-color: rgb(27, 121, 139);
 }
 
 /* GLOBAL STYLES */
@@ -236,6 +229,7 @@ input[type="number"] {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   min-width: 20%;
   min-height: 50px;
   padding: 6px 11px 6px 11px;
@@ -246,7 +240,6 @@ input[type="number"] {
 }
 
 .items-titles:hover {
-  cursor: pointer;
   background-color: rgb(42, 93, 141);
 }
 
@@ -254,8 +247,12 @@ input[type="number"] {
   background-color: rgb(27, 61, 93);
 }
 
-.items-titles-selected {
-  background-color: rgb(30, 76, 116);
+.items-selected {
+  background-color: rgb(53, 151, 97);
+}
+
+.items-selected:hover {
+  background-color: rgb(49, 136, 88);
 }
 
 .items-content {
