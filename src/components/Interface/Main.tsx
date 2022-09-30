@@ -44,8 +44,8 @@ function Main() {
               <span style={{ fontWeight: "bold", color: "green" }}>
                 Inventory
               </span>{" "}
-              tab and then select which recipe you'd like to check using the
-              buttons above.
+              tab <br /> and then select which recipe you'd like to check using
+              the buttons above.
             </div>
           )}
           <ItemDisplay displaySelection={displaySelection} />
