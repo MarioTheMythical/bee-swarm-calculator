@@ -44,25 +44,46 @@ function Main() {
 
   return (
     <ThemeContext.Provider value={theme}>
-      <div className="main-parent-container">
-        <div className="main-container">
+      <div
+        className="main-parent-container"
+        style={{
+          backgroundColor: theme ? "rgb(29, 54, 62)" : "rgb(152, 203, 223)",
+        }}
+      >
+        <div
+          className={
+            theme ? "main-container dark-background" : "main-container"
+          }
+        >
           <div className="main-title-container">
-            <div className="main-title" />
+            <div className={theme ? "main-title dark-font" : "main-title"} />
             <div
               onClick={() => changeTheme(!theme)}
               className={theme ? "dark" : "light"}
             />
           </div>
-          <div className="main-subtitle">
+          <div className={theme ? "main-subtitle dark-font" : "main-subtitle"}>
             A recipe calculator which makes it easier to track your progress.
           </div>
-          <div className="main-items-container">
+          <div
+            className={
+              theme
+                ? "main-items-container dark-background-lighter"
+                : "main-items-container"
+            }
+          >
             <ItemSelection
               displaySelection={displaySelection}
               changeUserDisplaySelection={changeUserDisplaySelection}
             />
             {bssDescriptionCheck && (
-              <div className="main-description">
+              <div
+                className={
+                  theme
+                    ? "main-description dark-background"
+                    : "main-description"
+                }
+              >
                 To get started using BSS Calculator, enter your current item and
                 material amounts within the{" "}
                 <span style={{ fontWeight: "bold", color: "rgb(53, 151, 97)" }}>
