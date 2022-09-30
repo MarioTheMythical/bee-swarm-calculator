@@ -6,7 +6,9 @@ import ItemSelection from "./ItemSelection";
 function Main() {
   const [displaySelection, setDisplaySelection] = useState<number>(0);
   const [bssDescriptionCheck, setBssDescriptionCheck] = useState(true);
-  const [theme, setTheme] = useState(false);
+  const [theme, setTheme] = useState(
+    localStorage.getItem("BSS-Theme") === "dark" ? true : false
+  );
 
   const changeUserDisplaySelection = (selection: number) => {
     setDisplaySelection(selection);
@@ -14,7 +16,12 @@ function Main() {
   };
 
   const changeTheme = (selection: boolean) => {
-    setTheme(selection);
+    if (selection) {
+      localStorage.setItem("BSS-Theme", "dark");
+    } else {
+      localStorage.setItem("BSS-Theme", "light");
+    }
+    setTheme(!theme);
   };
 
   useEffect(() => {
@@ -28,6 +35,9 @@ function Main() {
         localStorage.setItem(`${item.name}`, JSON.stringify("0"));
       }
     });
+    if (!localStorage.getItem("theme")) {
+      localStorage.setItem("BSS-Theme", "light");
+    }
   }, []);
 
   return (
@@ -37,7 +47,7 @@ function Main() {
           <div className="main-title" />
           <div
             onClick={() => changeTheme(!theme)}
-            className={theme ? "light" : "dark"}
+            className={theme ? "dark" : "light"}
           />
         </div>
         <div className="main-subtitle">
