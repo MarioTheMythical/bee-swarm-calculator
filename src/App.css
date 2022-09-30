@@ -1,6 +1,6 @@
 html {
-  background-color: rgb(23, 23, 23);
-  color: white;
+  background-color: rgb(152, 203, 223);
+  color: rgb(20, 20, 20);
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -21,24 +21,33 @@ input[type="number"] {
   display: flex;
   justify-content: center;
   width: 100vw;
-  background-color: aqua;
 }
 
 .main-container {
-  width: 50vw;
-  background-color: rgb(16, 111, 111);
+  width: 40vw;
+  height: 100vh;
+  background-color: rgb(240, 240, 240);
 }
 
 .main-title {
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1.4em;
   padding: 10px;
 }
 
 .main-items-container {
   display: flex;
   flex-direction: column;
-  background-color: rgb(124, 213, 110);
+  background-color: rgb(209, 209, 209);
+}
+
+.main-description {
+  text-align: center;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  color: rgb(17, 17, 17);
+  background-color: rgb(216, 216, 216);
 }
 
 /* ITEM SELECTION */
@@ -57,6 +66,7 @@ input[type="number"] {
   padding: 5px 5px 10px 5px;
   border-radius: 5px;
   min-width: 80px;
+  color: white;
   background-color: rgb(55, 113, 168);
   transition: 100ms;
 }
@@ -97,6 +107,7 @@ input[type="number"] {
   width: 49%;
   height: 100%;
   border-radius: 5px;
+  color: white;
   background-color: rgb(55, 113, 168);
   transition: 100ms;
 }

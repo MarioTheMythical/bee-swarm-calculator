@@ -4,9 +4,11 @@ import ItemSelection from "./ItemSelection";
 
 function Main() {
   const [displaySelection, setDisplaySelection] = useState<number>(0);
+  const [bssDescriptionCheck, setBssDescriptionCheck] = useState(true);
 
   const changeUserDisplaySelection = (selection: number) => {
     setDisplaySelection(selection);
+    setBssDescriptionCheck(false);
   };
 
   return (
@@ -18,6 +20,17 @@ function Main() {
             displaySelection={displaySelection}
             changeUserDisplaySelection={changeUserDisplaySelection}
           />
+          {bssDescriptionCheck && (
+            <div className="main-description">
+              To get started using BSS Calculator, enter your current item and
+              material amounts within the{" "}
+              <span style={{ fontWeight: "bold", color: "green" }}>
+                Inventory
+              </span>{" "}
+              tab and then select which recipe you'd like to check using the
+              buttons above.
+            </div>
+          )}
           <ItemDisplay displaySelection={displaySelection} />
         </div>
       </div>
