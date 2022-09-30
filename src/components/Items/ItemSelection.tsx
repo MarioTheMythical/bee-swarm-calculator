@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { itemTypes } from "libs/types";
+import { ThemeContext } from "components/Interface/Main";
 
 type Props = {
   itemData: itemTypes;
@@ -11,6 +13,8 @@ function ItemSelection({
   itemSelection,
   changeItemSelection,
 }: Props) {
+  const theme = useContext(ThemeContext);
+
   return (
     <div className="items-titles-container">
       {itemData.map((item, index) => {
