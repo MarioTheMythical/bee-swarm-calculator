@@ -6,10 +6,15 @@ import ItemSelection from "./ItemSelection";
 function Main() {
   const [displaySelection, setDisplaySelection] = useState<number>(0);
   const [bssDescriptionCheck, setBssDescriptionCheck] = useState(true);
+  const [theme, setTheme] = useState(false);
 
   const changeUserDisplaySelection = (selection: number) => {
     setDisplaySelection(selection);
     setBssDescriptionCheck(false);
+  };
+
+  const changeTheme = (selection: boolean) => {
+    setTheme(selection);
   };
 
   useEffect(() => {
@@ -28,7 +33,13 @@ function Main() {
   return (
     <div className="main-parent-container">
       <div className="main-container">
-        <div className="main-title">Bee Swarm Sim Calculator</div>
+        <div className="main-title-container">
+          <div className="main-title" />
+          <div
+            onClick={() => changeTheme(!theme)}
+            className={theme ? "light" : "dark"}
+          />
+        </div>
         <div className="main-subtitle">
           A recipe calculator which makes it easier to track your progress.
         </div>

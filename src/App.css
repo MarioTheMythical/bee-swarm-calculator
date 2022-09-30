@@ -40,11 +40,41 @@ input[type="number"] {
   background-color: var(--main-background-color);
 }
 
+.main-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .main-title {
   text-align: center;
   font-size: 1.4em;
-  padding: 10px;
+  padding: 10px 0px 10px 0px;
   color: var(--main-dark-font);
+  width: 85%;
+}
+
+.dark::after {
+  cursor: pointer;
+  content: "🌙";
+  padding: 2px 5px 5px 5px;
+  border-radius: 5px;
+  background-color: var(--main-dark-font);
+  transition: 100ms;
+}
+
+.light::after {
+  cursor: pointer;
+  content: "☀️";
+  padding: 2px 5px 5px 5px;
+  border-radius: 5px;
+  background-color: var(--main-background-color);
+  transition: 100ms;
+}
+
+.main-title::after {
+  content: "Bee Swarm Sim Calculator";
 }
 
 .main-subtitle {
@@ -330,6 +360,10 @@ input[type="number"] {
 }
 
 @media (max-width: 44rem) {
+  .main-title::after {
+    content: "BSS Calculator";
+    margin-left: 12%;
+  }
   .main-container {
     width: 100vw;
   }
