@@ -129,7 +129,7 @@ function Recipe({ recipeData }: Props) {
                   {materialValueCheck && materialValueCheck[index]?.value}
                 </div>
                 {materialValueCheck && materialValueCheck[index]?.check ? (
-                  <div>✔️</div>
+                  <div>✅</div>
                 ) : (
                   ""
                 )}
