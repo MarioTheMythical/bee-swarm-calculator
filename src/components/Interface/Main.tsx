@@ -15,6 +15,9 @@ function Main() {
     <div className="main-parent-container">
       <div className="main-container">
         <div className="main-title">Bee Swarm Sim Calculator</div>
+        <div className="main-subtitle">
+          A recipe calculator which makes it easier to track your progress.
+        </div>
         <div className="main-items-container">
           <ItemSelection
             displaySelection={displaySelection}
