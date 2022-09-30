@@ -19,7 +19,7 @@ function ItemSelection({
             key={index}
             className={
               itemSelection === index
-                ? "items-titles items-titles-selected"
+                ? "items-titles inventory-selected"
                 : "items-titles "
             }
             onClick={() => changeItemSelection(index)}

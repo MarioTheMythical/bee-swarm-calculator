@@ -2,6 +2,11 @@
   --main-background-color: rgb(240, 240, 240);
   --main-darker-background-color: rgb(209, 209, 209);
   --main-dark-font: rgb(20, 20, 20);
+  --main-button: rgb(97, 163, 225);
+  --main-button-hover: rgb(62, 123, 180);
+  --main-button-active: rgb(27, 61, 93);
+  --main-button-selected: ;
+  --main-button-selected-hover: ;
 }
 
 html {
@@ -80,12 +85,13 @@ input[type="number"] {
   border-radius: 5px;
   min-width: 80px;
   color: white;
-  background-color: rgb(55, 113, 168);
+  border: 1px solid rgb(33, 81, 127, 0.2);
+  background-color: rgb(97, 163, 225);
   transition: 100ms;
 }
 
 .item-select-text:hover {
-  background-color: rgb(42, 93, 141);
+  background-color: rgb(62, 123, 180);
 }
 
 .item-select-text:active {
@@ -135,7 +141,11 @@ input[type="number"] {
 }
 
 .inventory-selected {
-  background-color: rgb(25, 65, 99);
+  background-color: rgb(151, 107, 53);
+}
+
+.inventory-selected:hover {
+  background-color: rgb(137, 104, 48);
 }
 
 /* INVENTORY ITEMS DISPLAY */

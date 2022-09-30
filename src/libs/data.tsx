@@ -564,7 +564,7 @@ export const toolRecipes: recipe = [
             image: "CausticWax.png",
           },
           {
-            material: "Honey Suckle",
+            material: "Honeysuckle",
             value: 1000,
             image: "HoneySuckle.png",
           },
