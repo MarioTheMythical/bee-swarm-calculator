@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { inventoryItems, inventoryMaterials } from "libs/data";
+import { useEffect, useState } from "react";
 import ItemDisplay from "./ItemDisplay";
 import ItemSelection from "./ItemSelection";
 
@@ -10,6 +11,19 @@ function Main() {
     setDisplaySelection(selection);
     setBssDescriptionCheck(false);
   };
+
+  useEffect(() => {
+    inventoryItems.forEach((item) => {
+      if (!localStorage.getItem(`${item.name}`)) {
+        localStorage.setItem(`${item.name}`, JSON.stringify("0"));
+      }
+    });
+    inventoryMaterials.forEach((item) => {
+      if (!localStorage.getItem(`${item.name}`)) {
+        localStorage.setItem(`${item.name}`, JSON.stringify("0"));
+      }
+    });
+  }, []);
 
   return (
     <div className="main-parent-container">

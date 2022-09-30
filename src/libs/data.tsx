@@ -415,16 +415,16 @@ export const tools: itemTypes = [
     image: "PetalWand.png",
   },
   {
-    name: "Gummy Baller",
-    image: "GummyBaller.png",
-  },
-  {
     name: "Tide Popper",
     image: "TidePopper.png",
   },
   {
     name: "Dark Scythe",
     image: "DarkScythe.png",
+  },
+  {
+    name: "Gummy Baller",
+    image: "GummyBaller.png",
   },
 ];
 
@@ -472,109 +472,6 @@ export const toolRecipes: recipe = [
         image: "StarJelly.png",
       },
       { material: "Spirit Petal", value: 1, image: "SpiritPetal.png" },
-    ],
-  },
-  {
-    gummy: [
-      { material: "Honey", value: 10000000000000, image: "Honey.png" },
-      {
-        material: "Glue",
-        value: 1500,
-        image: "Glue.png",
-        subRecipe: [
-          {
-            material: "Gumdrops",
-            value: 50,
-            image: "Gumdrops.png",
-          },
-          {
-            material: "Royal Jelly",
-            value: 10,
-            image: "RoyalJelly.png",
-          },
-        ],
-      },
-      {
-        material: "Caustic Wax",
-        value: 50,
-        image: "CausticWax.png",
-        subRecipe: [
-          {
-            material: "Hard Wax",
-            value: 5,
-            image: "HardWax.png",
-          },
-          {
-            material: "Enzymes",
-            value: 5,
-            image: "Enzymes.png",
-          },
-          {
-            material: "Neonberries",
-            value: 25,
-            image: "NeonBerries.png",
-          },
-          {
-            material: "Royal Jelly",
-            value: 5252,
-            image: "RoyalJelly.png",
-          },
-        ],
-      },
-      {
-        material: "Super Smoothies",
-        value: 10,
-        image: "SuperSmoothie.png",
-        subRecipe: [
-          {
-            material: "Neonberries",
-            value: 3,
-            image: "NeonBerries.png",
-          },
-          {
-            material: "Purple Potion",
-            value: 3,
-            image: "PurplePotion.png",
-          },
-          {
-            material: "Tropical Drink",
-            value: 6,
-            image: "TropicalDrink.png",
-          },
-          {
-            material: "Star Jelly",
-            value: 3,
-            image: "StarJelly.png",
-          },
-        ],
-      },
-      {
-        material: "Turpentine",
-        value: 5,
-        image: "Turpentine.png",
-        subRecipe: [
-          {
-            material: "Super Smoothies",
-            value: 10,
-            image: "SuperSmoothie.png",
-          },
-          {
-            material: "Caustic Wax",
-            value: 10,
-            image: "CausticWax.png",
-          },
-          {
-            material: "Honeysuckle",
-            value: 1000,
-            image: "HoneySuckle.png",
-          },
-          {
-            material: "Star Jelly",
-            value: 10,
-            image: "StarJelly.png",
-          },
-        ],
-      },
     ],
   },
   {
@@ -778,6 +675,109 @@ export const toolRecipes: recipe = [
         ],
       },
       { material: "Stingers", value: 200, image: "Stingers.png" },
+    ],
+  },
+  {
+    gummy: [
+      { material: "Honey", value: 10000000000000, image: "Honey.png" },
+      {
+        material: "Glue",
+        value: 1500,
+        image: "Glue.png",
+        subRecipe: [
+          {
+            material: "Gumdrops",
+            value: 50,
+            image: "Gumdrops.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Caustic Wax",
+        value: 50,
+        image: "CausticWax.png",
+        subRecipe: [
+          {
+            material: "Hard Wax",
+            value: 5,
+            image: "HardWax.png",
+          },
+          {
+            material: "Enzymes",
+            value: 5,
+            image: "Enzymes.png",
+          },
+          {
+            material: "Neonberries",
+            value: 25,
+            image: "NeonBerries.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 5252,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Super Smoothies",
+        value: 10,
+        image: "SuperSmoothie.png",
+        subRecipe: [
+          {
+            material: "Neonberries",
+            value: 3,
+            image: "NeonBerries.png",
+          },
+          {
+            material: "Purple Potion",
+            value: 3,
+            image: "PurplePotion.png",
+          },
+          {
+            material: "Tropical Drink",
+            value: 6,
+            image: "TropicalDrink.png",
+          },
+          {
+            material: "Star Jelly",
+            value: 3,
+            image: "StarJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Turpentine",
+        value: 5,
+        image: "Turpentine.png",
+        subRecipe: [
+          {
+            material: "Super Smoothies",
+            value: 10,
+            image: "SuperSmoothie.png",
+          },
+          {
+            material: "Caustic Wax",
+            value: 10,
+            image: "CausticWax.png",
+          },
+          {
+            material: "Honeysuckle",
+            value: 1000,
+            image: "HoneySuckle.png",
+          },
+          {
+            material: "Star Jelly",
+            value: 10,
+            image: "StarJelly.png",
+          },
+        ],
+      },
     ],
   },
 ];

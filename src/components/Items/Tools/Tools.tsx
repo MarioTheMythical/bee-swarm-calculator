@@ -16,13 +16,13 @@ function Tools() {
         return setRecipeData(toolRecipes[0].petal);
 
       case 1:
-        return setRecipeData(toolRecipes[1].gummy);
+        return setRecipeData(toolRecipes[1].tide);
 
       case 2:
-        return setRecipeData(toolRecipes[2].tide);
+        return setRecipeData(toolRecipes[2].scythe);
 
       case 3:
-        return setRecipeData(toolRecipes[3].scythe);
+        return setRecipeData(toolRecipes[3].gummy);
     }
   }, [toolSelection]);
 

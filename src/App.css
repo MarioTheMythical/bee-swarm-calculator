@@ -66,6 +66,7 @@ input[type="number"] {
   margin: 5px 10px 20px 10px;
   padding: 7px 7px 10px 7px;
   border-radius: 5px;
+  color: var(--main-dark-font);
   border: 2px solid rgb(27, 27, 27, 0.16);
   background-color: var(--main-background-color);
 }
@@ -114,7 +115,7 @@ input[type="number"] {
   justify-content: space-around;
   height: 40px;
   padding-bottom: 10px;
-  margin: 0px 4px 0px 4px;
+  margin: 0px 1px 5px 1px;
 }
 
 .inventory-titles {
@@ -175,14 +176,14 @@ input[type="number"] {
 
 .inventory-items-input {
   width: 50px;
-  height: 25px;
+  height: 28px;
   border: none;
   border-radius: 5px;
-  background-color: rgb(208, 208, 208);
+  background-color: var(--main-background-color);
 }
 
 .inventory-items-input:focus {
-  outline: 3px solid rgb(118, 207, 220);
+  outline: 3px solid rgb(12, 73, 83);
   transition: 100ms;
 }
 
@@ -208,7 +209,7 @@ input[type="number"] {
 .inventory-desc {
   width: 100%;
   border-radius: 5px;
-  padding: 5px 0px 10px 0px;
+  padding: 5px 5px 10px 5px;
   margin-bottom: 5px;
   background-color: rgb(27, 121, 139);
 }
