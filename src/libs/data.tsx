@@ -926,7 +926,7 @@ export const guardRecipes: recipe = [
       { material: "Strawberries", value: 100, image: "Strawberries.png" },
       {
         material: "Red Extract",
-        value: 100,
+        value: 10,
         image: "RedExtract.png",
         subRecipe: [
           {
@@ -1023,7 +1023,7 @@ export const guardRecipes: recipe = [
       { material: "Honey", value: 200000000, image: "Honey.png" },
       {
         material: "Red Extract",
-        value: 10,
+        value: 100,
         image: "RedExtract.png",
         subRecipe: [
           {
