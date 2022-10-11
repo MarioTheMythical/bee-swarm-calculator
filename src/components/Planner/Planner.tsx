@@ -3,8 +3,11 @@ import Hive from "./Hive/Hive";
 
 function Planner() {
   return (
-    <div>
-      <Hive />
+    <div className="planner">
+      <div className="planner-container">
+        <div className="planner-title">Hive Planner</div>
+        <Hive />
+      </div>
     </div>
   );
 }

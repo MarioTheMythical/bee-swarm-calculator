@@ -377,22 +377,62 @@ input[type="number"] {
 
 /* PLANNER */
 
-/* HIVE */
-
-.hive {
+.planner {
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: aqua;
+  height: 100vh;
+  background-color: rgb(45, 162, 162);
 }
 
+.planner-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgb(30, 107, 107);
+}
+
+.planner-title {
+  margin: 10px 10px 50px 10px;
+}
+
+/* BEES */
+
+.bees-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0px;
+  margin: 10px;
+  background-color: yellowgreen;
+}
+
+.bees-type-container {
+}
+
+.bees-button {
+  background-color: azure;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+/* HIVE */
+
 .hive-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hive-slot-container {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
   width: 500px;
-  height: 40vh;
+  height: 60vh;
   background-color: rgb(30, 107, 107);
 }
 
@@ -403,123 +443,123 @@ input[type="number"] {
   background-color: aqua;
 }
 
-.hive-container > :nth-child(1) {
+.hive-slot-container > :nth-child(1) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(3) {
+.hive-slot-container > :nth-child(3) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(5) {
+.hive-slot-container > :nth-child(5) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(6) {
+.hive-slot-container > :nth-child(6) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(8) {
+.hive-slot-container > :nth-child(8) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(10) {
+.hive-slot-container > :nth-child(10) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(11) {
+.hive-slot-container > :nth-child(11) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(13) {
+.hive-slot-container > :nth-child(13) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(15) {
+.hive-slot-container > :nth-child(15) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(16) {
+.hive-slot-container > :nth-child(16) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(18) {
+.hive-slot-container > :nth-child(18) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(20) {
+.hive-slot-container > :nth-child(20) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(21) {
+.hive-slot-container > :nth-child(21) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(23) {
+.hive-slot-container > :nth-child(23) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(25) {
+.hive-slot-container > :nth-child(25) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(26) {
+.hive-slot-container > :nth-child(26) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(28) {
+.hive-slot-container > :nth-child(28) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(30) {
+.hive-slot-container > :nth-child(30) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(31) {
+.hive-slot-container > :nth-child(31) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(33) {
+.hive-slot-container > :nth-child(33) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(35) {
+.hive-slot-container > :nth-child(35) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(36) {
+.hive-slot-container > :nth-child(36) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(38) {
+.hive-slot-container > :nth-child(38) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(40) {
+.hive-slot-container > :nth-child(40) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(41) {
+.hive-slot-container > :nth-child(41) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(43) {
+.hive-slot-container > :nth-child(43) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(45) {
+.hive-slot-container > :nth-child(45) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(46) {
+.hive-slot-container > :nth-child(46) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(48) {
+.hive-slot-container > :nth-child(48) {
   transform: translateY(40%);
 }
 
-.hive-container > :nth-child(50) {
+.hive-slot-container > :nth-child(50) {
   transform: translateY(40%);
 }
 
