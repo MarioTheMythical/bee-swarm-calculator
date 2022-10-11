@@ -472,6 +472,7 @@ input[type="number"] {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   width: 75px;
   height: 65px;
   margin: 3px;

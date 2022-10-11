@@ -53,6 +53,17 @@ function Hive() {
     setHiveSlots(newBees);
   };
 
+  const removeFromList = (index: number) => {
+    const newHive = hiveSlots.map((hive, hiveIndex) => {
+      if (hiveIndex === Number(index)) {
+        return { name: "", id: "0", image: "EmptyHive.png" };
+      }
+      return hive;
+    });
+
+    setHiveSlots(newHive);
+  };
+
   return (
     <div className="hive-container">
       <DragDropContext
@@ -63,7 +74,7 @@ function Hive() {
         onDragEnd={onDragEnd}
       >
         <Bees />
-        <Slots hiveSlots={hiveSlots} />
+        <Slots hiveSlots={hiveSlots} removeFromList={removeFromList} />
       </DragDropContext>
     </div>
   );

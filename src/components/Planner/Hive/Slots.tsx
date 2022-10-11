@@ -2,12 +2,14 @@ import { Droppable } from "react-beautiful-dnd";
 
 function Slots({
   hiveSlots,
+  removeFromList,
 }: {
   hiveSlots: {
     name: string;
     id: string;
     image: string;
   }[];
+  removeFromList: (index: number) => void;
 }) {
   return (
     <div className="hive-slot-container">
@@ -19,6 +21,7 @@ function Slots({
                 className="hive-slot"
                 {...provided.droppableProps}
                 ref={provided.innerRef}
+                onClick={() => removeFromList(index)}
               >
                 <img
                   src={require(`images/Hive/${hive.image}`)}
