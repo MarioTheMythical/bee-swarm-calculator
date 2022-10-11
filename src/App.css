@@ -375,6 +375,35 @@ input[type="number"] {
   background-color: rgb(21, 95, 109);
 }
 
+/* PLANNER */
+
+/* HIVE */
+
+.hive {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: aqua;
+}
+
+.hive-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 50vh;
+  background-color: rgb(30, 107, 107);
+}
+
+.hive-slot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: aquamarine;
+}
+
 /* SCREEN RES BREAKPOINTS */
 
 @media (max-width: 80rem) {
