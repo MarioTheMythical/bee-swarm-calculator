@@ -389,19 +389,138 @@ input[type="number"] {
 .hive-container {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  width: 50%;
-  height: 50vh;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 500px;
+  height: 40vh;
   background-color: rgb(30, 107, 107);
 }
 
-.hive-slot-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  background-color: aquamarine;
+.hive-slot {
+  width: 80px;
+  height: 80px;
+  margin: 3px;
+  background-color: aqua;
+}
+
+.hive-container > :nth-child(1) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(3) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(5) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(6) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(8) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(10) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(11) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(13) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(15) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(16) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(18) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(20) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(21) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(23) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(25) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(26) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(28) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(30) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(31) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(33) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(35) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(36) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(38) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(40) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(41) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(43) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(45) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(46) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(48) {
+  transform: translateY(40%);
+}
+
+.hive-container > :nth-child(50) {
+  transform: translateY(40%);
 }
 
 /* SCREEN RES BREAKPOINTS */
