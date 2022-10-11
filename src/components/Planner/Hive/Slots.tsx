@@ -1,3 +1,5 @@
+import { Droppable } from "react-beautiful-dnd";
+
 function Slots({
   hiveSlots,
 }: {
@@ -11,9 +13,18 @@ function Slots({
     <div className="hive-slot-container">
       {hiveSlots.map((hive, index) => {
         return (
-          <div key={index} className="hive-slot">
-            {hive.name}
-          </div>
+          <Droppable droppableId={"hive" + index} key={index}>
+            {(provided) => (
+              <div
+                className="hive-slot"
+                {...provided.droppableProps}
+                ref={provided.innerRef}
+              >
+                {hive.name}
+                {provided.placeholder}
+              </div>
+            )}
+          </Droppable>
         );
       })}
     </div>

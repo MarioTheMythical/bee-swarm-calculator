@@ -508,6 +508,16 @@ input[type="number"] {
   transform: translateY(40%);
 }
 
+/* BEE TYPES */
+
+.type-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0px;
+  background-color: cadetblue;
+}
+
 /* SCREEN RES BREAKPOINTS */
 
 @media (max-width: 80rem) {

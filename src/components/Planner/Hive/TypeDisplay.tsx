@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { beeTypeDisplay } from "libs/data";
-import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
+import { Draggable, Droppable } from "react-beautiful-dnd";
 
 function TypeDisplay({ type }: { type: number }) {
   const [typeData, setTypeData] = useState<
@@ -10,12 +10,6 @@ function TypeDisplay({ type }: { type: number }) {
       image: string;
     }[]
   >();
-
-  const onBeforeCapture = () => {};
-  const onBeforeDragStart = () => {};
-  const onDragStart = () => {};
-  const onDragUpdate = () => {};
-  const onDragEnd = () => {};
 
   useEffect(() => {
     switch (type) {
@@ -39,7 +33,11 @@ function TypeDisplay({ type }: { type: number }) {
   return (
     <Droppable droppableId="bees">
       {(provided) => (
-        <div {...provided.droppableProps} ref={provided.innerRef}>
+        <div
+          {...provided.droppableProps}
+          ref={provided.innerRef}
+          className="type-container"
+        >
           {typeData?.map((bee, index) => {
             return (
               <Draggable key={bee.id} draggableId={bee.id} index={index}>

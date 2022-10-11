@@ -11,7 +11,9 @@ function Hive() {
   const onBeforeDragStart = () => {};
   const onDragStart = () => {};
   const onDragUpdate = () => {};
-  const onDragEnd = () => {};
+  const onDragEnd = (result: any) => {
+    console.log(result);
+  };
 
   return (
     <div className="hive-container">
