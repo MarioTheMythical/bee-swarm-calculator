@@ -51,6 +51,7 @@ function TypeDisplay({ type }: { type: number }) {
                     <img
                       src={require(`images/Hive/${bee.image}`)}
                       alt={bee.name}
+                      style={{ width: "65px" }}
                     />
                   </div>
                 )}

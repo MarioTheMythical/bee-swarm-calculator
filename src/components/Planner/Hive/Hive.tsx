@@ -2,6 +2,7 @@ import { useState } from "react";
 import { HiveSlots } from "libs/data";
 import Slots from "./Slots";
 import Bees from "./Bees";
+import { beeTypeDisplay } from "libs/data";
 import { DragDropContext } from "react-beautiful-dnd";
 
 function Hive() {
@@ -12,7 +13,44 @@ function Hive() {
   const onDragStart = () => {};
   const onDragUpdate = () => {};
   const onDragEnd = (result: any) => {
-    console.log(result);
+    if (result.destination.droppableId.includes("hive")) {
+      let beeSelection: {
+        name: string;
+        id: string;
+        image: string;
+      }[] = [];
+
+      Object.values(beeTypeDisplay).forEach((item) => {
+        item.forEach((bee) => {
+          if (bee.id === result.draggableId) beeSelection.push(bee);
+        });
+      });
+
+      addToList(
+        beeSelection[0],
+        result.destination.droppableId.split("hive")[1]
+      );
+    }
+    return;
+  };
+
+  const addToList = (
+    bee: {
+      name: string;
+      id: string;
+      image: string;
+    },
+    index: number
+  ) => {
+    const newBees = hiveSlots.map((hive, hiveIndex) => {
+      if (hiveIndex === Number(index)) {
+        return { ...bee };
+      }
+
+      return hive;
+    });
+
+    setHiveSlots(newBees);
   };
 
   return (
