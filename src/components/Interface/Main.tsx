@@ -37,7 +37,7 @@ function Main() {
         localStorage.setItem(`${item.name}`, JSON.stringify("0"));
       }
     });
-    if (!localStorage.getItem("theme")) {
+    if (!localStorage.getItem("BSS-Theme")) {
       console.log(true);
       localStorage.setItem("BSS-Theme", "light");
     }
