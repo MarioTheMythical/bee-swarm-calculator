@@ -1869,11 +1869,11 @@ export const planterRecipes: recipe = [
 export const beeTypes = ["Rare", "Epic", "Legendary", "Mythic", "Event"];
 
 export const beeTypeDisplay = {
-  rare: [{ name: "rare", id: "", image: "" }],
-  epic: [{ name: "epic", id: "", image: "" }],
-  legendary: [{ name: "legend", id: "", image: "" }],
-  mythic: [{ name: "mythic", id: "", image: "" }],
-  event: [{ name: "event", id: "", image: "" }],
+  rare: [{ name: "rare", id: "0", image: "" }],
+  epic: [{ name: "epic", id: "0", image: "" }],
+  legendary: [{ name: "legend", id: "0", image: "" }],
+  mythic: [{ name: "mythic", id: "0", image: "" }],
+  event: [{ name: "event", id: "0", image: "" }],
 };
 
 export const HiveSlots = [
