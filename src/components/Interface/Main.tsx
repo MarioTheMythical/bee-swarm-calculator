@@ -38,6 +38,7 @@ function Main() {
       }
     });
     if (!localStorage.getItem("theme")) {
+      console.log(true);
       localStorage.setItem("BSS-Theme", "light");
     }
   }, []);
