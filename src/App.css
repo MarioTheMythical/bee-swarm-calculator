@@ -402,20 +402,51 @@ input[type="number"] {
 .bees-container {
   display: flex;
   justify-content: center;
-  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  width: 40vw;
   padding: 10px 0px;
-  margin: 10px;
+  margin: 10px 0px;
   background-color: yellowgreen;
 }
 
 .bees-type-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
 
 .bees-button {
-  background-color: azure;
-  padding: 10px;
-  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  min-width: 10%;
+  min-height: 35px;
+  padding: 2px 11px 2px 11px;
+  margin: 0px 5px 5px 5px;
+  border: 1px solid rgb(21, 52, 81, 0.7);
+  background-color: var(--main-button);
   border-radius: 5px;
+  transition: 100ms;
+}
+
+.bees-button:hover {
+  background-color: rgb(42, 93, 141);
+}
+
+.bees-button:active {
+  background-color: rgb(27, 61, 93);
+}
+
+.bees-selected {
+  border: 1px solid rgb(34, 100, 64, 0.7);
+  background-color: rgb(53, 151, 97);
+}
+
+.bees-selected:hover {
+  background-color: rgb(49, 136, 88);
 }
 
 /* HIVE */
@@ -432,7 +463,8 @@ input[type="number"] {
   flex-wrap: wrap;
   justify-content: center;
   width: 500px;
-  height: 60vh;
+  height: 60%;
+  margin-bottom: 50px;
   background-color: rgb(30, 107, 107);
 }
 
@@ -443,122 +475,35 @@ input[type="number"] {
   background-color: aqua;
 }
 
-.hive-slot-container > :nth-child(1) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(3) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(5) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(6) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(8) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(10) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(11) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(13) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(15) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(16) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(18) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(20) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(21) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(23) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(25) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(26) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(28) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(30) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(31) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(33) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(35) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(36) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(38) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(40) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(41) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(43) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(45) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(46) {
-  transform: translateY(40%);
-}
-
-.hive-slot-container > :nth-child(48) {
-  transform: translateY(40%);
-}
-
+.hive-slot-container > :nth-child(1),
+.hive-slot-container > :nth-child(3),
+.hive-slot-container > :nth-child(5),
+.hive-slot-container > :nth-child(6),
+.hive-slot-container > :nth-child(8),
+.hive-slot-container > :nth-child(10),
+.hive-slot-container > :nth-child(11),
+.hive-slot-container > :nth-child(13),
+.hive-slot-container > :nth-child(15),
+.hive-slot-container > :nth-child(16),
+.hive-slot-container > :nth-child(18),
+.hive-slot-container > :nth-child(20),
+.hive-slot-container > :nth-child(21),
+.hive-slot-container > :nth-child(23),
+.hive-slot-container > :nth-child(25),
+.hive-slot-container > :nth-child(26),
+.hive-slot-container > :nth-child(28),
+.hive-slot-container > :nth-child(30),
+.hive-slot-container > :nth-child(31),
+.hive-slot-container > :nth-child(33),
+.hive-slot-container > :nth-child(35),
+.hive-slot-container > :nth-child(36),
+.hive-slot-container > :nth-child(38),
+.hive-slot-container > :nth-child(40),
+.hive-slot-container > :nth-child(41),
+.hive-slot-container > :nth-child(43),
+.hive-slot-container > :nth-child(45),
+.hive-slot-container > :nth-child(46),
+.hive-slot-container > :nth-child(48),
 .hive-slot-container > :nth-child(50) {
   transform: translateY(40%);
 }
@@ -569,10 +514,16 @@ input[type="number"] {
   .main-container {
     width: 70vw;
   }
+  .bees-container {
+    width: 70vw;
+  }
 }
 
 @media (max-width: 60rem) {
   .main-container {
+    width: 80vw;
+  }
+  .bees-container {
     width: 80vw;
   }
 }
@@ -583,6 +534,9 @@ input[type="number"] {
     margin-left: 12%;
   }
   .main-container {
+    width: 100vw;
+  }
+  .bees-container {
     width: 100vw;
   }
   .items-content span {
@@ -600,5 +554,26 @@ input[type="number"] {
   }
   .items-titles {
     width: 100px;
+  }
+}
+
+@media (max-height: 55rem) {
+  .planner {
+    height: 100%;
+  }
+  .planner-container {
+    height: 100%;
+  }
+}
+
+@media (max-height: 50rem) {
+  .main-container {
+    height: 100%;
+  }
+  .planner {
+    height: 100%;
+  }
+  .planner-container {
+    height: 100%;
   }
 }
