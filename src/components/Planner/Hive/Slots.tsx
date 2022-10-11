@@ -14,14 +14,17 @@ function Slots({
       {hiveSlots.map((hive, index) => {
         return (
           <Droppable droppableId={"hive" + index} key={index}>
-            {(provided) => (
+            {(provided, snapshot) => (
               <div
                 className="hive-slot"
                 {...provided.droppableProps}
                 ref={provided.innerRef}
               >
-                {hive.name}
-                {provided.placeholder}
+                <img
+                  src={require(`images/Hive/${hive.image}`)}
+                  alt={hive.name}
+                />
+                <div style={{ display: "none" }}>{provided.placeholder}</div>
               </div>
             )}
           </Droppable>

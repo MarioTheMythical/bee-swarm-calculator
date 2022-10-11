@@ -459,53 +459,97 @@ input[type="number"] {
 
 .hive-slot-container {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  width: 500px;
-  height: 60%;
+  width: 450px;
   margin-bottom: 50px;
-  background-color: rgb(30, 107, 107);
+  background-color: rgb(36, 52, 52);
+  transform: translate(9%);
 }
 
 .hive-slot {
-  width: 80px;
-  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 65px;
   margin: 3px;
-  background-color: aqua;
+  background-image: url("images/Hive/EmptyHive.png");
 }
 
 .hive-slot-container > :nth-child(1),
-.hive-slot-container > :nth-child(3),
-.hive-slot-container > :nth-child(5),
 .hive-slot-container > :nth-child(6),
-.hive-slot-container > :nth-child(8),
 .hive-slot-container > :nth-child(10),
 .hive-slot-container > :nth-child(11),
-.hive-slot-container > :nth-child(13),
 .hive-slot-container > :nth-child(15),
 .hive-slot-container > :nth-child(16),
-.hive-slot-container > :nth-child(18),
 .hive-slot-container > :nth-child(20),
 .hive-slot-container > :nth-child(21),
-.hive-slot-container > :nth-child(23),
 .hive-slot-container > :nth-child(25),
 .hive-slot-container > :nth-child(26),
-.hive-slot-container > :nth-child(28),
 .hive-slot-container > :nth-child(30),
 .hive-slot-container > :nth-child(31),
-.hive-slot-container > :nth-child(33),
 .hive-slot-container > :nth-child(35),
 .hive-slot-container > :nth-child(36),
-.hive-slot-container > :nth-child(38),
 .hive-slot-container > :nth-child(40),
 .hive-slot-container > :nth-child(41),
-.hive-slot-container > :nth-child(43),
 .hive-slot-container > :nth-child(45),
 .hive-slot-container > :nth-child(46),
-.hive-slot-container > :nth-child(48),
 .hive-slot-container > :nth-child(50) {
-  transform: translateY(40%);
+  transform: translateY(55%);
+}
+
+.hive-slot-container > :nth-child(2),
+.hive-slot-container > :nth-child(7),
+.hive-slot-container > :nth-child(12),
+.hive-slot-container > :nth-child(17),
+.hive-slot-container > :nth-child(22),
+.hive-slot-container > :nth-child(27),
+.hive-slot-container > :nth-child(32),
+.hive-slot-container > :nth-child(37),
+.hive-slot-container > :nth-child(42),
+.hive-slot-container > :nth-child(47) {
+  transform: translateX(-26%);
+}
+
+.hive-slot-container > :nth-child(3),
+.hive-slot-container > :nth-child(8),
+.hive-slot-container > :nth-child(13),
+.hive-slot-container > :nth-child(18),
+.hive-slot-container > :nth-child(23),
+.hive-slot-container > :nth-child(28),
+.hive-slot-container > :nth-child(33),
+.hive-slot-container > :nth-child(38),
+.hive-slot-container > :nth-child(43),
+.hive-slot-container > :nth-child(48) {
+  transform: translate(-52%, 55%);
+}
+
+.hive-slot-container > :nth-child(4),
+.hive-slot-container > :nth-child(9),
+.hive-slot-container > :nth-child(14),
+.hive-slot-container > :nth-child(19),
+.hive-slot-container > :nth-child(24),
+.hive-slot-container > :nth-child(29),
+.hive-slot-container > :nth-child(34),
+.hive-slot-container > :nth-child(39),
+.hive-slot-container > :nth-child(44),
+.hive-slot-container > :nth-child(49) {
+  transform: translateX(-78%);
+}
+
+.hive-slot-container > :nth-child(5),
+.hive-slot-container > :nth-child(10),
+.hive-slot-container > :nth-child(15),
+.hive-slot-container > :nth-child(20),
+.hive-slot-container > :nth-child(25),
+.hive-slot-container > :nth-child(30),
+.hive-slot-container > :nth-child(35),
+.hive-slot-container > :nth-child(40),
+.hive-slot-container > :nth-child(45),
+.hive-slot-container > :nth-child(50) {
+  transform: translate(-104%, 55%);
 }
 
 /* BEE TYPES */

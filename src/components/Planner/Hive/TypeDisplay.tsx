@@ -48,7 +48,10 @@ function TypeDisplay({ type }: { type: number }) {
                     {...provided.dragHandleProps}
                     ref={provided.innerRef}
                   >
-                    {bee.name}
+                    <img
+                      src={require(`images/Hive/${bee.image}`)}
+                      alt={bee.name}
+                    />
                   </div>
                 )}
               </Draggable>
