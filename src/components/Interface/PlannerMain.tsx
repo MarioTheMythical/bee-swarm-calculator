@@ -103,6 +103,8 @@ function PlannerMain() {
                 className={
                   theme ? "main-description dark-info" : "main-description"
                 }
+                style={{ cursor: "pointer" }}
+                onClick={descriptionCheck}
               >
                 To use the Hive Planner, select which rarity of bees you want
                 and drag the icon into your{" "}

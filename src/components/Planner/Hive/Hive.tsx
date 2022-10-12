@@ -105,6 +105,50 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
     setHiveSlots(HiveSlots);
   };
 
+  useEffect(() => {
+    const hiveArrayToString = hiveSlots
+      .map((item) => {
+        if (item.name.includes("★")) {
+          return "G" + item.id;
+        }
+        return item.id;
+      })
+      .join("-");
+
+    const giftedBees: { name: string; id: string; image: string }[] = [
+      ...giftedBeeTypeDisplay.rare,
+      ...giftedBeeTypeDisplay.epic,
+      ...giftedBeeTypeDisplay.legendary,
+      ...giftedBeeTypeDisplay.mythic,
+      ...giftedBeeTypeDisplay.event,
+    ];
+
+    const normalBees: { name: string; id: string; image: string }[] = [
+      ...beeTypeDisplay.rare,
+      ...beeTypeDisplay.epic,
+      ...beeTypeDisplay.legendary,
+      ...beeTypeDisplay.mythic,
+      ...beeTypeDisplay.event,
+    ];
+
+    const loadHive = hiveArrayToString.split("-").map((item) => {
+      if (item === "0") {
+        return HiveSlots[0];
+      }
+      if (item.includes("G")) {
+        return giftedBees[Number(item.replace("G", "")) - 1];
+      }
+      return normalBees[Number(item.replace("G", "")) - 1];
+    });
+
+    console.log(loadHive);
+  }, [hiveSlots]);
+
+  // USE FOR COPY EXPORT CODE
+  // onClick={() => {
+  //   navigator.clipboard.writeText("test");
+  // }}
+
   return (
     <div className="hive-container">
       <DragDropContext
