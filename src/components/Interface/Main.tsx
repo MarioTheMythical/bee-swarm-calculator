@@ -2,6 +2,7 @@ import { useEffect, useState, createContext } from "react";
 import { inventoryItems, inventoryMaterials } from "libs/data";
 import ItemDisplay from "./ItemDisplay";
 import ItemSelection from "./ItemSelection";
+import { Link } from "react-router-dom";
 
 export const ThemeContext = createContext(true);
 
@@ -11,6 +12,7 @@ function Main() {
   const [theme, setTheme] = useState(
     localStorage.getItem("BSS-Theme") === "dark" ? true : false
   );
+  const [dropdownCheck, setDropdownCheck] = useState(false);
 
   const changeUserDisplaySelection = (selection: number) => {
     setDisplaySelection(selection);
@@ -56,7 +58,49 @@ function Main() {
             theme ? "main-container dark-background" : "main-container"
           }
         >
+          <div
+            className={
+              dropdownCheck
+                ? theme
+                  ? "dropdown-menu visible dark-info"
+                  : "dropdown-menu visible"
+                : theme
+                ? "dropdown-menu dark-info"
+                : "dropdown-menu"
+            }
+          >
+            <Link to="/">
+              <span />
+            </Link>
+            <Link to="/planner">
+              <span />
+            </Link>
+            <Link to="/calculator">
+              <span />
+            </Link>
+            <div
+              className={
+                dropdownCheck
+                  ? theme
+                    ? "dropdown-menu-close dark-font"
+                    : "dropdown-menu-close"
+                  : "hidden"
+              }
+              onClick={() => setDropdownCheck(false)}
+            >
+              ✕
+            </div>
+          </div>
+
+          <div
+            className={dropdownCheck ? "dropdown-menu-blur" : ""}
+            onClick={() => setDropdownCheck(false)}
+          />
           <div className="main-title-container">
+            <div
+              className={theme ? "dark-menu" : "light-menu"}
+              onClick={() => setDropdownCheck(true)}
+            />
             <div className={theme ? "main-title dark-font" : "main-title"} />
             <div
               onClick={() => changeTheme(!theme)}
@@ -69,10 +113,6 @@ function Main() {
           <div
             className={theme ? "main-items-container" : "main-items-container"}
           >
-            <ItemSelection
-              displaySelection={displaySelection}
-              changeUserDisplaySelection={changeUserDisplaySelection}
-            />
             {bssDescriptionCheck && (
               <div
                 className={
@@ -85,9 +125,14 @@ function Main() {
                   Inventory
                 </span>{" "}
                 tab and then select which recipe you'd like to check using the
-                buttons above.
+                buttons below.
               </div>
             )}
+            <ItemSelection
+              displaySelection={displaySelection}
+              changeUserDisplaySelection={changeUserDisplaySelection}
+            />
+
             <ItemDisplay displaySelection={displaySelection} />
           </div>
         </div>

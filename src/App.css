@@ -75,8 +75,8 @@ input[type="number"] {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  top: 1%;
-  right: 3%;
+  top: 5px;
+  right: 20px;
   font-size: 1.7rem;
   font-weight: 800;
   color: var(--main-dark-font);
@@ -102,6 +102,7 @@ input[type="number"] {
 }
 
 .dropdown-menu-blur {
+  cursor: pointer;
   position: fixed;
   width: 40%;
   height: 100%;
@@ -118,24 +119,20 @@ input[type="number"] {
 }
 
 .visible > :nth-child(1),
-.visible > :nth-child(2) {
+.visible > :nth-child(2),
+.visible > :nth-child(3) {
   padding: 15px 10px 0px 15px;
 }
 
-/* .visible > :nth-child(3)::after {
-  content: "x";
-  cursor: pointer;
-  color: white;
-  border-radius: 50%;
-  background-color: rgb(20, 20, 20);
-  padding: 0px 10px 5px 10px;
-} */
-
 .visible > :nth-child(1)::after {
-  content: "Hive Planner";
+  content: "Home";
 }
 
 .visible > :nth-child(2)::after {
+  content: "Hive Planner";
+}
+
+.visible > :nth-child(3)::after {
   content: "Recipe Calculator";
 }
 

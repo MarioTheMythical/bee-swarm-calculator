@@ -37,6 +37,9 @@ function App() {
               : "dropdown-menu"
           }
         >
+          <Link to="/">
+            <span />
+          </Link>
           <Link to="/planner">
             <span />
           </Link>

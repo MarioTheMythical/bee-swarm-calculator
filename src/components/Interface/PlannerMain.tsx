@@ -1,5 +1,6 @@
 import { useEffect, useState, createContext } from "react";
 import Hive from "components/Planner/Hive/Hive";
+import { Link } from "react-router-dom";
 
 export const PlannerThemeContext = createContext(true);
 
@@ -8,6 +9,7 @@ function PlannerMain() {
   const [theme, setTheme] = useState(
     localStorage.getItem("BSS-Theme") === "dark" ? true : false
   );
+  const [dropdownCheck, setDropdownCheck] = useState(false);
 
   const changeTheme = (selection: boolean) => {
     if (selection) {
@@ -39,10 +41,51 @@ function PlannerMain() {
       >
         <div
           className={
+            dropdownCheck
+              ? theme
+                ? "dropdown-menu visible dark-info"
+                : "dropdown-menu visible"
+              : theme
+              ? "dropdown-menu dark-info"
+              : "dropdown-menu"
+          }
+        >
+          <Link to="/">
+            <span />
+          </Link>
+          <Link to="/planner">
+            <span />
+          </Link>
+          <Link to="/calculator">
+            <span />
+          </Link>
+          <div
+            className={
+              dropdownCheck
+                ? theme
+                  ? "dropdown-menu-close dark-font"
+                  : "dropdown-menu-close"
+                : "hidden"
+            }
+            onClick={() => setDropdownCheck(false)}
+          >
+            ✕
+          </div>
+        </div>
+        <div
+          className={dropdownCheck ? "dropdown-menu-blur" : ""}
+          onClick={() => setDropdownCheck(false)}
+        />
+        <div
+          className={
             theme ? "main-container dark-background" : "main-container"
           }
         >
           <div className="main-title-container">
+            <div
+              className={theme ? "dark-menu" : "light-menu"}
+              onClick={() => setDropdownCheck(true)}
+            />
             <div className={theme ? "main-title dark-font" : "main-title"} />
             <div
               onClick={() => changeTheme(!theme)}
