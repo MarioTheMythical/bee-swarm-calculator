@@ -1,9 +1,9 @@
-import Planner from "components/Planner/Planner";
+import PlannerMain from "components/Interface/PlannerMain";
 
 function App() {
   return (
-    <div>
-      <Planner />
+    <div className="planner-container">
+      <PlannerMain />
     </div>
   );
 }

@@ -1904,8 +1904,26 @@ export const beeTypeDisplay = {
     { name: "Shy", id: "28", image: "ShyBee.png" },
     { name: "Demon", id: "29", image: "DemonBee.png" },
   ],
-  mythic: [{ name: "mythic", id: "15", image: "EmptyHive.png" }],
-  event: [{ name: "event", id: "15", image: "EmptyHive.png" }],
+  mythic: [
+    { name: "Vector", id: "30", image: "VectorBee.png" },
+    { name: "Fuzzy", id: "31", image: "FuzzyBee.png" },
+    { name: "Tadpole", id: "32", image: "TadpoleBee.png" },
+    { name: "Bouyant", id: "33", image: "BouyantBee.png" },
+    { name: "Precise", id: "34", image: "PreciseBee.png" },
+    { name: "Spicy", id: "35", image: "SpicyBee.png" },
+  ],
+  event: [
+    { name: "Bear", id: "36", image: "BearBee.png" },
+    { name: "Tabby", id: "37", image: "TabbyBee.png" },
+    { name: "Photon", id: "38", image: "PhotonBee.png" },
+    { name: "Gummy", id: "39", image: "GummyBee.png" },
+    { name: "Puppy", id: "40", image: "PuppyBee.png" },
+    { name: "Windy", id: "41", image: "WindyBee.png" },
+    { name: "Vicious", id: "42", image: "ViciousBee.png" },
+    { name: "Festive", id: "43", image: "FestiveBee.png" },
+    { name: "Cobalt", id: "44", image: "CobaltBee.png" },
+    { name: "Crimson", id: "45", image: "CrimsonBee.png" },
+  ],
 };
 
 export const giftedBeeTypeDisplay = {
@@ -1944,8 +1962,26 @@ export const giftedBeeTypeDisplay = {
     { name: "GiftedShy", id: "28", image: "Gifted/ShyBee.png" },
     { name: "GiftedDemon", id: "29", image: "Gifted/DemonBee.png" },
   ],
-  mythic: [{ name: "mythic", id: "4", image: "EmptyHive.png" }],
-  event: [{ name: "event", id: "5", image: "EmptyHive.png" }],
+  mythic: [
+    { name: "GiftedVector", id: "30", image: "Gifted/VectorBee.png" },
+    { name: "GiftedFuzzy", id: "31", image: "Gifted/FuzzyBee.png" },
+    { name: "GiftedTadpole", id: "32", image: "Gifted/TadpoleBee.png" },
+    { name: "GiftedBouyant", id: "33", image: "Gifted/BouyantBee.png" },
+    { name: "GiftedPrecise", id: "34", image: "Gifted/PreciseBee.png" },
+    { name: "GiftedSpicy", id: "35", image: "Gifted/SpicyBee.png" },
+  ],
+  event: [
+    { name: "GiftedBear", id: "36", image: "Gifted/BearBee.png" },
+    { name: "GiftedTabby", id: "37", image: "Gifted/TabbyBee.png" },
+    { name: "GiftedPhoton", id: "38", image: "Gifted/PhotonBee.png" },
+    { name: "GiftedGummy", id: "39", image: "Gifted/GummyBee.png" },
+    { name: "GiftedPuppy", id: "40", image: "Gifted/PuppyBee.png" },
+    { name: "GiftedWindy", id: "41", image: "Gifted/WindyBee.png" },
+    { name: "GiftedVicious", id: "42", image: "Gifted/ViciousBee.png" },
+    { name: "GiftedFestive", id: "43", image: "Gifted/FestiveBee.png" },
+    { name: "GiftedCobalt", id: "44", image: "Gifted/CobaltBee.png" },
+    { name: "GiftedCrimson", id: "45", image: "Gifted/CrimsonBee.png" },
+  ],
 };
 
 export const HiveSlots = [

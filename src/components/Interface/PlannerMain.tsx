@@ -109,8 +109,9 @@ function PlannerMain() {
                 <span style={{ fontWeight: "bold", color: "rgb(53, 151, 97)" }}>
                   hive.
                 </span>{" "}
-                After you're happy with your hive setup, you can save it for
-                later. <br />
+                To Delete a bee from your hive, simply click it and it'll be
+                deleted. After you're happy with your hive setup, you can save
+                it for later. <br />
                 (Hive data only saves on your current device and is deleted if
                 you clear your browser cache.)
               </div>
