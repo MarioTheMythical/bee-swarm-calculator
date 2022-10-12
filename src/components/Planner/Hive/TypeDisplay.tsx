@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
+import { PlannerThemeContext } from "components/Interface/PlannerMain";
 import { beeTypeDisplay } from "libs/data";
 import { Draggable, Droppable } from "react-beautiful-dnd";
 
@@ -10,6 +11,8 @@ function TypeDisplay({ type }: { type: number }) {
       image: string;
     }[]
   >();
+
+  const theme = useContext(PlannerThemeContext);
 
   useEffect(() => {
     switch (type) {
@@ -36,7 +39,7 @@ function TypeDisplay({ type }: { type: number }) {
         <div
           {...provided.droppableProps}
           ref={provided.innerRef}
-          className="type-container"
+          className={theme ? "type-container dark-info" : "type-container"}
         >
           {typeData?.map((bee, index) => {
             return (

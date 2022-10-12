@@ -5,7 +5,7 @@ import Bees from "./Bees";
 import { beeTypeDisplay } from "libs/data";
 import { DragDropContext } from "react-beautiful-dnd";
 
-function Hive() {
+function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
   const [hiveSlots, setHiveSlots] = useState(HiveSlots);
 
   const onBeforeCapture = () => {};
@@ -73,7 +73,7 @@ function Hive() {
         onDragUpdate={onDragUpdate}
         onDragEnd={onDragEnd}
       >
-        <Bees />
+        <Bees descriptionCheck={descriptionCheck} />
         <Slots hiveSlots={hiveSlots} removeFromList={removeFromList} />
       </DragDropContext>
     </div>

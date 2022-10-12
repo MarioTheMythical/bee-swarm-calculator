@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { PlannerThemeContext } from "components/Interface/PlannerMain";
+import { useContext, useState } from "react";
 import { beeTypes } from "libs/data";
 import TypeDisplay from "./TypeDisplay";
 
-function Bees() {
+function Bees({ descriptionCheck }: { descriptionCheck: () => void }) {
   const [beeTypeSelection, setBeeTypeSelection] = useState(0);
   const [giftedCheck, setGiftedCheck] = useState(false);
+  const theme = useContext(PlannerThemeContext);
+
   return (
     <div className="bees-container">
       <div className="bees-type-container">
@@ -17,7 +20,10 @@ function Bees() {
                   ? "bees-button bees-selected"
                   : "bees-button"
               }
-              onClick={() => setBeeTypeSelection(index)}
+              onClick={() => {
+                setBeeTypeSelection(index);
+                descriptionCheck();
+              }}
             >
               {type}
             </div>
@@ -27,7 +33,7 @@ function Bees() {
       <TypeDisplay type={beeTypeSelection} />
       <button
         onClick={() => setGiftedCheck((current) => !current)}
-        className="bees-gifted"
+        className={theme ? "bees-gifted dark-info" : "bees-gifted"}
       >
         Gifted {giftedCheck ? "✅" : "❌"}
       </button>

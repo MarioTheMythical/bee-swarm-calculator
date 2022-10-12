@@ -1,7 +1,7 @@
 import { useEffect, useState, createContext } from "react";
 import Hive from "components/Planner/Hive/Hive";
 
-export const ThemeContext = createContext(true);
+export const PlannerThemeContext = createContext(true);
 
 function PlannerMain() {
   const [bssDescriptionCheck, setBssDescriptionCheck] = useState(true);
@@ -15,7 +15,7 @@ function PlannerMain() {
     } else {
       localStorage.setItem("BSS-Theme", "light");
     }
-    setTheme(!theme);
+    setTheme((current) => !current);
   };
 
   useEffect(() => {
@@ -25,8 +25,12 @@ function PlannerMain() {
     }
   }, []);
 
+  const descriptionCheck = () => {
+    setBssDescriptionCheck(false);
+  };
+
   return (
-    <ThemeContext.Provider value={theme}>
+    <PlannerThemeContext.Provider value={theme}>
       <div
         className="main-parent-container"
         style={{
@@ -66,11 +70,11 @@ function PlannerMain() {
                 buttons above.
               </div>
             )}
-            <Hive />
+            <Hive descriptionCheck={descriptionCheck} />
           </div>
         </div>
       </div>
-    </ThemeContext.Provider>
+    </PlannerThemeContext.Provider>
   );
 }
 
