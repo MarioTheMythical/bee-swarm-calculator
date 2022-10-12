@@ -105,13 +105,17 @@ function PlannerMain() {
                 }
               >
                 To use the Hive Planner, select which rarity of bees you want
-                and drag the icon into the{" "}
+                and drag the icon into your{" "}
                 <span style={{ fontWeight: "bold", color: "rgb(53, 151, 97)" }}>
                   hive.
                 </span>{" "}
-                To Delete a bee from your hive, simply click it and it'll be
-                deleted. After you're happy with your hive setup, you can save
-                it for later. <br />
+                <br />
+                <br />
+                To Delete a bee from your hive, simply click it.
+                <br />
+                <br /> After you're happy with your hive setup, you can save it
+                for later. <br />
+                <br />
                 (Hive data only saves on your current device and is deleted if
                 you clear your browser cache.)
               </div>

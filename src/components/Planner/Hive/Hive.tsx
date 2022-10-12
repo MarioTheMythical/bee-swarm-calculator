@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { HiveSlots } from "libs/data";
 import Slots from "./Slots";
 import Bees from "./Bees";
@@ -8,6 +8,26 @@ import { DragDropContext } from "react-beautiful-dnd";
 function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
   const [hiveSlots, setHiveSlots] = useState(HiveSlots);
   const [giftedCheck, setGiftedCheck] = useState(false);
+
+  useEffect(() => {
+    let hive: string[] = [];
+    let hiveCount: { name: string; count: number }[] = [];
+
+    hiveSlots.forEach((item) => {
+      if (!hive.includes(item.name) && item.name !== "") {
+        hive.push(item.name);
+        hiveCount.push({ name: item.name, count: 0 });
+      }
+    });
+
+    hiveCount.forEach((item, index) => {
+      hiveCount[index].count = hiveSlots.filter(
+        (slot) => slot.name === item.name
+      ).length;
+    });
+
+    console.log(hiveCount);
+  }, [hiveSlots]);
 
   const onBeforeCapture = () => {};
   const onBeforeDragStart = () => {};
