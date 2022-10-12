@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect } from "react";
 import { PlannerThemeContext } from "components/Interface/PlannerMain";
-import { beeTypeDisplay } from "libs/data";
+import { beeTypeDisplay, giftedBeeTypeDisplay } from "libs/data";
 import { Draggable, Droppable } from "react-beautiful-dnd";
 
 function TypeDisplay({
@@ -23,21 +23,36 @@ function TypeDisplay({
   useEffect(() => {
     switch (type) {
       case 1:
+        if (giftedCheck) {
+          return setTypeData(giftedBeeTypeDisplay.epic);
+        }
         return setTypeData(beeTypeDisplay.epic);
 
       case 2:
+        if (giftedCheck) {
+          return setTypeData(giftedBeeTypeDisplay.legendary);
+        }
         return setTypeData(beeTypeDisplay.legendary);
 
       case 3:
+        if (giftedCheck) {
+          return setTypeData(giftedBeeTypeDisplay.mythic);
+        }
         return setTypeData(beeTypeDisplay.mythic);
 
       case 4:
+        if (giftedCheck) {
+          return setTypeData(giftedBeeTypeDisplay.event);
+        }
         return setTypeData(beeTypeDisplay.event);
 
       default:
+        if (giftedCheck) {
+          return setTypeData(giftedBeeTypeDisplay.rare);
+        }
         return setTypeData(beeTypeDisplay.rare);
     }
-  }, [type]);
+  }, [type, giftedCheck]);
 
   return (
     <Droppable droppableId="bees">
@@ -59,11 +74,7 @@ function TypeDisplay({
                   >
                     <img
                       className="type-image"
-                      src={
-                        giftedCheck
-                          ? require(`images/Hive/Gifted/${bee.image}`)
-                          : require(`images/Hive/${bee.image}`)
-                      }
+                      src={require(`images/Hive/${bee.image}`)}
                       alt={bee.name}
                     />
                   </div>

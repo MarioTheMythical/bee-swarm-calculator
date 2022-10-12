@@ -1876,6 +1876,14 @@ export const beeTypeDisplay = {
   event: [{ name: "event", id: "5", image: "EmptyHive.png" }],
 };
 
+export const giftedBeeTypeDisplay = {
+  rare: [{ name: "GiftedBasic", id: "1", image: "Gifted/BasicBee.png" }],
+  epic: [{ name: "epic", id: "2", image: "Gifted/BasicBee.png" }],
+  legendary: [{ name: "legend", id: "3", image: "EmptyHive.png" }],
+  mythic: [{ name: "mythic", id: "4", image: "EmptyHive.png" }],
+  event: [{ name: "event", id: "5", image: "EmptyHive.png" }],
+};
+
 export const HiveSlots = [
   { name: "", id: "0", image: "EmptyHive.png" },
   { name: "", id: "0", image: "EmptyHive.png" },

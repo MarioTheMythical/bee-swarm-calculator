@@ -2,16 +2,18 @@ import { useState } from "react";
 import { HiveSlots } from "libs/data";
 import Slots from "./Slots";
 import Bees from "./Bees";
-import { beeTypeDisplay } from "libs/data";
+import { giftedBeeTypeDisplay, beeTypeDisplay } from "libs/data";
 import { DragDropContext } from "react-beautiful-dnd";
 
 function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
   const [hiveSlots, setHiveSlots] = useState(HiveSlots);
+  const [giftedCheck, setGiftedCheck] = useState(false);
 
   const onBeforeCapture = () => {};
   const onBeforeDragStart = () => {};
   const onDragStart = () => {};
   const onDragUpdate = () => {};
+
   const onDragEnd = (result: any) => {
     if (result.destination.droppableId.includes("hive")) {
       let beeSelection: {
@@ -20,11 +22,19 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
         image: string;
       }[] = [];
 
-      Object.values(beeTypeDisplay).forEach((item) => {
-        item.forEach((bee) => {
-          if (bee.id === result.draggableId) beeSelection.push(bee);
+      if (giftedCheck) {
+        Object.values(giftedBeeTypeDisplay).forEach((item) => {
+          item.forEach((bee) => {
+            if (bee.id === result.draggableId) beeSelection.push(bee);
+          });
         });
-      });
+      } else {
+        Object.values(beeTypeDisplay).forEach((item) => {
+          item.forEach((bee) => {
+            if (bee.id === result.draggableId) beeSelection.push(bee);
+          });
+        });
+      }
 
       addToList(
         beeSelection[0],
@@ -64,6 +74,10 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
     setHiveSlots(newHive);
   };
 
+  const selectGifted = () => {
+    setGiftedCheck((current) => !current);
+  };
+
   return (
     <div className="hive-container">
       <DragDropContext
@@ -73,7 +87,11 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
         onDragUpdate={onDragUpdate}
         onDragEnd={onDragEnd}
       >
-        <Bees descriptionCheck={descriptionCheck} />
+        <Bees
+          descriptionCheck={descriptionCheck}
+          giftedCheck={giftedCheck}
+          selectGifted={selectGifted}
+        />
         <Slots hiveSlots={hiveSlots} removeFromList={removeFromList} />
       </DragDropContext>
     </div>

@@ -3,9 +3,17 @@ import { useContext, useState } from "react";
 import { beeTypes } from "libs/data";
 import TypeDisplay from "./TypeDisplay";
 
-function Bees({ descriptionCheck }: { descriptionCheck: () => void }) {
+function Bees({
+  descriptionCheck,
+  giftedCheck,
+  selectGifted,
+}: {
+  descriptionCheck: () => void;
+  giftedCheck: boolean;
+  selectGifted: () => void;
+}) {
   const [beeTypeSelection, setBeeTypeSelection] = useState(0);
-  const [giftedCheck, setGiftedCheck] = useState(false);
+
   const theme = useContext(PlannerThemeContext);
 
   return (
@@ -32,7 +40,7 @@ function Bees({ descriptionCheck }: { descriptionCheck: () => void }) {
       </div>
       <TypeDisplay type={beeTypeSelection} giftedCheck={giftedCheck} />
       <button
-        onClick={() => setGiftedCheck((current) => !current)}
+        onClick={selectGifted}
         className={theme ? "bees-gifted dark-info" : "bees-gifted"}
       >
         Gifted {giftedCheck ? "✅" : "❌"}

@@ -17,7 +17,7 @@ function Slots({
         {hiveSlots.map((hive, index) => {
           return (
             <Droppable droppableId={"hive" + index} key={index}>
-              {(provided, snapshot) => (
+              {(provided) => (
                 <div
                   className="hive-slot"
                   {...provided.droppableProps}
