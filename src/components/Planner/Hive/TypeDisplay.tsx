@@ -23,33 +23,28 @@ function TypeDisplay({
   useEffect(() => {
     switch (type) {
       case 1:
-        if (giftedCheck) {
-          return setTypeData(giftedBeeTypeDisplay.epic);
-        }
+        if (giftedCheck) return setTypeData(giftedBeeTypeDisplay.epic);
+
         return setTypeData(beeTypeDisplay.epic);
 
       case 2:
-        if (giftedCheck) {
-          return setTypeData(giftedBeeTypeDisplay.legendary);
-        }
+        if (giftedCheck) return setTypeData(giftedBeeTypeDisplay.legendary);
+
         return setTypeData(beeTypeDisplay.legendary);
 
       case 3:
-        if (giftedCheck) {
-          return setTypeData(giftedBeeTypeDisplay.mythic);
-        }
+        if (giftedCheck) return setTypeData(giftedBeeTypeDisplay.mythic);
+
         return setTypeData(beeTypeDisplay.mythic);
 
       case 4:
-        if (giftedCheck) {
-          return setTypeData(giftedBeeTypeDisplay.event);
-        }
+        if (giftedCheck) return setTypeData(giftedBeeTypeDisplay.event);
+
         return setTypeData(beeTypeDisplay.event);
 
       default:
-        if (giftedCheck) {
-          return setTypeData(giftedBeeTypeDisplay.rare);
-        }
+        if (giftedCheck) return setTypeData(giftedBeeTypeDisplay.rare);
+
         return setTypeData(beeTypeDisplay.rare);
     }
   }, [type, giftedCheck]);
