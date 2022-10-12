@@ -28,7 +28,7 @@ function PlannerMain() {
   return (
     <ThemeContext.Provider value={theme}>
       <div
-        className="planner"
+        className="main-parent-container"
         style={{
           backgroundColor: theme ? "rgb(29, 54, 62)" : "rgb(152, 203, 223)",
         }}
@@ -49,11 +49,7 @@ function PlannerMain() {
             A tool to help plan your future hive ideas.
           </div>
           <div
-            className={
-              theme
-                ? "main-items-container dark-background-lighter"
-                : "main-items-container"
-            }
+            className={theme ? "main-items-container" : "main-items-container"}
           >
             {bssDescriptionCheck && (
               <div
