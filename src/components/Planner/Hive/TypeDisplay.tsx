@@ -49,9 +49,9 @@ function TypeDisplay({ type }: { type: number }) {
                     ref={provided.innerRef}
                   >
                     <img
+                      className="type-image"
                       src={require(`images/Hive/${bee.image}`)}
                       alt={bee.name}
-                      style={{ width: "65px" }}
                     />
                   </div>
                 )}

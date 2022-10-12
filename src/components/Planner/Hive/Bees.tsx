@@ -25,12 +25,12 @@ function Bees() {
         })}
       </div>
       <TypeDisplay type={beeTypeSelection} />
-      <div
+      <button
         onClick={() => setGiftedCheck((current) => !current)}
         className="bees-gifted"
       >
         Gifted {giftedCheck ? "✅" : "❌"}
-      </div>
+      </button>
     </div>
   );
 }

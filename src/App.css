@@ -451,7 +451,11 @@ input[type="number"] {
 
 .bees-gifted {
   cursor: pointer;
+  user-select: none;
   font-size: 1.1rem;
+  color: white;
+  border: none;
+  background-color: rgb(0, 0, 0, 0);
 }
 
 /* BEE TYPES */
@@ -463,6 +467,10 @@ input[type="number"] {
   padding: 15px 0px 10px 0px;
   margin: 10px 0px;
   background-color: cadetblue;
+}
+
+.type-image {
+  width: 65px;
 }
 
 /* HIVE */
@@ -623,6 +631,9 @@ input[type="number"] {
   }
   .items-titles {
     width: 100px;
+  }
+  .type-image {
+    width: 55px;
   }
   .hive-slot-container-bg {
     width: 330px;
