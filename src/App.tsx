@@ -1,11 +1,15 @@
-import Planner from "components/Planner/Planner";
+import { Link } from "react-router-dom";
 import "./App.css";
-import Main from "./components/Interface/Main";
 
 function App() {
   return (
     <div>
-      <Planner />
+      <Link to="/calculator">
+        <div>Calculator</div>
+      </Link>
+      <Link to="/planner">
+        <div>Planner</div>
+      </Link>
     </div>
   );
 }

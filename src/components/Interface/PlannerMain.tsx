@@ -61,13 +61,15 @@ function PlannerMain() {
                   theme ? "main-description dark-info" : "main-description"
                 }
               >
-                To get started using BSS Calculator, enter your current item and
-                material amounts within the{" "}
+                To use the Hive Planner, select which rarity of bees you want
+                and drag the icon into the{" "}
                 <span style={{ fontWeight: "bold", color: "rgb(53, 151, 97)" }}>
-                  Inventory
+                  hive.
                 </span>{" "}
-                tab and then select which recipe you'd like to check using the
-                buttons above.
+                After you're happy with your hive setup, you can save it for
+                later. <br />
+                (Hive data only saves on your current device and gets deleted if
+                you clear browser cache.)
               </div>
             )}
             <Hive descriptionCheck={descriptionCheck} />
