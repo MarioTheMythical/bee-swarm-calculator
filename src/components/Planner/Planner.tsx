@@ -4,6 +4,7 @@ function Planner() {
   return (
     <div className="planner-container">
       <PlannerMain />
+      <div>test</div>
     </div>
   );
 }

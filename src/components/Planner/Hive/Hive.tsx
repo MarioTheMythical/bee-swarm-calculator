@@ -78,6 +78,10 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
     setGiftedCheck((current) => !current);
   };
 
+  const clearHive = () => {
+    setHiveSlots(HiveSlots);
+  };
+
   return (
     <div className="hive-container">
       <DragDropContext
@@ -94,6 +98,12 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
         />
         <Slots hiveSlots={hiveSlots} removeFromList={removeFromList} />
       </DragDropContext>
+      <div className="planner-btn-container">
+        <div className="planner-save">Save</div>
+        <div className="inventory-reset-button" onClick={clearHive}>
+          Clear
+        </div>
+      </div>
     </div>
   );
 }

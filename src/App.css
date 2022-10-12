@@ -126,17 +126,17 @@ input[type="number"] {
 
 .visible > :nth-child(1)::after {
   content: "Home";
-  animation: fadein 500ms;
+  animation: fadein 300ms;
 }
 
 .visible > :nth-child(2)::after {
   content: "Hive Planner";
-  animation: fadein 500ms;
+  animation: fadein 300ms;
 }
 
 .visible > :nth-child(3)::after {
   content: "Recipe Calculator";
-  animation: fadein 500ms;
+  animation: fadein 300ms;
 }
 
 @keyframes fadein {
@@ -483,6 +483,31 @@ input[type="number"] {
 
 .planner-title {
   margin: 10px 10px 50px 10px;
+}
+
+.planner-btn-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.planner-save {
+  cursor: pointer;
+  user-select: none;
+  padding: 1px 10px 4px 10px;
+  margin: 2px 50px 5px 0px;
+  border-radius: 3px;
+  border: 2px solid rgb(0, 128, 13, 0.2);
+  background-color: rgb(0, 128, 13);
+  transition: 100ms;
+}
+
+.planner-save:hover {
+  background-color: rgb(0, 150, 15);
+}
+
+.planner-save:active {
+  background-color: rgb(0, 113, 11);
 }
 
 /* BEES */
