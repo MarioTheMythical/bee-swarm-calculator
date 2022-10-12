@@ -1,22 +1,13 @@
 import { useEffect, useState, createContext } from "react";
-import { inventoryItems, inventoryMaterials } from "libs/data";
-import ItemDisplay from "./ItemDisplay";
-import ItemSelection from "./ItemSelection";
 import Hive from "components/Planner/Hive/Hive";
 
 export const ThemeContext = createContext(true);
 
 function PlannerMain() {
-  const [displaySelection, setDisplaySelection] = useState<number>(0);
   const [bssDescriptionCheck, setBssDescriptionCheck] = useState(true);
   const [theme, setTheme] = useState(
     localStorage.getItem("BSS-Theme") === "dark" ? true : false
   );
-
-  const changeUserDisplaySelection = (selection: number) => {
-    setDisplaySelection(selection);
-    setBssDescriptionCheck(false);
-  };
 
   const changeTheme = (selection: boolean) => {
     if (selection) {
@@ -37,7 +28,7 @@ function PlannerMain() {
   return (
     <ThemeContext.Provider value={theme}>
       <div
-        className="main-parent-container"
+        className="planner"
         style={{
           backgroundColor: theme ? "rgb(29, 54, 62)" : "rgb(152, 203, 223)",
         }}
@@ -55,7 +46,7 @@ function PlannerMain() {
             />
           </div>
           <div className={theme ? "main-subtitle dark-font" : "main-subtitle"}>
-            A recipe calculator which makes it easier to track your progress.
+            A tool to help plan your future hive ideas.
           </div>
           <div
             className={

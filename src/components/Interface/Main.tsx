@@ -67,11 +67,7 @@ function Main() {
             A recipe calculator which makes it easier to track your progress.
           </div>
           <div
-            className={
-              theme
-                ? "main-items-container dark-background-lighter"
-                : "main-items-container"
-            }
+            className={theme ? "main-items-container" : "main-items-container"}
           >
             <ItemSelection
               displaySelection={displaySelection}

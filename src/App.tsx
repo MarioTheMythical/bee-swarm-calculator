@@ -5,7 +5,7 @@ import Main from "./components/Interface/Main";
 function App() {
   return (
     <div>
-      <Planner />
+      <Main />
     </div>
   );
 }
