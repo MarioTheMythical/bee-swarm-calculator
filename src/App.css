@@ -449,12 +449,38 @@ input[type="number"] {
   background-color: rgb(49, 136, 88);
 }
 
+.bees-gifted {
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+/* BEE TYPES */
+
+.type-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 15px 0px 10px 0px;
+  margin: 10px 0px;
+  background-color: cadetblue;
+}
+
 /* HIVE */
 
 .hive-container {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.hive-slot-container-bg {
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 15px 10px 10px 10px;
+  border: 5px solid #836c19;
+  background-color: #92791b;
 }
 
 .hive-slot-container {
@@ -464,8 +490,6 @@ input[type="number"] {
   justify-content: center;
   width: 450px;
   margin-bottom: 50px;
-  background-color: rgb(36, 52, 52);
-  transform: translate(9%);
 }
 
 .hive-slot {
@@ -498,7 +522,7 @@ input[type="number"] {
 .hive-slot-container > :nth-child(45),
 .hive-slot-container > :nth-child(46),
 .hive-slot-container > :nth-child(50) {
-  transform: translateY(55%);
+  transform: translate(50%, 55%);
 }
 
 .hive-slot-container > :nth-child(2),
@@ -511,7 +535,7 @@ input[type="number"] {
 .hive-slot-container > :nth-child(37),
 .hive-slot-container > :nth-child(42),
 .hive-slot-container > :nth-child(47) {
-  transform: translateX(-26%);
+  transform: translateX(26%);
 }
 
 .hive-slot-container > :nth-child(3),
@@ -524,7 +548,7 @@ input[type="number"] {
 .hive-slot-container > :nth-child(38),
 .hive-slot-container > :nth-child(43),
 .hive-slot-container > :nth-child(48) {
-  transform: translate(-52%, 55%);
+  transform: translate(3%, 55%);
 }
 
 .hive-slot-container > :nth-child(4),
@@ -537,7 +561,7 @@ input[type="number"] {
 .hive-slot-container > :nth-child(39),
 .hive-slot-container > :nth-child(44),
 .hive-slot-container > :nth-child(49) {
-  transform: translateX(-78%);
+  transform: translateX(-20%);
 }
 
 .hive-slot-container > :nth-child(5),
@@ -550,17 +574,7 @@ input[type="number"] {
 .hive-slot-container > :nth-child(40),
 .hive-slot-container > :nth-child(45),
 .hive-slot-container > :nth-child(50) {
-  transform: translate(-104%, 55%);
-}
-
-/* BEE TYPES */
-
-.type-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding: 10px 0px;
-  background-color: cadetblue;
+  transform: translate(-43%, 55%);
 }
 
 /* SCREEN RES BREAKPOINTS */
@@ -610,6 +624,18 @@ input[type="number"] {
   .items-titles {
     width: 100px;
   }
+  .hive-slot-container-bg {
+    width: 330px;
+  }
+  .hive-slot-container {
+    width: 280px;
+    height: 680px;
+    transform: translate(-2%);
+  }
+  .hive-slot {
+    width: 50px;
+    height: 40px;
+  }
 }
 
 @media (max-height: 55rem) {
@@ -630,5 +656,81 @@ input[type="number"] {
   }
   .planner-container {
     height: 100%;
+  }
+}
+
+@media (max-width: 44rem) {
+  .hive-slot-container > :nth-child(1),
+  .hive-slot-container > :nth-child(6),
+  .hive-slot-container > :nth-child(10),
+  .hive-slot-container > :nth-child(11),
+  .hive-slot-container > :nth-child(15),
+  .hive-slot-container > :nth-child(16),
+  .hive-slot-container > :nth-child(20),
+  .hive-slot-container > :nth-child(21),
+  .hive-slot-container > :nth-child(25),
+  .hive-slot-container > :nth-child(26),
+  .hive-slot-container > :nth-child(30),
+  .hive-slot-container > :nth-child(31),
+  .hive-slot-container > :nth-child(35),
+  .hive-slot-container > :nth-child(36),
+  .hive-slot-container > :nth-child(40),
+  .hive-slot-container > :nth-child(41),
+  .hive-slot-container > :nth-child(45),
+  .hive-slot-container > :nth-child(46),
+  .hive-slot-container > :nth-child(50) {
+    transform: translateY(85%);
+  }
+
+  .hive-slot-container > :nth-child(2),
+  .hive-slot-container > :nth-child(7),
+  .hive-slot-container > :nth-child(12),
+  .hive-slot-container > :nth-child(17),
+  .hive-slot-container > :nth-child(22),
+  .hive-slot-container > :nth-child(27),
+  .hive-slot-container > :nth-child(32),
+  .hive-slot-container > :nth-child(37),
+  .hive-slot-container > :nth-child(42),
+  .hive-slot-container > :nth-child(47) {
+    transform: translateX(6%);
+  }
+
+  .hive-slot-container > :nth-child(3),
+  .hive-slot-container > :nth-child(8),
+  .hive-slot-container > :nth-child(13),
+  .hive-slot-container > :nth-child(18),
+  .hive-slot-container > :nth-child(23),
+  .hive-slot-container > :nth-child(28),
+  .hive-slot-container > :nth-child(33),
+  .hive-slot-container > :nth-child(38),
+  .hive-slot-container > :nth-child(43),
+  .hive-slot-container > :nth-child(48) {
+    transform: translate(12%, 85%);
+  }
+
+  .hive-slot-container > :nth-child(4),
+  .hive-slot-container > :nth-child(9),
+  .hive-slot-container > :nth-child(14),
+  .hive-slot-container > :nth-child(19),
+  .hive-slot-container > :nth-child(24),
+  .hive-slot-container > :nth-child(29),
+  .hive-slot-container > :nth-child(34),
+  .hive-slot-container > :nth-child(39),
+  .hive-slot-container > :nth-child(44),
+  .hive-slot-container > :nth-child(49) {
+    transform: translateX(18%);
+  }
+
+  .hive-slot-container > :nth-child(5),
+  .hive-slot-container > :nth-child(10),
+  .hive-slot-container > :nth-child(15),
+  .hive-slot-container > :nth-child(20),
+  .hive-slot-container > :nth-child(25),
+  .hive-slot-container > :nth-child(30),
+  .hive-slot-container > :nth-child(35),
+  .hive-slot-container > :nth-child(40),
+  .hive-slot-container > :nth-child(45),
+  .hive-slot-container > :nth-child(50) {
+    transform: translate(24%, 85%);
   }
 }

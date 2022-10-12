@@ -4,6 +4,7 @@ import TypeDisplay from "./TypeDisplay";
 
 function Bees() {
   const [beeTypeSelection, setBeeTypeSelection] = useState(0);
+  const [giftedCheck, setGiftedCheck] = useState(false);
   return (
     <div className="bees-container">
       <div className="bees-type-container">
@@ -24,6 +25,12 @@ function Bees() {
         })}
       </div>
       <TypeDisplay type={beeTypeSelection} />
+      <div
+        onClick={() => setGiftedCheck((current) => !current)}
+        className="bees-gifted"
+      >
+        Gifted {giftedCheck ? "✅" : "❌"}
+      </div>
     </div>
   );
 }
