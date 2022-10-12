@@ -1869,17 +1869,23 @@ export const planterRecipes: recipe = [
 export const beeTypes = ["Rare", "Epic", "Legendary", "Mythic", "Event"];
 
 export const beeTypeDisplay = {
-  rare: [{ name: "Basic", id: "1", image: "BasicBee.png" }],
-  epic: [{ name: "epic", id: "2", image: "BasicBee.png" }],
-  legendary: [{ name: "legend", id: "3", image: "EmptyHive.png" }],
-  mythic: [{ name: "mythic", id: "4", image: "EmptyHive.png" }],
-  event: [{ name: "event", id: "5", image: "EmptyHive.png" }],
+  rare: [
+    { name: "Basic", id: "1", image: "BasicBee.png" },
+    { name: "Bomber", id: "2", image: "BomberBee.png" },
+  ],
+  epic: [{ name: "Bubble", id: "3", image: "BubbleBee.png" }],
+  legendary: [{ name: "legend", id: "15", image: "EmptyHive.png" }],
+  mythic: [{ name: "mythic", id: "15", image: "EmptyHive.png" }],
+  event: [{ name: "event", id: "15", image: "EmptyHive.png" }],
 };
 
 export const giftedBeeTypeDisplay = {
-  rare: [{ name: "GiftedBasic", id: "1", image: "Gifted/BasicBee.png" }],
-  epic: [{ name: "epic", id: "2", image: "Gifted/BasicBee.png" }],
-  legendary: [{ name: "legend", id: "3", image: "EmptyHive.png" }],
+  rare: [
+    { name: "GiftedBasic", id: "1", image: "Gifted/BasicBee.png" },
+    { name: "GiftedBomber", id: "2", image: "Gifted/BomberBee.png" },
+  ],
+  epic: [{ name: "GiftedBubble", id: "3", image: "Gifted/BubbleBee.png" }],
+  legendary: [{ name: "legend", id: "3", image: "Gifted/BubbleBee.png" }],
   mythic: [{ name: "mythic", id: "4", image: "EmptyHive.png" }],
   event: [{ name: "event", id: "5", image: "EmptyHive.png" }],
 };
