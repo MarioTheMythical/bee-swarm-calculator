@@ -541,6 +541,7 @@ input[type="number"] {
 .type-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   width: 97%;
   padding: 15px 0px 10px 0px;
   margin-top: 10px;

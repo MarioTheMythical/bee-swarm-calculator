@@ -55,7 +55,7 @@ function TypeDisplay({
   }, [type, giftedCheck]);
 
   return (
-    <Droppable droppableId="bees">
+    <Droppable droppableId="bees" direction="horizontal" isDropDisabled={true}>
       {(provided) => (
         <div
           {...provided.droppableProps}
@@ -82,7 +82,7 @@ function TypeDisplay({
               </Draggable>
             );
           })}
-          {provided.placeholder}
+          <div style={{ display: "none" }}>{provided.placeholder}</div>
         </div>
       )}
     </Droppable>
