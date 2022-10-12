@@ -76,9 +76,7 @@ function Main() {
             {bssDescriptionCheck && (
               <div
                 className={
-                  theme
-                    ? "main-description dark-background"
-                    : "main-description"
+                  theme ? "main-description dark-info" : "main-description"
                 }
               >
                 To get started using BSS Calculator, enter your current item and

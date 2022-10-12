@@ -364,6 +364,11 @@ input[type="number"] {
   background-color: var(--main-lighter-background-color-dark);
 }
 
+.dark-info {
+  color: white;
+  background-color: rgb(25, 25, 25);
+}
+
 .dark-font {
   color: white;
 }
