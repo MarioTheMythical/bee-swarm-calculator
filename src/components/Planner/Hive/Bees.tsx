@@ -30,7 +30,7 @@ function Bees({ descriptionCheck }: { descriptionCheck: () => void }) {
           );
         })}
       </div>
-      <TypeDisplay type={beeTypeSelection} />
+      <TypeDisplay type={beeTypeSelection} giftedCheck={giftedCheck} />
       <button
         onClick={() => setGiftedCheck((current) => !current)}
         className={theme ? "bees-gifted dark-info" : "bees-gifted"}

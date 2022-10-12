@@ -1870,7 +1870,7 @@ export const beeTypes = ["Rare", "Epic", "Legendary", "Mythic", "Event"];
 
 export const beeTypeDisplay = {
   rare: [{ name: "Basic", id: "1", image: "BasicBee.png" }],
-  epic: [{ name: "epic", id: "2", image: "GiftedBasicBee.png" }],
+  epic: [{ name: "epic", id: "2", image: "BasicBee.png" }],
   legendary: [{ name: "legend", id: "3", image: "EmptyHive.png" }],
   mythic: [{ name: "mythic", id: "4", image: "EmptyHive.png" }],
   event: [{ name: "event", id: "5", image: "EmptyHive.png" }],

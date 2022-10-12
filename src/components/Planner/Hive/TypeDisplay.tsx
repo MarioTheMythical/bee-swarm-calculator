@@ -3,7 +3,13 @@ import { PlannerThemeContext } from "components/Interface/PlannerMain";
 import { beeTypeDisplay } from "libs/data";
 import { Draggable, Droppable } from "react-beautiful-dnd";
 
-function TypeDisplay({ type }: { type: number }) {
+function TypeDisplay({
+  type,
+  giftedCheck,
+}: {
+  type: number;
+  giftedCheck: boolean;
+}) {
   const [typeData, setTypeData] = useState<
     {
       name: string;
@@ -53,7 +59,11 @@ function TypeDisplay({ type }: { type: number }) {
                   >
                     <img
                       className="type-image"
-                      src={require(`images/Hive/${bee.image}`)}
+                      src={
+                        giftedCheck
+                          ? require(`images/Hive/Gifted/${bee.image}`)
+                          : require(`images/Hive/${bee.image}`)
+                      }
                       alt={bee.name}
                     />
                   </div>
