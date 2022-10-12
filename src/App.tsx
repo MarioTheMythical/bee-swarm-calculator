@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
+import Main from "components/Interface/Main";
 
 function App() {
   const [theme, setTheme] = useState(
     localStorage.getItem("BSS-Theme") === "dark" ? true : false
   );
+  const [dropdownCheck, setDropdownCheck] = useState(false);
 
   const changeTheme = (selection: boolean) => {
     if (selection) {
@@ -26,10 +28,48 @@ function App() {
       >
         <div
           className={
+            dropdownCheck
+              ? theme
+                ? "dropdown-menu visible dark-info"
+                : "dropdown-menu visible"
+              : theme
+              ? "dropdown-menu dark-info"
+              : "dropdown-menu"
+          }
+        >
+          <Link to="/planner">
+            <span />
+          </Link>
+          <Link to="/calculator">
+            <span />
+          </Link>
+          <div
+            className={
+              dropdownCheck
+                ? theme
+                  ? "dropdown-menu-close dark-font"
+                  : "dropdown-menu-close"
+                : "hidden"
+            }
+            onClick={() => setDropdownCheck(false)}
+          >
+            ✕
+          </div>
+        </div>
+        <div
+          className={dropdownCheck ? "dropdown-menu-blur" : ""}
+          onClick={() => setDropdownCheck(false)}
+        />
+        <div
+          className={
             theme ? "main-container dark-background" : "main-container"
           }
         >
           <div className="main-title-container">
+            <div
+              className={theme ? "dark-menu" : "light-menu"}
+              onClick={() => setDropdownCheck(true)}
+            />
             <div className={theme ? "main-title dark-font" : "main-title"} />
             <div
               onClick={() => changeTheme(!theme)}
@@ -59,12 +99,6 @@ function App() {
                 you clear browser cache.)
               </div>
             }
-            <Link to="/calculator">
-              <div>Calculator</div>
-            </Link>
-            <Link to="/planner">
-              <div>Planner</div>
-            </Link>
           </div>
         </div>
       </div>

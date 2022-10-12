@@ -16,6 +16,17 @@ html {
   color: white;
 }
 
+a:link {
+  text-decoration: none;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -58,6 +69,76 @@ input[type="number"] {
   width: 85%;
 }
 
+.dropdown-menu-close {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  top: 1%;
+  right: 3%;
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--main-dark-font);
+  z-index: 16;
+}
+
+.hidden {
+  display: none;
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: var(--main-background-color);
+  color: var(--main-dark-font);
+  font-size: 1.1rem;
+  font-weight: 500;
+  width: 40%;
+  height: 0%;
+  z-index: 15;
+  transition: 300ms;
+}
+
+.dropdown-menu-blur {
+  position: fixed;
+  width: 40%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
+  background-color: rgba(20, 20, 20, 0.4);
+  z-index: 14;
+  transition: 100ms;
+}
+
+.visible {
+  height: 20%;
+  transition: 200ms;
+}
+
+.visible > :nth-child(1),
+.visible > :nth-child(2) {
+  padding: 15px 10px 0px 15px;
+}
+
+/* .visible > :nth-child(3)::after {
+  content: "x";
+  cursor: pointer;
+  color: white;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  padding: 0px 10px 5px 10px;
+} */
+
+.visible > :nth-child(1)::after {
+  content: "Hive Planner";
+}
+
+.visible > :nth-child(2)::after {
+  content: "Recipe Calculator";
+}
+
 .light::after {
   cursor: pointer;
   content: "🌙";
@@ -71,6 +152,29 @@ input[type="number"] {
   cursor: pointer;
   content: "☀️";
   padding: 2px 5px 5px 5px;
+  border-radius: 5px;
+  background-color: var(--main-background-color);
+  transition: 100ms;
+}
+
+.light-menu::after {
+  cursor: pointer;
+  content: "☰";
+  padding: 2px 10px 5px 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: var(--main-dark-font);
+  transition: 100ms;
+}
+
+.dark-menu::after {
+  cursor: pointer;
+  content: "☰";
+  padding: 2px 10px 5px 10px;
+  color: var(--main-background-color-dark);
+  font-size: 1.1rem;
+  font-weight: bold;
   border-radius: 5px;
   background-color: var(--main-background-color);
   transition: 100ms;
@@ -598,6 +702,12 @@ input[type="number"] {
   .main-container {
     width: 70vw;
   }
+  .dropdown-menu {
+    width: 70%;
+  }
+  .dropdown-menu-blur {
+    width: 70%;
+  }
   .bees-container {
     width: 70vw;
   }
@@ -607,18 +717,32 @@ input[type="number"] {
   .main-container {
     width: 80vw;
   }
+  .dropdown-menu {
+    width: 80%;
+  }
+  .dropdown-menu-blur {
+    width: 80%;
+  }
   .bees-container {
     width: 80vw;
   }
 }
 
 @media (max-width: 44rem) {
+  .main-title {
+    width: 70%;
+  }
   .main-title::after {
     content: "BSS Tools";
-    margin-left: 12%;
   }
   .main-container {
     width: 100vw;
+  }
+  .dropdown-menu {
+    width: 100%;
+  }
+  .dropdown-menu-blur {
+    width: 100%;
   }
   .bees-container {
     width: 100vw;
