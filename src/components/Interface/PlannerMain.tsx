@@ -111,8 +111,8 @@ function PlannerMain() {
                 </span>{" "}
                 After you're happy with your hive setup, you can save it for
                 later. <br />
-                (Hive data only saves on your current device and gets deleted if
-                you clear browser cache.)
+                (Hive data only saves on your current device and is deleted if
+                you clear your browser cache.)
               </div>
             )}
             <Hive descriptionCheck={descriptionCheck} />

@@ -1872,8 +1872,9 @@ export const beeTypeDisplay = {
   rare: [
     { name: "Basic", id: "1", image: "BasicBee.png" },
     { name: "Bomber", id: "2", image: "BomberBee.png" },
+    { name: "Brave", id: "3", image: "BraveBee.png" },
   ],
-  epic: [{ name: "Bubble", id: "3", image: "BubbleBee.png" }],
+  epic: [{ name: "Bubble", id: "4", image: "BubbleBee.png" }],
   legendary: [{ name: "legend", id: "15", image: "EmptyHive.png" }],
   mythic: [{ name: "mythic", id: "15", image: "EmptyHive.png" }],
   event: [{ name: "event", id: "15", image: "EmptyHive.png" }],
@@ -1883,6 +1884,7 @@ export const giftedBeeTypeDisplay = {
   rare: [
     { name: "GiftedBasic", id: "1", image: "Gifted/BasicBee.png" },
     { name: "GiftedBomber", id: "2", image: "Gifted/BomberBee.png" },
+    { name: "GiftedBrave", id: "3", image: "Gifted/BraveBee.png" },
   ],
   epic: [{ name: "GiftedBubble", id: "3", image: "Gifted/BubbleBee.png" }],
   legendary: [{ name: "legend", id: "3", image: "Gifted/BubbleBee.png" }],
