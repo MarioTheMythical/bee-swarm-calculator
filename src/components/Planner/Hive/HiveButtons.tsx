@@ -19,7 +19,22 @@ function HiveButtons({
   const [saveDisplayCheck, setSaveDisplayCheck] = useState(false);
   const [copyCheck, setCopyCheck] = useState(false);
   const [hiveNameInput, setHiveNameInput] = useState("");
+  const [hiveSlotNames, setHiveSlotNames] = useState<string[]>([]);
+  const [hiveSlotSelection, setHiveSlotSelection] = useState(0);
   const [hiveExportCode, setHiveExportCode] = useState("");
+
+  useEffect(() => {
+    for (let i = 0; i < 3; i++) {
+      if (localStorage.getItem(`HiveSlot-${i + 1}`)) {
+        setHiveSlotNames((current) => [
+          ...current,
+          localStorage.getItem(`HiveSlot-${i + 1}`) || "",
+        ]);
+      } else {
+        setHiveSlotNames((current) => [...current, "Empty"]);
+      }
+    }
+  }, []);
 
   useEffect(() => {
     const hiveArrayToString = hiveSlots
@@ -66,6 +81,12 @@ function HiveButtons({
     setTimeout(() => setCopyCheck(false), 1000);
   };
 
+  const userHiveInput = (event: string) => {
+    if (event.length > 12) return;
+
+    setHiveNameInput(event);
+  };
+
   return (
     <div className="planner-btn-container">
       {saveDisplayCheck && (
@@ -88,14 +109,33 @@ function HiveButtons({
         >
           <div className="planner-save-name-container">
             <div>Hive Name</div>
-            <input onChange={(e) => setHiveNameInput(e.target.value)} />
+            <input
+              className="planner-save-input"
+              placeholder="Max 12 Characters"
+              onChange={(event) => userHiveInput(event.target.value)}
+            />
           </div>
           <div className="planner-save-slot-container">
-            <div>Save Slot</div>
+            <div>Save Hive Slot</div>
             <div className="planner-save-slots">
-              <div>Empty</div>
-              <div>Empty</div>
-              <div>Empty</div>
+              {hiveSlotNames.map((name, index) => {
+                return (
+                  <div
+                    key={index}
+                    className={
+                      name === "Empty"
+                        ? "planner-save-slot-content planner-slot-empty"
+                        : name.toLocaleLowerCase().includes("blue")
+                        ? "planner-save-slot-content planner-slot-blue"
+                        : name.toLocaleLowerCase().includes("red")
+                        ? "planner-save-slot-content planner-slot-red"
+                        : "planner-save-slot-content planner-slot-filled"
+                    }
+                  >
+                    {name}
+                  </div>
+                );
+              })}
             </div>
           </div>
           <div>
@@ -114,6 +154,20 @@ function HiveButtons({
                 }}
               />
               <div>{hiveNameInput + "-" + hiveExportCode}</div>
+            </div>
+          </div>
+          <div className="planner-btn-container">
+            <div
+              className="planner-btn planner-save-btn planner-load"
+              onClick={() => setSaveDisplayCheck(false)}
+            >
+              Save
+            </div>
+            <div
+              className="planner-btn planner-save-btn planner-load"
+              onClick={() => setSaveDisplayCheck(false)}
+            >
+              Close
             </div>
           </div>
         </div>
