@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { PlannerThemeContext } from "components/Interface/PlannerMain";
 import { giftedBeeTypeDisplay, beeTypeDisplay, HiveSlots } from "libs/data";
 
 function HiveButtons({
@@ -12,6 +13,9 @@ function HiveButtons({
     image: string;
   }[];
 }) {
+  const [saveDisplayCheck, setSaveDisplayCheck] = useState(false);
+  const theme = useContext(PlannerThemeContext);
+
   useEffect(() => {
     const hiveArrayToString = hiveSlots
       .map((item) => {
@@ -53,9 +57,51 @@ function HiveButtons({
   // onClick={() => {
   //   navigator.clipboard.writeText("test");
   // }}
+
   return (
     <div className="planner-btn-container">
-      <div className="planner-btn planner-save">Save</div>
+      {saveDisplayCheck && (
+        <div
+          className={
+            saveDisplayCheck ? "planner-blur planner-visible" : "planner-blur"
+          }
+          onClick={() => setSaveDisplayCheck(false)}
+        />
+      )}
+      {saveDisplayCheck && (
+        <div
+          className={
+            saveDisplayCheck
+              ? theme
+                ? "planner-save-display planner-visible dark-info"
+                : "planner-save-display planner-visible planner-light"
+              : "planner-save-display"
+          }
+        >
+          <div className="planner-save-name-container">
+            <div>Hive Name</div>
+            <input />
+          </div>
+          <div className="planner-save-slot-container">
+            <div>Save Slot</div>
+            <div className="planner-save-slots">
+              <div>Empty</div>
+              <div>Empty</div>
+              <div>Empty</div>
+            </div>
+          </div>
+          <div>
+            <div>Export Code</div>
+            <div className="planner-save-export">Code</div>
+          </div>
+        </div>
+      )}
+      <div
+        className="planner-btn planner-save"
+        onClick={() => setSaveDisplayCheck(true)}
+      >
+        Save
+      </div>
       <div className="planner-btn planner-load">Load</div>
       <div className="inventory-reset-button" onClick={clearHive}>
         Clear
