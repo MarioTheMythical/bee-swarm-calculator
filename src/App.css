@@ -568,9 +568,6 @@ input[type="number"] {
   transition: 100ms;
 }
 
-.planner-save-name-container {
-}
-
 .planner-save-slot-container {
   padding: 10px 0px;
 }
@@ -889,6 +886,9 @@ input[type="number"] {
   .dropdown-menu-blur {
     width: 70%;
   }
+  .planner-blur {
+    width: 70%;
+  }
   .bees-container {
     width: 70vw;
   }
@@ -902,6 +902,9 @@ input[type="number"] {
     width: 80%;
   }
   .dropdown-menu-blur {
+    width: 80%;
+  }
+  .planner-blur {
     width: 80%;
   }
   .bees-container {
@@ -961,6 +964,12 @@ input[type="number"] {
   }
   .planner-hive-count {
     width: 350px;
+  }
+  .planner-save-display {
+    width: 300px;
+  }
+  .planner-blur {
+    width: 100%;
   }
 }
 
