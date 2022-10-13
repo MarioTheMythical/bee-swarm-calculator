@@ -211,7 +211,7 @@ input[type="number"] {
 .main-description {
   text-align: center;
   margin: 5px 10px 20px 10px;
-  padding: 7px 7px 10px 7px;
+  padding: 7px 70px 10px 7px;
   border-radius: 5px;
   color: var(--main-dark-font);
   border: 2px solid rgb(27, 27, 27, 0.16);
@@ -491,6 +491,10 @@ input[type="number"] {
   width: 100%;
 }
 
+.hive-btn-container {
+  display: flex;
+}
+
 .planner-btn {
   cursor: pointer;
   user-select: none;
@@ -537,6 +541,7 @@ input[type="number"] {
   border: 3px solid rgb(106, 106, 106);
   border-radius: 5px;
   z-index: 15;
+  margin-left: 186px;
   opacity: 0;
   visibility: hidden;
   transition: 100ms;
@@ -559,6 +564,7 @@ input[type="number"] {
   opacity: 0;
   visibility: hidden;
   z-index: 14;
+  margin-left: 186px;
   transition: 100ms;
 }
 
@@ -575,20 +581,39 @@ input[type="number"] {
   margin-top: 5px;
 }
 
+.planner-save-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.planner-save-desc {
+  font-size: 0.9rem;
+  color: #999;
+}
+
 .planner-save-slot-container {
   padding: 10px 0px;
 }
 
-.planner-save-slot-container > :nth-child(2) {
+.planner-save-slot-container > :nth-child(3) {
   display: flex;
   justify-content: space-between;
   padding: 10px 0px;
 }
 
+.planner-save-slots {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .planner-save-slot-content {
   cursor: pointer;
+  min-width: 50px;
   padding: 5px 15px;
+  margin: 5px 0px;
+  border: 2px solid #10427c00;
   border-radius: 5px;
+  color: white;
   transition: 100ms;
 }
 
@@ -693,6 +718,12 @@ input[type="number"] {
 .planner-save-btn {
   color: white;
   margin: 15px 25px 0px 25px;
+}
+
+.planner-disabled {
+  cursor: not-allowed;
+  border: 2px solid rgba(163, 163, 163, 0.2);
+  background-color: #444;
 }
 
 @keyframes fadeOut {
@@ -1041,6 +1072,9 @@ input[type="number"] {
   .planner-save-display {
     top: 20%;
     width: 300px;
+  }
+  .planner-save-display {
+    top: 1%;
   }
   .planner-blur {
     width: 100%;
