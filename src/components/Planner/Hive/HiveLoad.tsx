@@ -1,7 +1,18 @@
 import { useContext, useEffect, useState } from "react";
 import { PlannerThemeContext } from "components/Interface/PlannerMain";
+import { beeTypeDisplay, giftedBeeTypeDisplay, HiveSlots } from "libs/data";
 
-function HiveLoad() {
+function HiveLoad({
+  changeHiveSlots,
+}: {
+  changeHiveSlots: (
+    data: {
+      name: string;
+      id: string;
+      image: string;
+    }[]
+  ) => void;
+}) {
   const theme = useContext(PlannerThemeContext);
   const [loadCheck, setLoadCheck] = useState(false);
   const [hiveSlotSelection, setHiveSlotSelection] = useState(0);
@@ -29,9 +40,80 @@ function HiveLoad() {
   }, [loadCheck]);
 
   const loadHiveData = () => {
-    if (importCode.length > 0 && hiveSlotSelection > 0) {
-      return;
+    const giftedBees: { name: string; id: string; image: string }[] = [
+      ...giftedBeeTypeDisplay.rare,
+      ...giftedBeeTypeDisplay.epic,
+      ...giftedBeeTypeDisplay.legendary,
+      ...giftedBeeTypeDisplay.mythic,
+      ...giftedBeeTypeDisplay.event,
+    ];
+
+    const normalBees: { name: string; id: string; image: string }[] = [
+      ...beeTypeDisplay.rare,
+      ...beeTypeDisplay.epic,
+      ...beeTypeDisplay.legendary,
+      ...beeTypeDisplay.mythic,
+      ...beeTypeDisplay.event,
+    ];
+
+    closeLoad();
+
+    if (
+      (importCode.length > 0 && hiveSlotSelection > 0) ||
+      importCode.length > 0
+    ) {
+      const loadHive = importCode
+        .split("-")
+        .slice(1)
+        .map((item) => {
+          if (item === "0") {
+            return HiveSlots[0];
+          }
+          if (item.includes("G")) {
+            return giftedBees[Number(item.replace("G", "")) - 1];
+          }
+          return normalBees[Number(item.replace("G", "")) - 1];
+        });
+
+      const hiveCheck = loadHive.filter((item) => item === undefined).length;
+
+      if (loadHive.length < 50 || hiveCheck > 0) return;
+
+      changeHiveSlots(loadHive.slice(0, 50));
+
+      return closeLoad();
     }
+
+    const hiveSlot = localStorage.getItem(`HiveSlot-${hiveSlotSelection}`);
+
+    if (hiveSlot) {
+      const loadHive = hiveSlot
+        .split("-")
+        .slice(1)
+        .map((item) => {
+          if (item === "0") {
+            return HiveSlots[0];
+          }
+          if (item.includes("G")) {
+            return giftedBees[Number(item.replace("G", "")) - 1];
+          }
+          return normalBees[Number(item.replace("G", "")) - 1];
+        });
+
+      const hiveCheck = loadHive.filter((item) => item === undefined).length;
+
+      if (loadHive.length < 50 || hiveCheck > 0) return;
+
+      changeHiveSlots(loadHive.slice(0, 50));
+
+      return closeLoad();
+    }
+  };
+
+  const closeLoad = () => {
+    setLoadCheck(false);
+    setImportCode("");
+    setHiveSlotSelection(0);
   };
 
   return (
@@ -43,7 +125,7 @@ function HiveLoad() {
               ? "planner-blur planner-load-blur planner-visible"
               : "planner-blur"
           }
-          onClick={() => setLoadCheck(false)}
+          onClick={closeLoad}
         />
       )}
       {loadCheck && (
@@ -114,7 +196,7 @@ function HiveLoad() {
               }
               onClick={() =>
                 hiveSlotSelection > 0 || importCode.length > 0
-                  ? setLoadCheck(false)
+                  ? loadHiveData()
                   : ""
               }
             >
@@ -122,7 +204,7 @@ function HiveLoad() {
             </div>
             <div
               className="planner-btn planner-save-btn planner-load"
-              onClick={() => setLoadCheck(false)}
+              onClick={closeLoad}
             >
               Close
             </div>

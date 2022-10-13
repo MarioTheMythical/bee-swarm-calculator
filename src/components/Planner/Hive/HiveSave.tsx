@@ -52,32 +52,6 @@ function HiveSave({
       .join("-");
 
     setHiveExportCode(hiveArrayToString);
-
-    const giftedBees: { name: string; id: string; image: string }[] = [
-      ...giftedBeeTypeDisplay.rare,
-      ...giftedBeeTypeDisplay.epic,
-      ...giftedBeeTypeDisplay.legendary,
-      ...giftedBeeTypeDisplay.mythic,
-      ...giftedBeeTypeDisplay.event,
-    ];
-
-    const normalBees: { name: string; id: string; image: string }[] = [
-      ...beeTypeDisplay.rare,
-      ...beeTypeDisplay.epic,
-      ...beeTypeDisplay.legendary,
-      ...beeTypeDisplay.mythic,
-      ...beeTypeDisplay.event,
-    ];
-
-    const loadHive = hiveArrayToString.split("-").map((item) => {
-      if (item === "0") {
-        return HiveSlots[0];
-      }
-      if (item.includes("G")) {
-        return giftedBees[Number(item.replace("G", "")) - 1];
-      }
-      return normalBees[Number(item.replace("G", "")) - 1];
-    });
   }, [hiveSlots]);
 
   const changeCopyCheck = () => {
@@ -103,6 +77,12 @@ function HiveSave({
     setHiveSlotSelection(0);
   };
 
+  const closeSave = () => {
+    setSaveDisplayCheck(false);
+    setHiveNameInput("");
+    setHiveSlotSelection(0);
+  };
+
   return (
     <div className="planner-btn-container">
       {saveDisplayCheck && (
@@ -110,7 +90,7 @@ function HiveSave({
           className={
             saveDisplayCheck ? "planner-blur planner-visible" : "planner-blur"
           }
-          onClick={() => setSaveDisplayCheck(false)}
+          onClick={closeSave}
         />
       )}
       {saveDisplayCheck && (
@@ -203,7 +183,7 @@ function HiveSave({
             </div>
             <div
               className="planner-btn planner-save-btn planner-load"
-              onClick={() => setSaveDisplayCheck(false)}
+              onClick={closeSave}
             >
               Close
             </div>

@@ -107,6 +107,16 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
     setHiveSlots(HiveSlots);
   };
 
+  const changeHiveSlots = (
+    hiveData: {
+      name: string;
+      id: string;
+      image: string;
+    }[]
+  ) => {
+    setHiveSlots(hiveData);
+  };
+
   return (
     <div className="hive-container">
       <DragDropContext
@@ -136,7 +146,7 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
       )}
       <div className="hive-btn-container">
         <HiveSave hiveSlots={hiveSlots} />
-        <HiveLoad />
+        <HiveLoad changeHiveSlots={changeHiveSlots} />
         <div className="inventory-reset-button" onClick={clearHive}>
           Clear
         </div>
