@@ -17,7 +17,7 @@ function Slots({
         {hiveSlots.map((hive, index) => {
           return (
             <Droppable droppableId={"hive" + index} key={index}>
-              {(provided) => (
+              {(provided, snapshot) => (
                 <div
                   className="hive-slot"
                   {...provided.droppableProps}
@@ -25,7 +25,11 @@ function Slots({
                   onClick={() => removeFromList(index)}
                 >
                   <img
-                    src={require(`images/Hive/${hive.image}`)}
+                    src={
+                      snapshot.isDraggingOver
+                        ? require(`images/Hive/Hover/${hive.image}`)
+                        : require(`images/Hive/${hive.image}`)
+                    }
                     alt={hive.name}
                   />
                   <div style={{ display: "none" }}>{provided.placeholder}</div>

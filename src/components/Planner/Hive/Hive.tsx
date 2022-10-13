@@ -140,8 +140,6 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
       }
       return normalBees[Number(item.replace("G", "")) - 1];
     });
-
-    console.log(loadHive);
   }, [hiveSlots]);
 
   // USE FOR COPY EXPORT CODE
