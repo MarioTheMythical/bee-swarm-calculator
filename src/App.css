@@ -568,6 +568,10 @@ input[type="number"] {
   transition: 100ms;
 }
 
+.planner-load-blur {
+  margin-left: -43px;
+}
+
 .planner-visible {
   opacity: 1;
   visibility: visible;

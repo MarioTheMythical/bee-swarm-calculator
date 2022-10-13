@@ -5,6 +5,7 @@ import Bees from "../Bees";
 import { giftedBeeTypeDisplay, beeTypeDisplay } from "libs/data";
 import { DragDropContext } from "react-beautiful-dnd";
 import HiveSave from "components/Planner/Hive/HiveSave";
+import HiveLoad from "./HiveLoad";
 
 function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
   const [hiveSlots, setHiveSlots] = useState(HiveSlots);
@@ -135,7 +136,7 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
       )}
       <div className="hive-btn-container">
         <HiveSave hiveSlots={hiveSlots} />
-        <div className="planner-btn planner-load">Load</div>
+        <HiveLoad />
         <div className="inventory-reset-button" onClick={clearHive}>
           Clear
         </div>
