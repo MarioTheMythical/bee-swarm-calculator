@@ -491,15 +491,19 @@ input[type="number"] {
   width: 100%;
 }
 
-.planner-save {
+.planner-btn {
   cursor: pointer;
   user-select: none;
   padding: 1px 10px 4px 10px;
   margin: 2px 50px 5px 0px;
   border-radius: 3px;
-  border: 2px solid rgb(0, 128, 13, 0.2);
   background-color: rgb(0, 128, 13);
   transition: 100ms;
+}
+
+.planner-save {
+  border: 2px solid rgb(0, 128, 13, 0.2);
+  background-color: rgb(0, 128, 13);
 }
 
 .planner-save:hover {
@@ -508,6 +512,19 @@ input[type="number"] {
 
 .planner-save:active {
   background-color: rgb(0, 113, 11);
+}
+
+.planner-load {
+  border: 2px solid rgb(0, 102, 128, 0.2);
+  background-color: rgb(0, 102, 128);
+}
+
+.planner-load:hover {
+  background-color: rgb(0, 115, 144);
+}
+
+.planner-load:active {
+  background-color: rgb(0, 88, 109);
 }
 
 .planner-hive-count {

@@ -175,7 +175,8 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
         </div>
       )}
       <div className="planner-btn-container">
-        <div className="planner-save">Save</div>
+        <div className="planner-btn planner-save">Save</div>
+        <div className="planner-btn planner-load">Load</div>
         <div className="inventory-reset-button" onClick={clearHive}>
           Clear
         </div>
