@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import { PlannerThemeContext } from "components/Interface/PlannerMain";
-import { giftedBeeTypeDisplay, beeTypeDisplay, HiveSlots } from "libs/data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy } from "@fortawesome/free-regular-svg-icons";
 
