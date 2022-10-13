@@ -582,10 +582,61 @@ input[type="number"] {
 }
 
 .planner-save-export {
-  padding: 5px;
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+  padding: 5px 10px 8px 10px;
   border-radius: 5px;
   color: white;
   background-color: #666;
+  overflow: hidden;
+}
+
+.planner-save-export > :nth-child(1):hover {
+  cursor: pointer;
+  color: rgb(0, 191, 255);
+}
+
+.planner-save-export > :nth-child(1):active {
+  cursor: pointer;
+  color: rgb(0, 164, 218);
+}
+
+.planner-save-export > :nth-child(2) {
+  margin-left: 15px;
+  width: 100%;
+  padding-right: 15px;
+  overflow-x: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.planner-save-export > :nth-child(2)::-webkit-scrollbar {
+  display: none;
+}
+
+.planner-export-title-container {
+  display: flex;
+}
+
+.planner-export-title-container > :nth-child(2) {
+  padding-left: 10px;
+  opacity: 0;
+  animation: fadeOut 1000ms;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .planner-hive-count {

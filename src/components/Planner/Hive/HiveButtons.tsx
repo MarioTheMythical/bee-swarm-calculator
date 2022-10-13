@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { PlannerThemeContext } from "components/Interface/PlannerMain";
 import { giftedBeeTypeDisplay, beeTypeDisplay, HiveSlots } from "libs/data";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCopy } from "@fortawesome/free-regular-svg-icons";
 
 function HiveButtons({
   clearHive,
@@ -14,6 +16,7 @@ function HiveButtons({
   }[];
 }) {
   const [saveDisplayCheck, setSaveDisplayCheck] = useState(false);
+  const [copyCheck, setCopyCheck] = useState(false);
   const theme = useContext(PlannerThemeContext);
 
   useEffect(() => {
@@ -58,6 +61,12 @@ function HiveButtons({
   //   navigator.clipboard.writeText("test");
   // }}
 
+  const changeCopyCheck = () => {
+    setCopyCheck(true);
+
+    setTimeout(() => setCopyCheck(false), 1000);
+  };
+
   return (
     <div className="planner-btn-container">
       {saveDisplayCheck && (
@@ -91,8 +100,16 @@ function HiveButtons({
             </div>
           </div>
           <div>
-            <div>Export Code</div>
-            <div className="planner-save-export">Code</div>
+            <div className={copyCheck ? "planner-export-title-container" : ""}>
+              <div>Export Code</div>
+              {copyCheck && <div>Copied!</div>}
+            </div>
+            <div className="planner-save-export">
+              <FontAwesomeIcon icon={faCopy} onClick={changeCopyCheck} />
+              <div>
+                CodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCode
+              </div>
+            </div>
           </div>
         </div>
       )}
