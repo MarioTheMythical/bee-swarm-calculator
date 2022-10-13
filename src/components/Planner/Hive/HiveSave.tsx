@@ -25,13 +25,14 @@ function HiveSave({
     setHiveSlotNames([]);
 
     for (let i = 0; i < 3; i++) {
-      if (localStorage.getItem(`HiveSlot-${i + 1}`)) {
-        if (localStorage.getItem(`HiveSlot-${i + 1}`)?.split("-")[0] === "") {
+      let saveSlot = localStorage.getItem(`HiveSlot-${i + 1}`);
+      if (saveSlot) {
+        if (saveSlot?.split("-")[0] === "") {
           setHiveSlotNames((current) => [...current, `Save Slot ${i + 1}`]);
         } else {
           setHiveSlotNames((current) => [
             ...current,
-            localStorage.getItem(`HiveSlot-${i + 1}`)?.split("-")[0] || "",
+            saveSlot?.split("-")[0] || "",
           ]);
         }
       } else {
