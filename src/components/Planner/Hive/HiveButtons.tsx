@@ -15,9 +15,11 @@ function HiveButtons({
     image: string;
   }[];
 }) {
+  const theme = useContext(PlannerThemeContext);
   const [saveDisplayCheck, setSaveDisplayCheck] = useState(false);
   const [copyCheck, setCopyCheck] = useState(false);
-  const theme = useContext(PlannerThemeContext);
+  const [hiveNameInput, setHiveNameInput] = useState("");
+  const [hiveExportCode, setHiveExportCode] = useState("");
 
   useEffect(() => {
     const hiveArrayToString = hiveSlots
@@ -28,6 +30,8 @@ function HiveButtons({
         return item.id;
       })
       .join("-");
+
+    setHiveExportCode(hiveArrayToString);
 
     const giftedBees: { name: string; id: string; image: string }[] = [
       ...giftedBeeTypeDisplay.rare,
@@ -55,11 +59,6 @@ function HiveButtons({
       return normalBees[Number(item.replace("G", "")) - 1];
     });
   }, [hiveSlots]);
-
-  // USE FOR COPY EXPORT CODE
-  // onClick={() => {
-  //   navigator.clipboard.writeText("test");
-  // }}
 
   const changeCopyCheck = () => {
     setCopyCheck(true);
@@ -89,7 +88,7 @@ function HiveButtons({
         >
           <div className="planner-save-name-container">
             <div>Hive Name</div>
-            <input />
+            <input onChange={(e) => setHiveNameInput(e.target.value)} />
           </div>
           <div className="planner-save-slot-container">
             <div>Save Slot</div>
@@ -105,10 +104,16 @@ function HiveButtons({
               {copyCheck && <div>Copied!</div>}
             </div>
             <div className="planner-save-export">
-              <FontAwesomeIcon icon={faCopy} onClick={changeCopyCheck} />
-              <div>
-                CodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCodeCode
-              </div>
+              <FontAwesomeIcon
+                icon={faCopy}
+                onClick={() => {
+                  changeCopyCheck();
+                  navigator.clipboard.writeText(
+                    hiveNameInput + "-" + hiveExportCode
+                  );
+                }}
+              />
+              <div>{hiveNameInput + "-" + hiveExportCode}</div>
             </div>
           </div>
         </div>
