@@ -145,7 +145,7 @@ function HiveLoad({
             </div>
             <input
               className="planner-save-input"
-              placeholder="Max 10 Characters"
+              placeholder="Enter valid code"
               onChange={(event) => setImportCode(event.currentTarget.value)}
             />
           </div>
