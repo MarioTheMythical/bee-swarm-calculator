@@ -120,8 +120,9 @@ function BondMain() {
                 .
                 <br />
                 <br />
-                The total exp and honey needed for each individual bee or total
-                hive will be displayed.
+                The level, bond needed for next level, total honey needed for a
+                single bee to next level and the total honey needed for all your
+                hive to next level.
               </div>
             )}
           </div>

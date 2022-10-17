@@ -1036,6 +1036,8 @@ input[type="number"] {
   align-items: center;
   width: 100%;
   margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.3);
 }
 
 .bond-table-titles > :nth-child(1)::after {
@@ -1083,6 +1085,8 @@ input[type="number"] {
   align-items: center;
   width: 100%;
   margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.3);
 }
 
 .bond-table-value-container > :nth-child(1) {

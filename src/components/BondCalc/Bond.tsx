@@ -9,22 +9,30 @@ function Bond() {
   const [bondData, setBondData] = useState<
     {
       level: number;
-      total: number;
-      next: number;
-      honeySingle: string;
-      honeyTotal: string;
+      next: string;
+      single: string;
+      total: string;
     }[]
   >();
 
   useEffect(() => {
-    bondExp.forEach((item) => {
+    const newBondData = bondExp.map((item) => {
       const abbreviatedNext = abbreviateNumbers(item.next);
       const abbreviatedSingle = abbreviateNumbers((item.next / 10) * 10000);
-      const abbreviatedTotal = (item.next / 10) * 10000 * hiveSlots;
+      const abbreviatedTotal = abbreviateNumbers(
+        (item.next / 10) * 10000 * hiveSlots
+      );
 
-      console.log(abbreviatedTotal);
+      return {
+        level: item.level,
+        next: abbreviatedNext,
+        single: abbreviatedSingle,
+        total: abbreviatedTotal,
+      };
     });
-  }, []);
+
+    setBondData(newBondData);
+  }, [hiveSlots]);
 
   return (
     <div className="bond-container">
@@ -41,12 +49,13 @@ function Bond() {
           <div />
           <div />
         </div>
-        {bondExp.map((item) => {
+        {bondData?.map((item) => {
           return (
             <div key={item.level} className="bond-table-value-container">
               <div>{item.level}</div>
               <div>{item.next}</div>
-              <div>{(item.next / 10) * 10000}</div>
+              <div>{item.single}</div>
+              <div>{item.total}</div>
             </div>
           );
         })}

@@ -30,13 +30,23 @@ const abbreviateNumbers = (value: number) => {
   finalValue = sValue.toString();
 
   // appending the letter to precised val.
+
   if (finalValue.length > 3) {
     sNum = Math.floor(("" + value).length / 3);
     sValue = parseFloat(
       (sNum !== 0 ? value / Math.pow(1000, sNum) : value).toPrecision(2)
     );
-    if (sValue % 1 !== 0) {
-      finalValue = sValue.toFixed(1);
+
+    if (sNum > 4 && finalValue.length >= 5) {
+      sNum = Math.floor(("" + value).length / 3);
+      sValue = parseFloat(
+        (sNum !== 0 ? value / Math.pow(1000, sNum) : value).toPrecision(4)
+      );
+    }
+
+    if (finalValue.length === 6) {
+      sNum = sNum - 1;
+      sValue = finalValue.toString().slice(0, 3);
     }
   }
   return sValue + s[sNum];
