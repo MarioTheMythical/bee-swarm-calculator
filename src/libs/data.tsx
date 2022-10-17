@@ -1709,7 +1709,7 @@ export const planterRecipes: recipe = [
       },
       {
         material: "Hard Wax",
-        value: 5,
+        value: 10,
         image: "HardWax.png",
         subRecipe: [
           {
