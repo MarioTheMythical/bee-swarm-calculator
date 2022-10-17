@@ -246,11 +246,6 @@ body::-webkit-scrollbar-thumb {
   flex-wrap: wrap;
 }
 
-.main-tool-container > :nth-child(4) {
-  opacity: 0;
-  height: 1px;
-}
-
 .main-tool-selection {
   margin: 10px;
 }

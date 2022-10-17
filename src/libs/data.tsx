@@ -2049,9 +2049,14 @@ export const toolSelection = [
     path: "/calculator",
   },
   {
-    name: "Recipe calculator",
-    img: "Hive/Tools/Calculator.png",
-    path: "/calculator",
+    name: "Bond calculator",
+    img: "Hive/Tools/Bond.png",
+    path: "/bond",
+  },
+  {
+    name: "Bee cheatsheet",
+    img: "Hive/Tools/ComingSoon.png",
+    path: "",
   },
 ];
 
