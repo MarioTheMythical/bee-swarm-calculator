@@ -5,8 +5,12 @@ import { useContext, useEffect, useState } from "react";
 
 function Bond() {
   const theme = useContext(PlannerThemeContext);
-  const [hiveSlots, setHiveSlots] = useState("");
-  const [bondBonus, setBondBonus] = useState("");
+  const [hiveSlots, setHiveSlots] = useState(
+    localStorage.getItem("hive-slots") || ""
+  );
+  const [bondBonus, setBondBonus] = useState(
+    localStorage.getItem("bonus") || ""
+  );
   const [bondData, setBondData] = useState<
     {
       level: number;
@@ -43,15 +47,18 @@ function Bond() {
     const num = Number(value);
 
     if (value === "") {
-      return setHiveSlots("");
+      setHiveSlots("");
+      return localStorage.setItem("hive-slots", "");
     }
 
     if (num > 50) {
-      return setHiveSlots("50");
+      setHiveSlots("50");
+      return localStorage.setItem("hive-slots", "50");
     }
 
     if (num <= 50 && num > 0) {
       setHiveSlots(value.slice(0, 2));
+      localStorage.setItem("hive-slots", value.slice(0, 2));
     }
   };
 
@@ -59,17 +66,23 @@ function Bond() {
     const num = Number(value.slice(0, 2));
 
     if (value === "") {
+      localStorage.setItem("bonus", "");
       return setBondBonus("");
     }
 
     if (num <= 99 && num >= 0) {
       setBondBonus(value.slice(0, 2));
+      localStorage.setItem("bonus", value.slice(0, 2));
     }
   };
 
   return (
     <div className="bond-container">
-      <div className="bond-input-container">
+      <div
+        className={
+          theme ? "bond-input-container" : "bond-input-container light-table"
+        }
+      >
         <div>Unlocked hive slots: </div>
         <input
           className="bond-input"
@@ -91,7 +104,11 @@ function Bond() {
           }}
         />
       </div>
-      <div className="bond-table-container">
+      <div
+        className={
+          theme ? "bond-table-container" : "bond-table-container light-table"
+        }
+      >
         <div className="bond-table-titles">
           <div />
           <div />

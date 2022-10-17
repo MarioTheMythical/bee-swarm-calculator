@@ -1046,6 +1046,11 @@ body::-webkit-scrollbar-thumb {
   background-color: #444;
 }
 
+.light-table {
+  color: var(--main-dark-font);
+  background-color: rgb(232, 232, 232);
+}
+
 .bond-table-titles {
   display: flex;
   flex-direction: row;
