@@ -2036,3 +2036,119 @@ export const HiveSlots = [
   { name: "", id: "0", image: "EmptyHive.png" },
   { name: "", id: "0", image: "EmptyHive.png" },
 ];
+
+export const toolSelection = [
+  {
+    name: "Hive planner",
+    img: "Hive/Tools/Planner.png",
+    path: "/planner",
+  },
+  {
+    name: "Recipe calculator",
+    img: "Hive/Tools/Calculator.png",
+    path: "/calculator",
+  },
+];
+
+export const treatExp = [
+  {
+    level: 1,
+    total: 0,
+    next: 10,
+  },
+  {
+    level: 2,
+    total: 10,
+    next: 40,
+  },
+  {
+    level: 3,
+    total: 50,
+    next: 200,
+  },
+  {
+    level: 4,
+    total: 250,
+    next: 750,
+  },
+  {
+    level: 5,
+    total: 1000,
+    next: 4000,
+  },
+  {
+    level: 6,
+    total: 5000,
+    next: 15000,
+  },
+  {
+    level: 7,
+    total: 20000,
+    next: 60000,
+  },
+  {
+    level: 8,
+    total: 80000,
+    next: 270000,
+  },
+  {
+    level: 9,
+    total: 350000,
+    next: 450000,
+  },
+  {
+    level: 10,
+    total: 800000,
+    next: 1200000,
+  },
+  {
+    level: 11,
+    total: 2000000,
+    next: 2000000,
+  },
+  {
+    level: 12,
+    total: 4000000,
+    next: 4000000,
+  },
+  {
+    level: 13,
+    total: 8000000,
+    next: 7000000,
+  },
+  {
+    level: 14,
+    total: 15000000,
+    next: 15000000,
+  },
+  {
+    level: 15,
+    total: 30000000,
+    next: 120000000,
+  },
+  {
+    level: 16,
+    total: 150000000,
+    next: 450000000,
+  },
+  {
+    level: 17,
+    total: 600000000,
+    next: 1900000000,
+  },
+  {
+    level: 18,
+    total: 2500000000,
+    next: 7500000000,
+  },
+  {
+    level: 19,
+    total: 10000000000,
+    next: 15000000000,
+  },
+  {
+    level: 20,
+    total: 25000000000,
+    next: 475000000000,
+  },
+];

@@ -1,19 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
-
-const testData = [
-  {
-    name: "Hive planner",
-    img: "Hive/Tools/Planner.png",
-    path: "/planner",
-  },
-  {
-    name: "Recipe calculator",
-    img: "Hive/Tools/Calculator.png",
-    path: "/calculator",
-  },
-];
+import { toolSelection } from "libs/data";
 
 function App() {
   const [theme, setTheme] = useState(
@@ -109,7 +97,7 @@ function App() {
             }
           </div>
           <div className="main-tool-container">
-            {testData.map((item, index) => {
+            {toolSelection.map((item, index) => {
               return (
                 <Link
                   to={item.path}
