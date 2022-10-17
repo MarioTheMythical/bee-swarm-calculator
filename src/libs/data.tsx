@@ -2050,7 +2050,7 @@ export const toolSelection = [
   },
 ];
 
-export const treatExp = [
+export const bondExp = [
   {
     level: 1,
     total: 0,

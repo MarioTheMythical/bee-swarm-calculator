@@ -1000,6 +1000,78 @@ input[type="number"] {
 
 /* BOND CALCULATOR */
 
+.bond-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: yellowgreen;
+}
+
+.bond-input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  width: 95%;
+  background-color: #444;
+}
+
+.bond-table-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 90%;
+  background-color: #444;
+}
+
+.bond-table-titles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.bond-input {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.bond-table-titles > :nth-child(1)::after {
+  content: "Level";
+}
+
+.bond-table-titles > :nth-child(2)::after {
+  content: "Next Level";
+}
+
+.bond-table-titles > :nth-child(3)::after {
+  content: "Single ";
+}
+
+.bond-table-titles > :nth-child(4)::after {
+  content: "Total ";
+}
+
+.bond-table-value-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 /* DARK THEME */
 
 .dark-background {
@@ -1133,6 +1205,9 @@ input[type="number"] {
   }
   .planner-blur {
     width: 100%;
+  }
+  .bond-input-container {
+    width: 90%;
   }
 }
 

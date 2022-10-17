@@ -1,5 +1,5 @@
-import Bond from "components/TreatCalc/Treat";
-import Treat from "components/TreatCalc/Treat";
+import Bond from "components/BondCalc/Bond";
+import Treat from "components/BondCalc/Bond";
 import { useEffect, useState, createContext } from "react";
 import { Link } from "react-router-dom";
 
@@ -94,7 +94,8 @@ function BondMain() {
             />
           </div>
           <div className={theme ? "main-subtitle dark-font" : "main-subtitle"}>
-            A tool to help plan your future hive ideas.
+            A tool to calculate required amount of honey and treats for each
+            level.
           </div>
           <div
             className={theme ? "main-items-container" : "main-items-container"}

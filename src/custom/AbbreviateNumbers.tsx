@@ -10,9 +10,18 @@ const abbreviateNumbers = (value: number) => {
   var sNum = Math.floor(("" + value).length / 4);
 
   // calculating the precised value.
-  var sValue: number | string = parseFloat(
-    (sNum !== 0 ? value / Math.pow(1000, sNum) : value).toPrecision(2)
-  );
+
+  var sValue: number | string = 0;
+
+  if (sNum >= 3) {
+    sValue = parseFloat(
+      (sNum !== 0 ? value / Math.pow(1000, sNum) : value).toPrecision()
+    );
+  } else {
+    sValue = parseFloat(
+      (sNum !== 0 ? value / Math.pow(1000, sNum) : value).toPrecision(2)
+    );
+  }
 
   if (sValue % 1 !== 0) {
     finalValue = sValue.toFixed(1);
