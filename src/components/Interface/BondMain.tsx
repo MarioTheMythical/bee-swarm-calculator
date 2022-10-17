@@ -1,5 +1,4 @@
 import Bond from "components/BondCalc/Bond";
-import Treat from "components/BondCalc/Bond";
 import { useEffect, useState, createContext } from "react";
 import { Link } from "react-router-dom";
 
@@ -112,8 +111,8 @@ function BondMain() {
                 <span style={{ fontWeight: "bold", color: "rgb(53, 151, 97)" }}>
                   bond from treat % bonus
                 </span>
-                , which includes gifted puppy bee and moon amulet bonuses, as
-                well as your current unlocked{" "}
+                , which includes gifted puppy bee (20%) and moon amulet bonuses
+                (example 5%), as well as your current unlocked{" "}
                 <span style={{ fontWeight: "bold", color: "rgb(53, 151, 97)" }}>
                   hive slot amount
                 </span>

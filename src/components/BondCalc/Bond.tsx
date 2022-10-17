@@ -5,8 +5,8 @@ import { useContext, useEffect, useState } from "react";
 
 function Bond() {
   const theme = useContext(PlannerThemeContext);
-  const [hiveSlots, setHiveSlots] = useState(50);
-  const [bondBonus, setBondBonus] = useState(0);
+  const [hiveSlots, setHiveSlots] = useState("");
+  const [bondBonus, setBondBonus] = useState("");
   const [bondData, setBondData] = useState<
     {
       level: number;
@@ -21,7 +21,7 @@ function Bond() {
       const abbreviatedNext = abbreviateNumbers(item.next);
       const abbreviatedSingle = abbreviateNumbers((item.next / 10) * 10000);
       const abbreviatedTotal = abbreviateNumbers(
-        (item.next / 10) * 10000 * hiveSlots
+        (item.next / 10) * 10000 * Number(hiveSlots)
       );
 
       return {
@@ -35,13 +35,57 @@ function Bond() {
     setBondData(newBondData);
   }, [hiveSlots]);
 
+  const userSlotsInput = (value: string) => {
+    const num = Number(value);
+
+    if (value === "") {
+      return setHiveSlots("");
+    }
+
+    if (num > 50) {
+      return setHiveSlots("50");
+    }
+
+    if (num <= 50 && num > 0) {
+      setHiveSlots(value.slice(0, 2));
+    }
+  };
+
+  const userBonusInput = (value: string) => {
+    const num = Number(value.slice(0, 2));
+
+    if (value === "") {
+      return setBondBonus("");
+    }
+
+    if (num <= 99 && num > 0) {
+      setBondBonus(value.slice(0, 2));
+    }
+  };
+
   return (
     <div className="bond-container">
       <div className="bond-input-container">
         <div>Unlocked hive slots: </div>
-        <input className="bond-input" placeholder="0" />
+        <input
+          className="bond-input"
+          type="number"
+          maxLength={2}
+          value={hiveSlots}
+          placeholder="0"
+          onChange={(e) => {
+            userSlotsInput(e.target.value);
+          }}
+        />
         <div style={{ marginLeft: 20 }}>Bond Bonus %: </div>
-        <input className="bond-input" placeholder="0" />
+        <input
+          className="bond-input"
+          value={bondBonus}
+          placeholder="0"
+          onChange={(e) => {
+            userBonusInput(e.target.value);
+          }}
+        />
       </div>
       <div className="bond-table-container">
         <div className="bond-table-titles">
