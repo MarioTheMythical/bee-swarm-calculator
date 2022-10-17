@@ -26,10 +26,10 @@ function Bond() {
       if (bondBonus === "" || bondBonus === "0") bonus = 1;
       const abbreviatedNext = abbreviateNumbers(item.next);
       const abbreviatedSingle = abbreviateNumbers(
-        (item.next / 10) * 10000 * bonus
+        Math.round((item.next / 10) * 10000 * bonus)
       );
       const abbreviatedTotal = abbreviateNumbers(
-        (item.next / 10) * 10000 * Number(hiveSlots) * bonus
+        Math.round((item.next / 10) * 10000 * Number(hiveSlots) * bonus)
       );
 
       return {

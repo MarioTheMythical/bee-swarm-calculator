@@ -1,5 +1,6 @@
 const abbreviateNumbers = (value: number) => {
   if (value < 10000) {
+    if (value.toString().includes(".")) return value.toString().split(".")[0];
     return value.toString();
   }
   let finalValue = "";
