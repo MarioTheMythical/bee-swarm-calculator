@@ -2,6 +2,17 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
 
+const testData = [
+  {
+    name: "Hive planner",
+    img: "Hive/Tools/Planner.png",
+  },
+  {
+    name: "Recipe calculator",
+    img: "Hive/Tools/Calculator.png",
+  },
+];
+
 function App() {
   const [theme, setTheme] = useState(
     localStorage.getItem("BSS-Theme") === "dark" ? true : false
@@ -90,17 +101,30 @@ function App() {
                   theme ? "main-description dark-info" : "main-description"
                 }
               >
-                To use the Hive Planner, select which rarity of bees you want
-                and drag the icon into the{" "}
-                <span style={{ fontWeight: "bold", color: "rgb(53, 151, 97)" }}>
-                  hive.
-                </span>{" "}
-                After you're happy with your hive setup, you can save it for
-                later. <br />
-                (Hive data only saves on your current device and gets deleted if
-                you clear browser cache.)
+                To get started, select the tool you want to use from the
+                selection below or use the navigation menu in the top left.
               </div>
             }
+          </div>
+          <div className="main-tool-container">
+            {testData.map((item, index) => {
+              return (
+                <div key={index} className="main-tool-selection">
+                  <div
+                    className={
+                      theme ? "main-tool-title" : "main-tool-title light-font"
+                    }
+                  >
+                    {item.name}
+                  </div>
+                  <img
+                    className="main-tool-img"
+                    src={require(`images/${item.img}`)}
+                    alt={item.name}
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

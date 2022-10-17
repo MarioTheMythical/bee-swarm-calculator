@@ -218,6 +218,56 @@ input[type="number"] {
   background-color: var(--main-background-color);
 }
 
+.main-tool-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.main-tool-selection {
+  margin: 10px;
+  width: 400px;
+}
+
+.main-tool-title {
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.1em;
+  transition: 200ms;
+}
+
+.main-tool-title:hover {
+  color: rgb(40, 140, 182);
+}
+
+.main-tool-img {
+  cursor: pointer;
+  width: 350px;
+  margin-top: 15px;
+  border: 1px solid rgb(255, 255, 255, 0.5);
+  border-radius: 5px;
+  transition: 200ms;
+}
+
+.main-tool-img:not(:hover) {
+  opacity: 0.7;
+}
+
+.main-tool-img:hover {
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+.main-tool-container:hover
+  > .main-tool-selection:not(:hover)
+  > .main-tool-img:not(:hover) {
+  opacity: 0.5;
+}
+
+/* .main-tool-img:hover {
+  width: 370px;
+} */
+
 /* ITEM SELECTION */
 
 .item-select-container {
@@ -980,6 +1030,10 @@ input[type="number"] {
 
 .dark-description {
   background-color: rgb(21, 95, 109);
+}
+
+.light-font {
+  color: var(--main-dark-font);
 }
 
 /* SCREEN RES BREAKPOINTS */
