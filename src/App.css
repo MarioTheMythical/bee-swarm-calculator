@@ -235,7 +235,7 @@ input[type="number"] {
   transition: 200ms;
 }
 
-.main-tool-title:hover {
+.main-tool-selection:hover {
   color: rgb(40, 140, 182);
 }
 
