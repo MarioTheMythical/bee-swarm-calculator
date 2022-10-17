@@ -24,10 +24,6 @@ const abbreviateNumbers = (value: number) => {
     );
   }
 
-  if (sValue % 1 !== 0) {
-    finalValue = sValue.toFixed(1);
-  }
-
   finalValue = sValue.toString();
 
   // appending the letter to precised val.
@@ -43,6 +39,11 @@ const abbreviateNumbers = (value: number) => {
       sValue = parseFloat(
         (sNum !== 0 ? value / Math.pow(1000, sNum) : value).toPrecision(4)
       );
+    }
+
+    if (finalValue.split(".")[0].length === 3) {
+      sNum = sNum - 1;
+      sValue = finalValue.toString().slice(0, 3);
     }
 
     if (finalValue.length === 6) {

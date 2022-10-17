@@ -130,13 +130,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 .visible {
-  height: 160px;
+  height: 210px;
   transition: 200ms;
 }
 
 .visible > :nth-child(1),
 .visible > :nth-child(2),
-.visible > :nth-child(3) {
+.visible > :nth-child(3),
+.visible > :nth-child(4) {
   padding: 15px 10px 0px 15px;
 }
 
@@ -152,6 +153,11 @@ body::-webkit-scrollbar-thumb {
 
 .visible > :nth-child(3)::after {
   content: "Recipe Calculator";
+  animation: fadein 300ms;
+}
+
+.visible > :nth-child(4)::after {
+  content: "Bond Calculator";
   animation: fadein 300ms;
 }
 
@@ -238,6 +244,11 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.main-tool-container > :nth-child(4) {
+  opacity: 0;
+  height: 1px;
 }
 
 .main-tool-selection {

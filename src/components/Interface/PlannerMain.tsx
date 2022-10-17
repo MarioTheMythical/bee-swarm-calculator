@@ -59,6 +59,9 @@ function PlannerMain() {
           <Link to="/calculator">
             <span />
           </Link>
+          <Link to="/bond">
+            <span />
+          </Link>
           <div
             className={
               dropdownCheck

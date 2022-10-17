@@ -46,6 +46,9 @@ function App() {
           <Link to="/calculator">
             <span />
           </Link>
+          <Link to="/bond">
+            <span />
+          </Link>
           <div
             className={
               dropdownCheck
@@ -96,29 +99,31 @@ function App() {
               </div>
             }
           </div>
-          <div className="main-tool-container">
-            {toolSelection.map((item, index) => {
-              return (
-                <Link
-                  to={item.path}
-                  key={index}
-                  className="main-tool-selection"
-                >
-                  <div
-                    className={
-                      theme ? "main-tool-title" : "main-tool-title light-font"
-                    }
+          <div className="test">
+            <div className="main-tool-container">
+              {toolSelection.map((item, index) => {
+                return (
+                  <Link
+                    to={item.path}
+                    key={index}
+                    className="main-tool-selection"
                   >
-                    {item.name}
-                  </div>
-                  <img
-                    className="main-tool-img"
-                    src={require(`images/${item.img}`)}
-                    alt={item.name}
-                  />
-                </Link>
-              );
-            })}
+                    <div
+                      className={
+                        theme ? "main-tool-title" : "main-tool-title light-font"
+                      }
+                    >
+                      {item.name}
+                    </div>
+                    <img
+                      className="main-tool-img"
+                      src={require(`images/${item.img}`)}
+                      alt={item.name}
+                    />
+                  </Link>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

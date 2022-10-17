@@ -2048,6 +2048,11 @@ export const toolSelection = [
     img: "Hive/Tools/Calculator.png",
     path: "/calculator",
   },
+  {
+    name: "Recipe calculator",
+    img: "Hive/Tools/Calculator.png",
+    path: "/calculator",
+  },
 ];
 
 export const bondExp = [
