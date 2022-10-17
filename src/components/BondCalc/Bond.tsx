@@ -18,10 +18,14 @@ function Bond() {
 
   useEffect(() => {
     const newBondData = bondExp.map((item) => {
+      let bonus = Number("0." + (100 - Number(bondBonus)));
+      if (bondBonus === "" || bondBonus === "0") bonus = 1;
       const abbreviatedNext = abbreviateNumbers(item.next);
-      const abbreviatedSingle = abbreviateNumbers((item.next / 10) * 10000);
+      const abbreviatedSingle = abbreviateNumbers(
+        (item.next / 10) * 10000 * bonus
+      );
       const abbreviatedTotal = abbreviateNumbers(
-        (item.next / 10) * 10000 * Number(hiveSlots)
+        (item.next / 10) * 10000 * Number(hiveSlots) * bonus
       );
 
       return {
@@ -33,7 +37,7 @@ function Bond() {
     });
 
     setBondData(newBondData);
-  }, [hiveSlots]);
+  }, [hiveSlots, bondBonus]);
 
   const userSlotsInput = (value: string) => {
     const num = Number(value);
@@ -58,7 +62,7 @@ function Bond() {
       return setBondBonus("");
     }
 
-    if (num <= 99 && num > 0) {
+    if (num <= 99 && num >= 0) {
       setBondBonus(value.slice(0, 2));
     }
   };
