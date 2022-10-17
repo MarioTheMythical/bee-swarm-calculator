@@ -226,7 +226,6 @@ input[type="number"] {
 
 .main-tool-selection {
   margin: 10px;
-  width: 400px;
 }
 
 .main-tool-title {
@@ -249,10 +248,6 @@ input[type="number"] {
   transition: 200ms;
 }
 
-.main-tool-img:not(:hover) {
-  opacity: 0.7;
-}
-
 .main-tool-img:hover {
   transform: scale(1.03);
   opacity: 1;
@@ -261,7 +256,7 @@ input[type="number"] {
 .main-tool-container:hover
   > .main-tool-selection:not(:hover)
   > .main-tool-img:not(:hover) {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 /* .main-tool-img:hover {

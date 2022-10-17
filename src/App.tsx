@@ -6,10 +6,12 @@ const testData = [
   {
     name: "Hive planner",
     img: "Hive/Tools/Planner.png",
+    path: "/planner",
   },
   {
     name: "Recipe calculator",
     img: "Hive/Tools/Calculator.png",
+    path: "/calculator",
   },
 ];
 
@@ -109,20 +111,22 @@ function App() {
           <div className="main-tool-container">
             {testData.map((item, index) => {
               return (
-                <div key={index} className="main-tool-selection">
-                  <div
-                    className={
-                      theme ? "main-tool-title" : "main-tool-title light-font"
-                    }
-                  >
-                    {item.name}
+                <Link to={item.path} key={index}>
+                  <div className="main-tool-selection">
+                    <div
+                      className={
+                        theme ? "main-tool-title" : "main-tool-title light-font"
+                      }
+                    >
+                      {item.name}
+                    </div>
+                    <img
+                      className="main-tool-img"
+                      src={require(`images/${item.img}`)}
+                      alt={item.name}
+                    />
                   </div>
-                  <img
-                    className="main-tool-img"
-                    src={require(`images/${item.img}`)}
-                    alt={item.name}
-                  />
-                </div>
+                </Link>
               );
             })}
           </div>
