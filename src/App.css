@@ -39,6 +39,22 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+/* SCROLLBAR */
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(40, 40, 40);
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  border: 3px solid rgb(64, 64, 64);
+  background-color: rgb(141, 141, 141);
+}
+
 /* MAIN */
 
 .main-parent-container {
@@ -1023,7 +1039,7 @@ input[type="number"] {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin: 20px 0px;
   padding: 10px;
   border-radius: 5px;
   width: 95%;

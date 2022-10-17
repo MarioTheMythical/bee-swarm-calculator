@@ -6,6 +6,7 @@ import { useContext, useEffect, useState } from "react";
 function Bond() {
   const theme = useContext(PlannerThemeContext);
   const [hiveSlots, setHiveSlots] = useState(50);
+  const [bondBonus, setBondBonus] = useState(0);
   const [bondData, setBondData] = useState<
     {
       level: number;
@@ -38,9 +39,9 @@ function Bond() {
     <div className="bond-container">
       <div className="bond-input-container">
         <div>Unlocked hive slots: </div>
-        <input className="bond-input" />
-        <div style={{ marginLeft: 20 }}>Bond % Bonus: </div>
-        <input className="bond-input" />
+        <input className="bond-input" placeholder="0" />
+        <div style={{ marginLeft: 20 }}>Bond Bonus %: </div>
+        <input className="bond-input" placeholder="0" />
       </div>
       <div className="bond-table-container">
         <div className="bond-table-titles">
