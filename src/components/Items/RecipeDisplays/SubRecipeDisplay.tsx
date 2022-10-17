@@ -1,5 +1,5 @@
 import { useEffect, useContext } from "react";
-import { ThemeContext } from "components/Interface/Main";
+import { ThemeContext } from "components/Interface/CalcMain";
 import { recipeMaterial } from "libs/types";
 
 type Props = {

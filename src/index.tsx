@@ -3,8 +3,9 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
-import CalcPage from "components/Pages/CalcPage";
-import PlannerPage from "components/Pages/PlannerPage";
+import Treat from "components/TreatCalc/Treat";
+import PlannerMain from "components/Interface/PlannerMain";
+import CalcMain from "components/Interface/CalcMain";
 
 const router = createBrowserRouter([
   {
@@ -13,11 +14,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/calculator",
-    element: <CalcPage />,
+    element: <CalcMain />,
   },
   {
     path: "/planner",
-    element: <PlannerPage />,
+    element: <PlannerMain />,
+  },
+  {
+    path: "/bond",
+    element: <Treat />,
   },
 ]);
 

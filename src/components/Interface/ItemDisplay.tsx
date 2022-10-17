@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ThemeContext } from "components/Interface/Main";
+import { ThemeContext } from "components/Interface/CalcMain";
 import Inventory from "../Inventory/Inventory";
 import Bags from "../Items/Bags/Bags";
 import Belts from "../Items/Belts/Belts";
