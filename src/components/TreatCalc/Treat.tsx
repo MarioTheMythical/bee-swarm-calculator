@@ -1,7 +1,9 @@
-import React from "react";
+import { PlannerThemeContext } from "components/Interface/BondMain";
+import { useContext, useEffect, useState } from "react";
 
-function Treat() {
-  return <div>Treat</div>;
+function Bond() {
+  const theme = useContext(PlannerThemeContext);
+  return <div>Bond</div>;
 }
 
-export default Treat;
+export default Bond;
