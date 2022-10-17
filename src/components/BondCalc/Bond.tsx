@@ -5,6 +5,7 @@ import { useContext, useEffect, useState } from "react";
 
 function Bond() {
   const theme = useContext(PlannerThemeContext);
+  const [hiveSlots, setHiveSlots] = useState(50);
   const [bondData, setBondData] = useState<
     {
       level: number;
@@ -17,9 +18,11 @@ function Bond() {
 
   useEffect(() => {
     bondExp.forEach((item) => {
-      let abbreviatedNext = abbreviateNumbers(item.next);
+      const abbreviatedNext = abbreviateNumbers(item.next);
+      const abbreviatedSingle = abbreviateNumbers((item.next / 10) * 10000);
+      const abbreviatedTotal = (item.next / 10) * 10000 * hiveSlots;
 
-      console.log(abbreviatedNext);
+      console.log(abbreviatedTotal);
     });
   }, []);
 

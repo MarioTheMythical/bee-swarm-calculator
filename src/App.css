@@ -1005,7 +1005,6 @@ input[type="number"] {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: yellowgreen;
 }
 
 .bond-input-container {
@@ -1027,24 +1026,16 @@ input[type="number"] {
   margin-top: 20px;
   padding: 10px;
   border-radius: 5px;
-  width: 90%;
+  width: 95%;
   background-color: #444;
 }
 
 .bond-table-titles {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   align-items: center;
   width: 100%;
   margin-bottom: 10px;
-}
-
-.bond-input {
-  width: 30px;
-  height: 30px;
-  border-radius: 5px;
-  margin-left: 10px;
 }
 
 .bond-table-titles > :nth-child(1)::after {
@@ -1056,20 +1047,62 @@ input[type="number"] {
 }
 
 .bond-table-titles > :nth-child(3)::after {
-  content: "Single ";
+  content: "Single Honey Cost";
 }
 
 .bond-table-titles > :nth-child(4)::after {
-  content: "Total ";
+  content: "Total Honey Cost";
+}
+
+.bond-table-titles > :nth-child(1) {
+  width: 15%;
+  margin-left: 10px;
+}
+
+.bond-table-titles > :nth-child(2) {
+  width: 20%;
+  margin-left: 10px;
+}
+
+.bond-table-titles > :nth-child(3),
+.bond-table-titles > :nth-child(4) {
+  width: 30%;
+  margin-left: 10px;
+}
+
+.bond-input {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  margin-left: 10px;
 }
 
 .bond-table-value-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   align-items: center;
   width: 100%;
   margin-bottom: 10px;
+}
+
+.bond-table-value-container > :nth-child(1) {
+  width: 15%;
+}
+
+.bond-table-value-container > :nth-child(2) {
+  width: 20%;
+}
+
+.bond-table-value-container > :nth-child(3),
+.bond-table-value-container > :nth-child(4) {
+  width: 30%;
+}
+
+.bond-table-value-container > :nth-child(1),
+.bond-table-value-container > :nth-child(2),
+.bond-table-value-container > :nth-child(3),
+.bond-table-value-container > :nth-child(4) {
+  margin-left: 10px;
 }
 
 /* DARK THEME */
@@ -1208,6 +1241,37 @@ input[type="number"] {
   }
   .bond-input-container {
     width: 90%;
+  }
+  .bond-table-titles > :nth-child(1)::after {
+    content: "Level";
+  }
+
+  .bond-table-titles > :nth-child(2)::after {
+    content: "Next";
+  }
+
+  .bond-table-titles > :nth-child(3)::after {
+    content: "Single ";
+  }
+
+  .bond-table-titles > :nth-child(4)::after {
+    content: "Total ";
+  }
+  .bond-table-titles > :nth-child(1),
+  .bond-table-titles > :nth-child(2),
+  .bond-table-titles > :nth-child(3),
+  .bond-table-titles > :nth-child(4) {
+    width: 20%;
+  }
+  .bond-table-container {
+    width: 90%;
+  }
+  .bond-table-value-container > :nth-child(1),
+  .bond-table-value-container > :nth-child(2),
+  .bond-table-value-container > :nth-child(3),
+  .bond-table-value-container > :nth-child(4) {
+    width: 20%;
+    margin-left: 10px;
   }
 }
 
