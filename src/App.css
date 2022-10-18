@@ -281,9 +281,11 @@ body::-webkit-scrollbar-thumb {
   opacity: 0.6;
 }
 
-/* .main-tool-img:hover {
-  width: 370px;
-} */
+.main-tool-container:hover
+  > .main-tool-selection:not(:hover)
+  > .main-tool-title:not(:hover) {
+  opacity: 0.6;
+}
 
 /* ITEM SELECTION */
 
