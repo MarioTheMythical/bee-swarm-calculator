@@ -72,12 +72,12 @@ export const inventoryItems: itemTypes = [
     image: "PurplePotion.png",
   },
   {
-    name: "Turpentine",
-    image: "Turpentine.png",
-  },
-  {
     name: "Super Smoothies",
     image: "SuperSmoothie.png",
+  },
+  {
+    name: "Turpentine",
+    image: "Turpentine.png",
   },
 ];
 
