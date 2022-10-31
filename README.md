@@ -83,6 +83,8 @@ In the future I would like to revisit and add some of my initial goals including
 
 - Item cheatsheet which shows all stats and method for making items stronger.
 
+- Amulet stat evaluation - compares users current amulet with the perfect stats to see how many stats are missing.
+
 - Get feedback from the community and add any features requested.
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png"/>
