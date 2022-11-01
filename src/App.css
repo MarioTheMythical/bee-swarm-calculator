@@ -369,7 +369,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
   margin: 0px 8px 8px 8px;
   padding: 5px;
-  background-color: rgb(73, 192, 192);
+  background-color: rgb(219, 219, 219);
 }
 
 .inventory-items-content-container {
@@ -428,7 +428,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
   padding: 5px 5px 10px 5px;
   margin-bottom: 5px;
-  background-color: rgb(27, 121, 139);
+  background-color: rgb(183, 183, 183);
 }
 
 /* GLOBAL STYLES */
@@ -486,7 +486,7 @@ body::-webkit-scrollbar-thumb {
   padding: 5px;
   border-radius: 5px;
   margin: 8px;
-  background-color: rgb(73, 192, 192);
+  background-color: rgb(219, 219, 219);
 }
 
 .item-display-recipe-container {
@@ -501,15 +501,15 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   padding: 5px;
   border-radius: 5px;
-  background-color: rgb(42, 163, 165);
+  background-color: rgb(183, 183, 183);
 }
 
 .item-display-subrecipe {
   display: flex;
   flex-direction: column;
   padding: 5px 5px 5px 15px;
-  border-radius: 5px;
-  background-color: rgb(42, 163, 165);
+  border-radius: 0px 0px 5px 5px;
+  background-color: rgb(183, 183, 183);
 }
 
 .item-display-subrecipe-content {
@@ -817,12 +817,21 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 5px;
   margin-bottom: 10px;
-  border-radius: 5px;
+  padding: 0px 5px;
   width: 470px;
   color: var(--main-dark-font);
-  background-color: rgb(232, 232, 232);
+  background-color: rgb(219, 219, 219);
+  overflow-y: hidden;
+  max-height: 0px;
+  transition: 500ms;
+}
+
+.planner-open {
+  padding: 0px 5px;
+  border-radius: 5px;
+  max-height: 1000px;
+  transition: 700ms;
 }
 
 .planner-hive-count-content {
@@ -841,7 +850,7 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 10px;
   border-radius: 5px;
   color: var(--main-dark-font);
-  background-color: rgb(232, 232, 232);
+  background-color: rgb(219, 219, 219);
 }
 
 .planner-hive-show:hover {
@@ -918,7 +927,7 @@ body::-webkit-scrollbar-thumb {
   color: var(--main-dark-font);
   border: none;
   border-radius: 0px 0px 5px 5px;
-  background-color: rgb(232, 232, 232);
+  background-color: rgb(219, 219, 219);
   width: 97%;
 }
 
@@ -932,7 +941,7 @@ body::-webkit-scrollbar-thumb {
   padding: 15px 0px 10px 0px;
   margin-top: 10px;
   border-radius: 5px 5px 0px 0px;
-  background-color: rgb(232, 232, 232);
+  background-color: rgb(219, 219, 219);
 }
 
 .type-image {
@@ -1085,7 +1094,7 @@ body::-webkit-scrollbar-thumb {
 
 .light-table {
   color: var(--main-dark-font);
-  background-color: rgb(232, 232, 232);
+  background-color: rgb(219, 219, 219);
   border-bottom: 1px solid 2020202;
 }
 
