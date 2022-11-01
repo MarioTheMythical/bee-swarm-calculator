@@ -821,7 +821,8 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
   margin-bottom: 10px;
   width: 470px;
-  background-color: rgb(24, 118, 86);
+  color: var(--main-dark-font);
+  background-color: rgb(232, 232, 232);
 }
 
 .planner-hive-count-content {
@@ -886,10 +887,10 @@ body::-webkit-scrollbar-thumb {
   user-select: none;
   font-size: 1.1rem;
   padding-bottom: 10px;
-  color: white;
+  color: var(--main-dark-font);
   border: none;
   border-radius: 0px 0px 5px 5px;
-  background-color: rgb(200, 200, 200);
+  background-color: rgb(232, 232, 232);
   width: 97%;
 }
 
@@ -903,7 +904,7 @@ body::-webkit-scrollbar-thumb {
   padding: 15px 0px 10px 0px;
   margin-top: 10px;
   border-radius: 5px 5px 0px 0px;
-  background-color: rgb(200, 200, 200);
+  background-color: rgb(232, 232, 232);
 }
 
 .type-image {
@@ -1057,6 +1058,7 @@ body::-webkit-scrollbar-thumb {
 .light-table {
   color: var(--main-dark-font);
   background-color: rgb(232, 232, 232);
+  border-bottom: 1px solid 2020202;
 }
 
 .bond-table-titles {
@@ -1138,6 +1140,10 @@ body::-webkit-scrollbar-thumb {
   margin-left: 10px;
 }
 
+.light-table-title {
+  border-bottom: 1px solid #b5b5b5;
+}
+
 /* DARK THEME */
 
 .dark-background {
@@ -1160,11 +1166,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .dark-display {
-  background-color: rgb(27, 121, 139);
+  background-color: #444;
 }
 
 .dark-description {
-  background-color: rgb(21, 95, 109);
+  background-color: rgb(35, 35, 35);
 }
 
 .light-font {
