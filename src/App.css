@@ -818,8 +818,8 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   flex-wrap: wrap;
   padding: 5px;
-  border-radius: 5px;
   margin-bottom: 10px;
+  border-radius: 5px;
   width: 470px;
   color: var(--main-dark-font);
   background-color: rgb(232, 232, 232);
@@ -829,6 +829,34 @@ body::-webkit-scrollbar-thumb {
   min-width: 150px;
   padding: 5px;
   margin: 5px;
+}
+
+.planner-hive-show {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  padding: 5px;
+  width: 470px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  color: var(--main-dark-font);
+  background-color: rgb(232, 232, 232);
+}
+
+.planner-hive-show:hover {
+  color: white;
+  background-color: rgb(182, 182, 182);
+  transition: 100ms;
+}
+
+.planner-hive-show:active {
+  color: white;
+  background-color: rgb(143, 143, 143);
+}
+
+.planner-hive-show-active {
+  border-radius: 5px 5px 0px 0px;
 }
 
 /* BEES */
@@ -1266,6 +1294,9 @@ body::-webkit-scrollbar-thumb {
     height: 40px;
   }
   .planner-hive-count {
+    width: 350px;
+  }
+  .planner-hive-show {
     width: 350px;
   }
   .planner-save-display {

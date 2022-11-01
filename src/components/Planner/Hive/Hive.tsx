@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { HiveSlots } from "libs/data";
 import Slots from "../Slots";
 import Bees from "../Bees";
@@ -6,7 +6,7 @@ import { giftedBeeTypeDisplay, beeTypeDisplay } from "libs/data";
 import { DragDropContext } from "react-beautiful-dnd";
 import HiveSave from "components/Planner/Hive/HiveSave";
 import HiveLoad from "./HiveLoad";
-import { PlannerThemeContext } from "components/Interface/PlannerMain";
+import HiveCount from "./HiveCount";
 
 function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
   const [hiveSlots, setHiveSlots] = useState(HiveSlots);
@@ -14,7 +14,6 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
   const [hiveCount, setHiveCount] = useState<{ name: string; count: number }[]>(
     []
   );
-  const theme = useContext(PlannerThemeContext);
 
   useEffect(() => {
     let hive: string[] = [];
@@ -135,23 +134,7 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
         />
         <Slots hiveSlots={hiveSlots} removeFromList={removeFromList} />
       </DragDropContext>
-      {hiveCount.length > 0 && (
-        <div
-          className={
-            theme
-              ? "planner-hive-count dark-display dark-font"
-              : "planner-hive-count"
-          }
-        >
-          {hiveCount.map((slot, index) => {
-            return (
-              <div key={index} className="planner-hive-count-content">
-                {slot.name}: {slot.count}
-              </div>
-            );
-          })}
-        </div>
-      )}
+      {hiveCount.length > 0 && <HiveCount hiveCount={hiveCount} />}
       <div className="hive-btn-container">
         <HiveSave hiveSlots={hiveSlots} />
         <HiveLoad changeHiveSlots={changeHiveSlots} />
