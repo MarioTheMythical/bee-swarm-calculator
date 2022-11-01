@@ -109,7 +109,11 @@ function Bond() {
           theme ? "bond-table-container" : "bond-table-container light-table"
         }
       >
-        <div className="bond-table-titles">
+        <div
+          className={
+            theme ? "bond-table-titles" : "bond-table-titles light-table-title"
+          }
+        >
           <div />
           <div />
           <div />
@@ -117,7 +121,14 @@ function Bond() {
         </div>
         {bondData?.map((item) => {
           return (
-            <div key={item.level} className="bond-table-value-container">
+            <div
+              key={item.level}
+              className={
+                theme
+                  ? "bond-table-value-container"
+                  : "bond-table-value-container light-table-title"
+              }
+            >
               <div>{item.level}</div>
               <div>{item.next}</div>
               <div>{item.single}</div>
