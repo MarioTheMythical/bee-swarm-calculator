@@ -16,8 +16,6 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
   );
   const theme = useContext(PlannerThemeContext);
 
-  console.log(theme);
-
   useEffect(() => {
     let hive: string[] = [];
     let finalHiveCount: { name: string; count: number }[] = [];
