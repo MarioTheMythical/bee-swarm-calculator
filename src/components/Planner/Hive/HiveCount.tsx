@@ -22,9 +22,9 @@ function HiveCount({
         }
         onClick={() => setShowHiveCount(!showHiveCount)}
       >
-        Show hive count
+        {showHiveCount ? "Hide hive count" : "Show hive count"}
       </div>
-      {!showHiveCount && (
+      {showHiveCount && (
         <div
           className={
             theme
