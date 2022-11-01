@@ -275,18 +275,6 @@ body::-webkit-scrollbar-thumb {
   opacity: 1;
 }
 
-.main-tool-container:hover
-  > .main-tool-selection:not(:hover)
-  > .main-tool-img:not(:hover) {
-  opacity: 0.6;
-}
-
-.main-tool-container:hover
-  > .main-tool-selection:not(:hover)
-  > .main-tool-title:not(:hover) {
-  opacity: 0.6;
-}
-
 /* ITEM SELECTION */
 
 .item-select-container {
