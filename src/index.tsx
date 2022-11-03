@@ -13,6 +13,10 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
+    path: "/:undefined",
+    element: <App />,
+  },
+  {
     path: "/calculator",
     element: <CalcMain />,
   },
