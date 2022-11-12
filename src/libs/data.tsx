@@ -533,7 +533,7 @@ export const toolRecipes: recipe = [
           },
           {
             material: "Purple Potion",
-            value: 9,
+            value: 6,
             image: "PurplePotion.png",
           },
           {
