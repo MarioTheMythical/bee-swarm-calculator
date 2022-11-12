@@ -833,7 +833,7 @@ export const bagRecipes: recipe = [
       },
       {
         material: "Tropical Drink",
-        value: 510,
+        value: 150,
         image: "TropicalDrink.png",
         subRecipe: [
           {
