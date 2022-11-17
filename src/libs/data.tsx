@@ -1724,7 +1724,7 @@ export const planterRecipes: recipe = [
           },
           {
             material: "Enzymes",
-            value: 1,
+            value: 3,
             image: "Enzymes.png",
           },
           {
