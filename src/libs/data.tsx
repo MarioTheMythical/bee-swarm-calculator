@@ -101,12 +101,12 @@ export const inventoryMaterials: itemTypes = [
     image: "SunflowerSeeds.png",
   },
   {
-    name: "Neonberries",
-    image: "NeonBerries.png",
-  },
-  {
     name: "Bitterberries",
     image: "Bitterberries.png",
+  },
+  {
+    name: "Neonberries",
+    image: "NeonBerries.png",
   },
   {
     name: "Coconuts",
