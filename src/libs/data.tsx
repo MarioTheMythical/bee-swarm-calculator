@@ -1923,6 +1923,7 @@ export const beeTypeDisplay = {
     { name: "Festive", id: "43", image: "FestiveBee.png" },
     { name: "Cobalt", id: "44", image: "CobaltBee.png" },
     { name: "Crimson", id: "45", image: "CrimsonBee.png" },
+    { name: "Digital", id: "46", image: "DigitalBee.png" },
   ],
 };
 
@@ -1981,6 +1982,7 @@ export const giftedBeeTypeDisplay = {
     { name: "★ Festive", id: "43", image: "Gifted/FestiveBee.png" },
     { name: "★ Cobalt", id: "44", image: "Gifted/CobaltBee.png" },
     { name: "★ Crimson", id: "45", image: "Gifted/CrimsonBee.png" },
+    { name: "★ Digital", id: "46", image: "Gifted/DigitalBee.png" },
   ],
 };
 
@@ -2054,7 +2056,7 @@ export const toolSelection = [
     path: "/bond",
   },
   {
-    name: "Bee cheatsheet",
+    name: "Amulet Appraiser",
     img: "Hive/Tools/ComingSoon.png",
     path: "",
   },
