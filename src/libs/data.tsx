@@ -595,7 +595,7 @@ export const toolRecipes: recipe = [
       },
       {
         material: "Hard Wax",
-        value: 150,
+        value: 100,
         image: "HardWax.png",
         subRecipe: [
           {
