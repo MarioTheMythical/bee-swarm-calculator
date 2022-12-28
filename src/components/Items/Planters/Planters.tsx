@@ -28,7 +28,11 @@ function Boots() {
         return setRecipeData(planterRecipes[4].pesticide);
 
       case 5:
-        return setRecipeData(planterRecipes[5].petal);
+        return setRecipeData(planterRecipes[5].hydroponic);
+      case 6:
+        return setRecipeData(planterRecipes[6].heattreated);
+      case 7:
+        return setRecipeData(planterRecipes[7].petal);
     }
   }, [planterSelection]);
 
