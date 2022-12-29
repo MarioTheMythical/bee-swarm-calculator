@@ -609,9 +609,9 @@ export const toolRecipes: recipe = [
             image: "Enzymes.png",
           },
           {
-            material: "Neonberries",
+            material: "Bitterberries",
             value: 33,
-            image: "NeonBerries.png",
+            image: "Bitterberries.png",
           },
           {
             material: "Royal Jelly",
@@ -1721,11 +1721,6 @@ export const planterRecipes: recipe = [
         image: "HardWax.png",
         subRecipe: [
           {
-            material: "Bitterberries",
-            value: 33,
-            image: "Bitterberries.png",
-          },
-          {
             material: "Soft Wax",
             value: 3,
             image: "SoftWax.png",
@@ -1734,6 +1729,11 @@ export const planterRecipes: recipe = [
             material: "Enzymes",
             value: 3,
             image: "Enzymes.png",
+          },
+          {
+            material: "Bitterberries",
+            value: 33,
+            image: "Bitterberries.png",
           },
           {
             material: "Royal Jelly",
@@ -1870,11 +1870,6 @@ export const planterRecipes: recipe = [
         image: "HardWax.png",
         subRecipe: [
           {
-            material: "Bitterberries",
-            value: 33,
-            image: "Bitterberries.png",
-          },
-          {
             material: "Soft Wax",
             value: 3,
             image: "SoftWax.png",
@@ -1883,6 +1878,11 @@ export const planterRecipes: recipe = [
             material: "Enzymes",
             value: 3,
             image: "Enzymes.png",
+          },
+          {
+            material: "Bitterberries",
+            value: 33,
+            image: "Bitterberries.png",
           },
           {
             material: "Royal Jelly",
