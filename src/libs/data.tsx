@@ -1879,7 +1879,23 @@ export const planterRecipes: recipe = [
   {
     heattreated: [
       { material: "Honey", value: 750000000000, image: "Honey.png" },
-      { material: "Red Extract", value: 750, image: "RedExtract.png" },
+      {
+        material: "Red Extract",
+        value: 750,
+        image: "RedExtract.png",
+        subRecipe: [
+          {
+            material: "Strawberries",
+            value: 50,
+            image: "Strawberries.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
       {
         material: "Hard Wax",
         value: 150,
