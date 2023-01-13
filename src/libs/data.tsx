@@ -1775,7 +1775,23 @@ export const planterRecipes: recipe = [
   {
     hydroponic: [
       { material: "Honey", value: 750000000000, image: "Honey.png" },
-      { material: "Blue Extract", value: 750, image: "BlueExtract.png" },
+      {
+        material: "Blue Extract",
+        value: 750,
+        image: "BlueExtract.png",
+        subRecipe: [
+          {
+            material: "Blueberries",
+            value: 50,
+            image: "Blueberries.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
       {
         material: "Soft Wax",
         value: 500,
