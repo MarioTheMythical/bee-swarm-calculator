@@ -681,6 +681,28 @@ export const toolRecipes: recipe = [
     gummy: [
       { material: "Honey", value: 10000000000000, image: "Honey.png" },
       {
+        material: "Gumdrops",
+        value: 2500,
+        image: "Gumdrops.png",
+        subRecipe: [
+          {
+            material: "Blueberries",
+            value: 3,
+            image: "Blueberries.png",
+          },
+          {
+            material: "Strawberries",
+            value: 3,
+            image: "Strawberries.png",
+          },
+          {
+            material: "Pineapples",
+            value: 3,
+            image: "Pineapples.png",
+          },
+        ],
+      },
+      {
         material: "Glue",
         value: 1500,
         image: "Glue.png",
@@ -726,7 +748,7 @@ export const toolRecipes: recipe = [
       },
       {
         material: "Super Smoothies",
-        value: 10,
+        value: 50,
         image: "SuperSmoothie.png",
         subRecipe: [
           {
