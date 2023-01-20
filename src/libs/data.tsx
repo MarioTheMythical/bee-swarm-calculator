@@ -773,7 +773,7 @@ export const toolRecipes: recipe = [
           },
           {
             material: "Star Jelly",
-            value: 10,
+            value: 100,
             image: "StarJelly.png",
           },
         ],
@@ -1868,7 +1868,7 @@ export const planterRecipes: recipe = [
           },
           {
             material: "Star Jelly",
-            value: 10,
+            value: 100,
             image: "StarJelly.png",
           },
         ],
@@ -1972,7 +1972,7 @@ export const planterRecipes: recipe = [
           },
           {
             material: "Star Jelly",
-            value: 10,
+            value: 100,
             image: "StarJelly.png",
           },
         ],
