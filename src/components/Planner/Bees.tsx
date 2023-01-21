@@ -39,16 +39,22 @@ function Bees({
         })}
       </div>
       <TypeDisplay type={beeTypeSelection} giftedCheck={giftedCheck} />
-      <button
-        onClick={selectGifted}
-        className={theme ? "bees-gifted dark-info" : "bees-gifted"}
+      <div
+        className={
+          theme ? "bees-input-container dark-info" : "bees-input-container"
+        }
       >
-        Gifted {giftedCheck ? "✅" : "❌"}
-        <div>
+        <button
+          onClick={selectGifted}
+          className={theme ? "bees-gifted dark-info" : "bees-gifted"}
+        >
+          Gifted {giftedCheck ? "✅" : "❌"}
+        </button>
+        <div className="bees-hive-level">
           Hive level:
           <input className="bond-input"></input>
         </div>
-      </button>
+      </div>
     </div>
   );
 }

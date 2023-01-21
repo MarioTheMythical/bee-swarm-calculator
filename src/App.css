@@ -898,12 +898,10 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(49, 136, 88);
 }
 
-.bees-gifted {
+.bees-input-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
-  user-select: none;
   font-size: 1.1rem;
   padding-bottom: 10px;
   color: var(--main-dark-font);
@@ -911,6 +909,26 @@ body::-webkit-scrollbar-thumb {
   border-radius: 0px 0px 5px 5px;
   background-color: rgb(219, 219, 219);
   width: 97%;
+}
+
+.bees-gifted {
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.1rem;
+  color: var(--main-dark-font);
+  border: none;
+  border-radius: 0px 0px 5px 5px;
+  background-color: rgb(219, 219, 219);
+  width: 20%;
+  min-width: 150px;
+}
+
+.bees-hive-level {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  min-width: 150px;
 }
 
 /* BEE TYPES */
