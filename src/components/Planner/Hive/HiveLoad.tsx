@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { PlannerThemeContext } from "components/Interface/PlannerMain";
 import { beeTypeDisplay, giftedBeeTypeDisplay, HiveSlots } from "libs/data";
-import { ReactDOM } from "react";
 
 function HiveLoad({
   changeHiveSlots,
