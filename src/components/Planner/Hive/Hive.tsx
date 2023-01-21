@@ -147,7 +147,11 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
           selectGifted={selectGifted}
           changeHiveLevel={changeHiveLevel}
         />
-        <Slots hiveSlots={hiveSlots} removeFromList={removeFromList} />
+        <Slots
+          hiveSlots={hiveSlots}
+          removeFromList={removeFromList}
+          hiveLevel={hiveLevel}
+        />
       </DragDropContext>
       {hiveCount.length > 0 && <HiveCount hiveCount={hiveCount} />}
       <div className="hive-btn-container">

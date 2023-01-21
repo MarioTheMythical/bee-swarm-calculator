@@ -4,6 +4,7 @@ import { ReactDOM } from "react";
 function Slots({
   hiveSlots,
   removeFromList,
+  hiveLevel,
 }: {
   hiveSlots: {
     name: string;
@@ -11,7 +12,9 @@ function Slots({
     image: string;
   }[];
   removeFromList: (index: number) => void;
+  hiveLevel: number | undefined;
 }) {
+  console.log(hiveLevel);
   return (
     <div className="hive-slot-container-bg">
       <div className="hive-slot-container">
@@ -35,7 +38,7 @@ function Slots({
                   />
                   <div style={{ display: "none" }}>{provided.placeholder}</div>
                   {hive.id !== "0" && (
-                    <div className="hive-slot-levels">20</div>
+                    <div className="hive-slot-levels">{hiveLevel}</div>
                   )}
                 </div>
               )}

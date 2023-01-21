@@ -56,7 +56,7 @@ function Bees({
           Hive level:
           <input
             className="bond-input"
-            onChange={(e) => console.log(e.target.value)}
+            onChange={(event) => changeHiveLevel(Number(event.target.value))}
           />
         </div>
       </div>
