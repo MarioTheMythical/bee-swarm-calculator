@@ -22,7 +22,6 @@ function PlannerMain() {
 
   useEffect(() => {
     if (!localStorage.getItem("BSS-Theme")) {
-      console.log(true);
       localStorage.setItem("BSS-Theme", "light");
     }
   }, []);

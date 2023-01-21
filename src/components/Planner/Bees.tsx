@@ -7,10 +7,12 @@ function Bees({
   descriptionCheck,
   giftedCheck,
   selectGifted,
+  changeHiveLevel,
 }: {
   descriptionCheck: () => void;
   giftedCheck: boolean;
   selectGifted: () => void;
+  changeHiveLevel: (hiveLevelInput: number) => void;
 }) {
   const [beeTypeSelection, setBeeTypeSelection] = useState(0);
 
@@ -52,7 +54,10 @@ function Bees({
         </button>
         <div className="bees-hive-level">
           Hive level:
-          <input className="bond-input"></input>
+          <input
+            className="bond-input"
+            onChange={(e) => console.log(e.target.value)}
+          />
         </div>
       </div>
     </div>

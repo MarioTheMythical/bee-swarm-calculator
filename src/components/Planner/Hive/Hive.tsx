@@ -14,6 +14,7 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
   const [hiveCount, setHiveCount] = useState<{ name: string; count: number }[]>(
     []
   );
+  const [hiveLevel, setHiveLevel] = useState<number | undefined>();
 
   useEffect(() => {
     let hive: string[] = [];
@@ -118,6 +119,19 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
     setHiveSlots(hiveData);
   };
 
+  const changeHiveLevel = (hiveLevelInput: number) => {
+    if (!hiveLevelInput) {
+      return setHiveLevel(undefined);
+    }
+    if (hiveLevelInput > 25) {
+      return setHiveLevel(25);
+    }
+    if (hiveLevelInput < 0) {
+      return setHiveLevel(0);
+    }
+    setHiveLevel(hiveLevelInput);
+  };
+
   return (
     <div className="hive-container">
       <DragDropContext
@@ -131,6 +145,7 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
           descriptionCheck={descriptionCheck}
           giftedCheck={giftedCheck}
           selectGifted={selectGifted}
+          changeHiveLevel={changeHiveLevel}
         />
         <Slots hiveSlots={hiveSlots} removeFromList={removeFromList} />
       </DragDropContext>
