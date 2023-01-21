@@ -44,6 +44,10 @@ function Bees({
         className={theme ? "bees-gifted dark-info" : "bees-gifted"}
       >
         Gifted {giftedCheck ? "✅" : "❌"}
+        <div>
+          Hive level:
+          <input className="bond-input"></input>
+        </div>
       </button>
     </div>
   );
