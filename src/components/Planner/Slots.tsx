@@ -1,5 +1,4 @@
 import { Droppable } from "react-beautiful-dnd";
-import { ReactDOM } from "react";
 
 function Slots({
   hiveSlots,
