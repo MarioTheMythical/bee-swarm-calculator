@@ -120,14 +120,11 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
   };
 
   const changeHiveLevel = (hiveLevelInput: number) => {
-    if (!hiveLevelInput) {
+    if (!hiveLevelInput || hiveLevelInput < 0) {
       return setHiveLevel(undefined);
     }
     if (hiveLevelInput > 25) {
       return setHiveLevel(25);
-    }
-    if (hiveLevelInput < 0) {
-      return setHiveLevel(0);
     }
     setHiveLevel(hiveLevelInput);
   };

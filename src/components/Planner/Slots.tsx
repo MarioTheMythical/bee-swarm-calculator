@@ -14,7 +14,6 @@ function Slots({
   removeFromList: (index: number) => void;
   hiveLevel: number | undefined;
 }) {
-  console.log(hiveLevel);
   return (
     <div className="hive-slot-container-bg">
       <div className="hive-slot-container">

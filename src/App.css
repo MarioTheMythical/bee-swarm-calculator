@@ -1312,10 +1312,9 @@ body::-webkit-scrollbar-thumb {
   .hive-slot-levels {
     bottom: -15%;
     left: -5%;
-    text-shadow: -1.55px -1.55px 0 #000, 1.55px -1.55px 0 #000,
-      -1.55px 1.55px 0 #000, 1.55px 1.55px 0 #000;
+    text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000,
+      1.5px 1.5px 0 #000;
     font-size: 1.25em;
-    font-weight: 700;
   }
   .hive-slot {
     width: 50px;
