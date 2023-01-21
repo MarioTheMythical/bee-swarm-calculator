@@ -14,7 +14,9 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
   const [hiveCount, setHiveCount] = useState<{ name: string; count: number }[]>(
     []
   );
-  const [hiveLevel, setHiveLevel] = useState<number | undefined>();
+  const [hiveLevel, setHiveLevel] = useState<number | undefined>(
+    Number(localStorage.getItem("hiveLevel")) || undefined
+  );
 
   useEffect(() => {
     let hive: string[] = [];
@@ -121,11 +123,14 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
 
   const changeHiveLevel = (hiveLevelInput: number) => {
     if (!hiveLevelInput || hiveLevelInput < 0) {
+      localStorage.setItem("hiveLevel", "");
       return setHiveLevel(undefined);
     }
     if (hiveLevelInput > 25) {
+      localStorage.setItem("hiveLevel", "25");
       return setHiveLevel(25);
     }
+    localStorage.setItem("hiveLevel", hiveLevelInput + "");
     setHiveLevel(hiveLevelInput);
   };
 

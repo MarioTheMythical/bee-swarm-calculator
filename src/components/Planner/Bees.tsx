@@ -57,6 +57,7 @@ function Bees({
           <input
             className="bond-input"
             onChange={(event) => changeHiveLevel(Number(event.target.value))}
+            value={localStorage.getItem("hiveLevel") || ""}
           />
         </div>
       </div>
