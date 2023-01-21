@@ -42,6 +42,9 @@ function TypeDisplay({
 
         return setTypeData(beeTypeDisplay.event);
 
+      case 5:
+        return setTypeData(beeTypeDisplay.mutations);
+
       default:
         if (giftedCheck) return setTypeData(giftedBeeTypeDisplay.rare);
 

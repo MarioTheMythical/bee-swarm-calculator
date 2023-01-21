@@ -2104,7 +2104,14 @@ export const planterRecipes: recipe = [
   },
 ];
 
-export const beeTypes = ["Rare", "Epic", "Legendary", "Mythic", "Event"];
+export const beeTypes = [
+  "Rare",
+  "Epic",
+  "Legendary",
+  "Mythic",
+  "Event",
+  "Mutations",
+];
 
 export const beeTypeDisplay = {
   rare: [
@@ -2162,6 +2169,13 @@ export const beeTypeDisplay = {
     { name: "Cobalt", id: "44", image: "CobaltBee.png" },
     { name: "Crimson", id: "45", image: "CrimsonBee.png" },
     { name: "Digital", id: "46", image: "DigitalBee.png" },
+  ],
+  mutations: [
+    { name: "attack", id: "47", image: "Mutations/Attack.png" },
+    { name: "convert", id: "48", image: "Mutations/Convert.png" },
+    { name: "gather", id: "49", image: "Mutations/Gather.png" },
+    { name: "energy", id: "50", image: "Mutations/Energy.png" },
+    { name: "ability", id: "51", image: "Mutations/Ability.png" },
   ],
 };
 

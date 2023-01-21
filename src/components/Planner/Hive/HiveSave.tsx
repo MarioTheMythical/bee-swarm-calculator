@@ -150,7 +150,7 @@ function HiveSave({
           <div>
             <div className={copyCheck ? "planner-export-title-container" : ""}>
               <div className="planner-save-title">Export code</div>
-              {copyCheck && <div>Copied!</div>}
+              {copyCheck && <div>Copied code!</div>}
             </div>
             <div className="planner-save-desc">
               Use this code to import your hive or share with others.

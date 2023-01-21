@@ -986,6 +986,26 @@ body::-webkit-scrollbar-thumb {
   font-weight: 800;
 }
 
+.attack {
+  color: #ef3b38;
+}
+
+.convert {
+  color: #ffcc42;
+}
+
+.gather {
+  color: #a6f37d;
+}
+
+.energy {
+  color: #99cfe8;
+}
+
+.ability {
+  color: #b69df9;
+}
+
 .hive-slot {
   display: flex;
   justify-content: center;

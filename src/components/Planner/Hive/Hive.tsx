@@ -49,18 +49,45 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
         name: string;
         id: string;
         image: string;
+        mutation: string;
       }[] = [];
+
+      if (Number(result.draggableId) >= 47) {
+        Object.values(beeTypeDisplay).forEach((item) => {
+          item.forEach((bee) => {
+            if (bee.id === result.draggableId)
+              beeSelection.push({
+                name: bee.name,
+                id: bee.id,
+                image: bee.image,
+                mutation: bee.name,
+              });
+          });
+        });
+      }
 
       if (giftedCheck) {
         Object.values(giftedBeeTypeDisplay).forEach((item) => {
           item.forEach((bee) => {
-            if (bee.id === result.draggableId) beeSelection.push(bee);
+            if (bee.id === result.draggableId)
+              beeSelection.push({
+                name: bee.name,
+                id: bee.id,
+                image: bee.image,
+                mutation: "",
+              });
           });
         });
       } else {
         Object.values(beeTypeDisplay).forEach((item) => {
           item.forEach((bee) => {
-            if (bee.id === result.draggableId) beeSelection.push(bee);
+            if (bee.id === result.draggableId)
+              beeSelection.push({
+                name: bee.name,
+                id: bee.id,
+                image: bee.image,
+                mutation: "",
+              });
           });
         });
       }
@@ -78,10 +105,19 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
       name: string;
       id: string;
       image: string;
+      mutation?: string;
     },
     index: number
   ) => {
     const newBees = hiveSlots.map((hive, hiveIndex) => {
+      if (Number(bee.id) >= 47 && hiveIndex === Number(index)) {
+        console.log(hiveSlots[hiveIndex]);
+        return {
+          ...hiveSlots[hiveIndex],
+          mutation: bee.mutation,
+        };
+      }
+
       if (hiveIndex === Number(index)) {
         return { ...bee };
       }

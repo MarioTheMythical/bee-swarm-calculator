@@ -9,6 +9,7 @@ function Slots({
     name: string;
     id: string;
     image: string;
+    mutation?: string;
   }[];
   removeFromList: (index: number) => void;
   hiveLevel: number | undefined;
@@ -36,7 +37,15 @@ function Slots({
                   />
                   <div style={{ display: "none" }}>{provided.placeholder}</div>
                   {hive.id !== "0" && (
-                    <div className="hive-slot-levels">{hiveLevel}</div>
+                    <div
+                      className={
+                        hive.mutation
+                          ? `hive-slot-levels ${hive.mutation}`
+                          : "hive-slot-levels"
+                      }
+                    >
+                      {hiveLevel}
+                    </div>
                   )}
                 </div>
               )}
