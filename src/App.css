@@ -954,6 +954,17 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 40px;
 }
 
+.hive-slot-levels {
+  position: absolute;
+  bottom: 8%;
+  left: 5%;
+  color: rgb(255, 255, 255);
+  text-shadow: -1.6px -1.6px 0 #000, 1.6px -1.6px 0 #000, -1.6px 1.6px 0 #000,
+    1.6px 1.6px 0 #000;
+  font-size: 1.25em;
+  font-weight: 800;
+}
+
 .hive-slot {
   display: flex;
   justify-content: center;
@@ -1276,6 +1287,14 @@ body::-webkit-scrollbar-thumb {
     width: 280px;
     height: 680px;
     transform: translate(-2%);
+  }
+  .hive-slot-levels {
+    bottom: -15%;
+    left: -5%;
+    text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000,
+      1.5px 1.5px 0 #000;
+    font-size: 1.15em;
+    font-weight: 700;
   }
   .hive-slot {
     width: 50px;

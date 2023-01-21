@@ -1,4 +1,5 @@
 import { Droppable } from "react-beautiful-dnd";
+import { ReactDOM } from "react";
 
 function Slots({
   hiveSlots,
@@ -33,6 +34,9 @@ function Slots({
                     alt={hive.name}
                   />
                   <div style={{ display: "none" }}>{provided.placeholder}</div>
+                  {hive.id !== "0" && (
+                    <div className="hive-slot-levels">20</div>
+                  )}
                 </div>
               )}
             </Droppable>
