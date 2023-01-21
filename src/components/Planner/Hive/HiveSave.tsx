@@ -10,6 +10,7 @@ function HiveSave({
     name: string;
     id: string;
     image: string;
+    mutation?: string;
   }[];
 }) {
   const theme = useContext(PlannerThemeContext);
@@ -44,7 +45,17 @@ function HiveSave({
     const hiveArrayToString = hiveSlots
       .map((item) => {
         if (item.name.includes("★")) {
+          if (item.mutation) {
+            return (
+              "G" + item.id + item.mutation?.slice(0, 2).toLocaleUpperCase()
+            );
+          }
+
           return "G" + item.id;
+        }
+
+        if (item.mutation) {
+          return item.id + item.mutation?.slice(0, 2).toLocaleUpperCase();
         }
         return item.id;
       })

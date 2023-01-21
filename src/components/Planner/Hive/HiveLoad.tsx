@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { PlannerThemeContext } from "components/Interface/PlannerMain";
 import { beeTypeDisplay, giftedBeeTypeDisplay, HiveSlots } from "libs/data";
+import { ReactDOM } from "react";
 
 function HiveLoad({
   changeHiveSlots,
@@ -69,6 +70,58 @@ function HiveLoad({
           if (item === "0") {
             return HiveSlots[0];
           }
+
+          if (
+            item.includes("AT") ||
+            item.includes("CO") ||
+            item.includes("GA") ||
+            item.includes("EN") ||
+            item.includes("AB")
+          ) {
+            const slotMutation = item.slice(-2);
+
+            switch (slotMutation) {
+              case "AT":
+                return {
+                  ...giftedBees[
+                    Number(item.replace("AT", "").replace("G", "")) - 1
+                  ],
+                  mutation: "attack",
+                };
+
+              case "CO":
+                return {
+                  ...giftedBees[
+                    Number(item.replace("CO", "").replace("G", "")) - 1
+                  ],
+                  mutation: "convert",
+                };
+
+              case "GA":
+                return {
+                  ...giftedBees[
+                    Number(item.replace("GA", "").replace("G", "")) - 1
+                  ],
+                  mutation: "gather",
+                };
+
+              case "EN":
+                return {
+                  ...giftedBees[
+                    Number(item.replace("EN", "").replace("G", "")) - 1
+                  ],
+                  mutation: "energy",
+                };
+
+              case "AB":
+                return {
+                  ...giftedBees[
+                    Number(item.replace("AB", "").replace("G", "")) - 1
+                  ],
+                  mutation: "ability",
+                };
+            }
+          }
           if (item.includes("G")) {
             return giftedBees[Number(item.replace("G", "")) - 1];
           }
@@ -93,6 +146,57 @@ function HiveLoad({
         .map((item) => {
           if (item === "0") {
             return HiveSlots[0];
+          }
+          if (
+            item.includes("AT") ||
+            item.includes("CO") ||
+            item.includes("GA") ||
+            item.includes("EN") ||
+            item.includes("AB")
+          ) {
+            const slotMutation = item.slice(-2);
+
+            switch (slotMutation) {
+              case "AT":
+                return {
+                  ...giftedBees[
+                    Number(item.replace("AT", "").replace("G", "")) - 1
+                  ],
+                  mutation: "attack",
+                };
+
+              case "CO":
+                return {
+                  ...giftedBees[
+                    Number(item.replace("CO", "").replace("G", "")) - 1
+                  ],
+                  mutation: "convert",
+                };
+
+              case "GA":
+                return {
+                  ...giftedBees[
+                    Number(item.replace("GA", "").replace("G", "")) - 1
+                  ],
+                  mutation: "gather",
+                };
+
+              case "EN":
+                return {
+                  ...giftedBees[
+                    Number(item.replace("EN", "").replace("G", "")) - 1
+                  ],
+                  mutation: "energy",
+                };
+
+              case "AB":
+                return {
+                  ...giftedBees[
+                    Number(item.replace("AB", "").replace("G", "")) - 1
+                  ],
+                  mutation: "ability",
+                };
+            }
           }
           if (item.includes("G")) {
             return giftedBees[Number(item.replace("G", "")) - 1];
