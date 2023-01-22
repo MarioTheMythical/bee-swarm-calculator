@@ -1006,6 +1006,18 @@ body::-webkit-scrollbar-thumb {
   color: #b69df9;
 }
 
+.beequip-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 97%;
+  padding: 10px 0px 10px 0px;
+  margin-top: 10px;
+  margin-bottom: -15px;
+  border-radius: 5px 5px 0px 0px;
+  background-color: rgb(219, 219, 219);
+}
+
 .hive-slot {
   display: flex;
   justify-content: center;

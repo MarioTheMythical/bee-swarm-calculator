@@ -2111,6 +2111,7 @@ export const beeTypes = [
   "Mythic",
   "Event",
   "Mutations",
+  "Beequips",
 ];
 
 export const beeTypeDisplay = {
@@ -2177,6 +2178,12 @@ export const beeTypeDisplay = {
     { name: "energy", id: "50", image: "Mutations/Energy.png" },
     { name: "ability", id: "51", image: "Mutations/Ability.png" },
   ],
+  normal: [
+    { name: "attack", id: "47", image: "Mutations/Attack.png" },
+    { name: "convert", id: "48", image: "Mutations/Convert.png" },
+    { name: "gather", id: "49", image: "Mutations/Gather.png" },
+  ],
+  beesmas: [{ name: "attack", id: "47", image: "Mutations/Attack.png" }],
 };
 
 export const giftedBeeTypeDisplay = {

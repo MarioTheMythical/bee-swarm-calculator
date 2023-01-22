@@ -6,9 +6,11 @@ import { Draggable, Droppable } from "react-beautiful-dnd";
 function TypeDisplay({
   type,
   giftedCheck,
+  beequipSelection,
 }: {
   type: number;
   giftedCheck: boolean;
+  beequipSelection: number;
 }) {
   const [typeData, setTypeData] = useState<
     {
@@ -45,12 +47,18 @@ function TypeDisplay({
       case 5:
         return setTypeData(beeTypeDisplay.mutations);
 
+      case 6:
+        if (beequipSelection === 0) {
+          return setTypeData(beeTypeDisplay.normal);
+        }
+        return setTypeData(beeTypeDisplay.beesmas);
+
       default:
         if (giftedCheck) return setTypeData(giftedBeeTypeDisplay.rare);
 
         return setTypeData(beeTypeDisplay.rare);
     }
-  }, [type, giftedCheck]);
+  }, [type, giftedCheck, beequipSelection]);
 
   return (
     <Droppable droppableId="bees" direction="horizontal" isDropDisabled={true}>

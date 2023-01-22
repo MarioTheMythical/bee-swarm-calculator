@@ -2,6 +2,7 @@ import { PlannerThemeContext } from "components/Interface/PlannerMain";
 import { useContext, useState } from "react";
 import { beeTypes } from "libs/data";
 import TypeDisplay from "components/Planner/TypeDisplay";
+import { ReactDOM } from "react";
 
 function Bees({
   descriptionCheck,
@@ -15,6 +16,7 @@ function Bees({
   changeHiveLevel: (hiveLevelInput: number) => void;
 }) {
   const [beeTypeSelection, setBeeTypeSelection] = useState(0);
+  const [beequipSelection, setBeequipSelection] = useState(0);
 
   const theme = useContext(PlannerThemeContext);
 
@@ -40,7 +42,39 @@ function Bees({
           );
         })}
       </div>
-      <TypeDisplay type={beeTypeSelection} giftedCheck={giftedCheck} />
+      {beeTypeSelection === 6 && (
+        <div
+          className={
+            theme ? "beequip-container dark-info" : "beequip-container"
+          }
+        >
+          <div
+            className={
+              beequipSelection === 0
+                ? "bees-button bees-selected"
+                : "bees-button"
+            }
+            onClick={() => setBeequipSelection(0)}
+          >
+            Normal
+          </div>
+          <div
+            onClick={() => setBeequipSelection(1)}
+            className={
+              beequipSelection === 1
+                ? "bees-button bees-selected"
+                : "bees-button"
+            }
+          >
+            Beesmas
+          </div>
+        </div>
+      )}
+      <TypeDisplay
+        type={beeTypeSelection}
+        giftedCheck={giftedCheck}
+        beequipSelection={beequipSelection}
+      />
       <div
         className={
           theme ? "bees-input-container dark-info" : "bees-input-container"
