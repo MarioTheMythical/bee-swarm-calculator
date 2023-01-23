@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { PlannerThemeContext } from "components/Interface/PlannerMain";
-import { beeTypeDisplay, giftedBeeTypeDisplay, HiveSlots } from "libs/data";
+import ImportCodeConvert from "custom/ImportCodeConvert";
 
 function HiveLoad({
   changeHiveSlots,
@@ -10,6 +10,8 @@ function HiveLoad({
       name: string;
       id: string;
       image: string;
+      mutation?: string;
+      beequip?: string;
     }[]
   ) => void;
 }) {
@@ -40,174 +42,39 @@ function HiveLoad({
   }, [loadCheck]);
 
   const loadHiveData = () => {
-    const giftedBees: { name: string; id: string; image: string }[] = [
-      ...giftedBeeTypeDisplay.rare,
-      ...giftedBeeTypeDisplay.epic,
-      ...giftedBeeTypeDisplay.legendary,
-      ...giftedBeeTypeDisplay.mythic,
-      ...giftedBeeTypeDisplay.event,
-    ];
-
-    const normalBees: { name: string; id: string; image: string }[] = [
-      ...beeTypeDisplay.rare,
-      ...beeTypeDisplay.epic,
-      ...beeTypeDisplay.legendary,
-      ...beeTypeDisplay.mythic,
-      ...beeTypeDisplay.event,
-    ];
-
     closeLoad();
 
     if (
       (importCode.length > 0 && hiveSlotSelection > 0) ||
       importCode.length > 0
     ) {
-      const loadHive = importCode
-        .split("-")
-        .slice(1)
-        .map((item) => {
-          if (item === "0") {
-            return HiveSlots[0];
-          }
+      const beequipHiveCode = ImportCodeConvert(importCode);
 
-          if (
-            item.includes("AT") ||
-            item.includes("CO") ||
-            item.includes("GA") ||
-            item.includes("EN") ||
-            item.includes("AB")
-          ) {
-            const slotMutation = item.slice(-2);
+      if (beequipHiveCode) {
+        const hiveCheck = beequipHiveCode.filter(
+          (item) => item === undefined
+        ).length;
 
-            switch (slotMutation) {
-              case "AT":
-                return {
-                  ...giftedBees[
-                    Number(item.replace("AT", "").replace("G", "")) - 1
-                  ],
-                  mutation: "attack",
-                };
+        if (beequipHiveCode.length < 50 || hiveCheck > 0) return;
 
-              case "CO":
-                return {
-                  ...giftedBees[
-                    Number(item.replace("CO", "").replace("G", "")) - 1
-                  ],
-                  mutation: "convert",
-                };
+        changeHiveSlots(beequipHiveCode);
 
-              case "GA":
-                return {
-                  ...giftedBees[
-                    Number(item.replace("GA", "").replace("G", "")) - 1
-                  ],
-                  mutation: "gather",
-                };
-
-              case "EN":
-                return {
-                  ...giftedBees[
-                    Number(item.replace("EN", "").replace("G", "")) - 1
-                  ],
-                  mutation: "energy",
-                };
-
-              case "AB":
-                return {
-                  ...giftedBees[
-                    Number(item.replace("AB", "").replace("G", "")) - 1
-                  ],
-                  mutation: "ability",
-                };
-            }
-          }
-          if (item.includes("G")) {
-            return giftedBees[Number(item.replace("G", "")) - 1];
-          }
-          return normalBees[Number(item.replace("G", "")) - 1];
-        });
-
-      const hiveCheck = loadHive.filter((item) => item === undefined).length;
-
-      if (loadHive.length < 50 || hiveCheck > 0) return;
-
-      changeHiveSlots(loadHive.slice(0, 50));
-
-      return closeLoad();
+        return closeLoad();
+      }
     }
 
     const hiveSlot = localStorage.getItem(`HiveSlot-${hiveSlotSelection}`);
 
-    if (hiveSlot) {
-      const loadHive = hiveSlot
-        .split("-")
-        .slice(1)
-        .map((item) => {
-          if (item === "0") {
-            return HiveSlots[0];
-          }
-          if (
-            item.includes("AT") ||
-            item.includes("CO") ||
-            item.includes("GA") ||
-            item.includes("EN") ||
-            item.includes("AB")
-          ) {
-            const slotMutation = item.slice(-2);
+    const beequipHiveCode = ImportCodeConvert(hiveSlot);
 
-            switch (slotMutation) {
-              case "AT":
-                return {
-                  ...giftedBees[
-                    Number(item.replace("AT", "").replace("G", "")) - 1
-                  ],
-                  mutation: "attack",
-                };
+    if (beequipHiveCode) {
+      const hiveCheck = beequipHiveCode.filter(
+        (item) => item === undefined
+      ).length;
 
-              case "CO":
-                return {
-                  ...giftedBees[
-                    Number(item.replace("CO", "").replace("G", "")) - 1
-                  ],
-                  mutation: "convert",
-                };
+      if (beequipHiveCode.length < 50 || hiveCheck > 0) return;
 
-              case "GA":
-                return {
-                  ...giftedBees[
-                    Number(item.replace("GA", "").replace("G", "")) - 1
-                  ],
-                  mutation: "gather",
-                };
-
-              case "EN":
-                return {
-                  ...giftedBees[
-                    Number(item.replace("EN", "").replace("G", "")) - 1
-                  ],
-                  mutation: "energy",
-                };
-
-              case "AB":
-                return {
-                  ...giftedBees[
-                    Number(item.replace("AB", "").replace("G", "")) - 1
-                  ],
-                  mutation: "ability",
-                };
-            }
-          }
-          if (item.includes("G")) {
-            return giftedBees[Number(item.replace("G", "")) - 1];
-          }
-          return normalBees[Number(item.replace("G", "")) - 1];
-        });
-
-      const hiveCheck = loadHive.filter((item) => item === undefined).length;
-
-      if (loadHive.length < 50 || hiveCheck > 0) return;
-
-      changeHiveSlots(loadHive.slice(0, 50));
+      changeHiveSlots(beequipHiveCode);
 
       return closeLoad();
     }

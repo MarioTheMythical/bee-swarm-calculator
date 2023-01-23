@@ -2,7 +2,6 @@ import { PlannerThemeContext } from "components/Interface/PlannerMain";
 import { useContext, useState } from "react";
 import { beeTypes } from "libs/data";
 import TypeDisplay from "components/Planner/TypeDisplay";
-import { ReactDOM } from "react";
 
 function Bees({
   descriptionCheck,

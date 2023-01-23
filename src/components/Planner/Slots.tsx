@@ -10,6 +10,7 @@ function Slots({
     id: string;
     image: string;
     mutation?: string;
+    beequip?: string;
   }[];
   removeFromList: (index: number) => void;
   hiveLevel: number | undefined;
@@ -27,6 +28,17 @@ function Slots({
                   ref={provided.innerRef}
                   onClick={() => removeFromList(index)}
                 >
+                  {hive.beequip &&
+                    hive.id !== "0" &&
+                    hive.beequip.slice(1) !== "Remove.png" && (
+                      <img
+                        className="beequip-image"
+                        src={require(`images/Hive/Beequips/${hive.beequip.slice(
+                          1
+                        )}`)}
+                        alt={hive.name}
+                      />
+                    )}
                   <img
                     src={
                       snapshot.isDraggingOver

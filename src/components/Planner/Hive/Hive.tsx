@@ -49,10 +49,14 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
         name: string;
         id: string;
         image: string;
-        mutation: string;
+        mutation?: string;
+        beequip?: string;
       }[] = [];
 
-      if (Number(result.draggableId) >= 47) {
+      if (
+        Number(result.draggableId) >= 47 &&
+        Number(result.draggableId) <= 51
+      ) {
         Object.values(beeTypeDisplay).forEach((item) => {
           item.forEach((bee) => {
             if (bee.id === result.draggableId)
@@ -61,6 +65,21 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
                 id: bee.id,
                 image: bee.image,
                 mutation: bee.name,
+              });
+          });
+        });
+      }
+
+      if (Number(result.draggableId) >= 52) {
+        Object.values(beeTypeDisplay).forEach((item) => {
+          item.forEach((bee) => {
+            if (bee.id === result.draggableId)
+              beeSelection.push({
+                name: bee.name,
+                id: bee.id,
+                image: bee.image,
+                mutation: "",
+                beequip: bee.name,
               });
           });
         });
@@ -106,14 +125,26 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
       id: string;
       image: string;
       mutation?: string;
+      beequip?: string;
     },
     index: number
   ) => {
     const newBees = hiveSlots.map((hive, hiveIndex) => {
-      if (Number(bee.id) >= 47 && hiveIndex === Number(index)) {
+      if (
+        Number(bee.id) >= 47 &&
+        Number(bee.id) <= 51 &&
+        hiveIndex === Number(index)
+      ) {
         return {
           ...hiveSlots[hiveIndex],
           mutation: bee.mutation,
+        };
+      }
+
+      if (Number(bee.id) >= 52 && hiveIndex === Number(index)) {
+        return {
+          ...hiveSlots[hiveIndex],
+          beequip: bee.beequip + ".png",
         };
       }
 
@@ -152,6 +183,7 @@ function Hive({ descriptionCheck }: { descriptionCheck: () => void }) {
       id: string;
       image: string;
       mutation?: string;
+      beequip?: string;
     }[]
   ) => {
     setHiveSlots(hiveData);

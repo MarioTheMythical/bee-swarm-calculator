@@ -11,6 +11,7 @@ function HiveSave({
     id: string;
     image: string;
     mutation?: string;
+    beequip?: string;
   }[];
 }) {
   const theme = useContext(PlannerThemeContext);
@@ -45,19 +46,45 @@ function HiveSave({
     const hiveArrayToString = hiveSlots
       .map((item) => {
         if (item.name.includes("★")) {
-          if (item.mutation) {
+          if (item.mutation && item.beequip) {
             return (
-              "G" + item.id + item.mutation?.slice(0, 2).toLocaleUpperCase()
+              item.beequip.slice(0, 2).toLocaleUpperCase() +
+              "★" +
+              item.id +
+              item.mutation.slice(0, 2).toLocaleUpperCase()
             );
           }
 
-          return "G" + item.id;
+          if (item.beequip) {
+            return item.beequip.slice(0, 2).toLocaleUpperCase() + "★" + item.id;
+          }
+
+          if (item.mutation) {
+            return (
+              "★" + item.id + item.mutation?.slice(0, 2).toLocaleUpperCase()
+            );
+          }
+
+          return "★" + item.id;
+        }
+
+        if (item.mutation && item.beequip) {
+          return (
+            item.beequip.slice(0, 2).toLocaleUpperCase() +
+            "/" +
+            item.id +
+            item.mutation.slice(0, 2).toLocaleUpperCase()
+          );
+        }
+
+        if (item.beequip) {
+          return item.beequip.slice(0, 2).toLocaleUpperCase() + "/" + item.id;
         }
 
         if (item.mutation) {
-          return item.id + item.mutation?.slice(0, 2).toLocaleUpperCase();
+          return "/" + item.id + item.mutation?.slice(0, 2).toLocaleUpperCase();
         }
-        return item.id;
+        return "/" + item.id;
       })
       .join("-");
 
