@@ -49,6 +49,9 @@ function App() {
           <Link to="/bond">
             <span />
           </Link>
+          <Link to="/changelog">
+            <span />
+          </Link>
           <div
             className={
               dropdownCheck
