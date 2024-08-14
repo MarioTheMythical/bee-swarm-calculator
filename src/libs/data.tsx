@@ -1333,8 +1333,8 @@ export const beltRecipes: recipe = [
           },
         ],
       },
-      }
-]
+      },
+];
   
 // BOOTS //
 
