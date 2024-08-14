@@ -1333,8 +1333,9 @@ export const beltRecipes: recipe = [
           },
         ],
       },
-];
-
+      };
+]
+  
 // BOOTS //
 
 export const boots: itemTypes = [
