@@ -1116,7 +1116,7 @@ export const belts: itemTypes = [
   },
   {
     name: "Coconut",
-    image: "CocobutBelt.png",
+    image: "CoconutBelt.png",
   },
 ];
 
