@@ -1227,113 +1227,115 @@ export const beltRecipes: recipe = [
     ],
   },
   {
-    coconut: [
-      { material: "Honey", value: 7500000000, image: "Honey.png" },
-      { material: "Coconuts", value: 500, image: "Coconut.png" },
-      {
-        material: "Tropical Drink",
-        value: 1500,
-        image: "TropicalDrink.png",
-        subRecipe: [
-          {
-            material: "Coconuts",
-            value: 10,
-            image: "Coconuts.png",
-          },
-          {
-            material: "Oil",
-            value: 2,
-            image: "Oil.png",
-          },
-          {
-            material: "Enzymes",
-            value: 2,
-            image: "Enzymes.png",
-          },
-          ]
-      },
-      {
-        material: "Purple Potion",
-        value: 200,
-        image: "PurplePotion.png",
-        subRecipe: [
-          {
-            material: "Neonberries",
-            value: 3,
-            image: "NeonBerries.png",
-          },
-          {
-            material: "Red Extract",
-            value: 3,
-            image: "RedExtract.png",
-          },
-          {
-            material: "Blue Extract",
-            value: 3,
-            image: "BlueExtract.png",
-          },
-          {
-            material: "Glue",
-            value: 3,
-            image: "Glue.png",
-          },
-        ],
-      },
-      {
-        material: "Hard Wax",
-        value: 200,
-        image: "HardWax.png",
-        subRecipe: [
-          {
-            material: "Soft Wax",
-            value: 3,
-            image: "SoftWax.png",
-          },
-          {
-            material: "Enzymes",
-            value: 3,
-            image: "Enzymes.png",
-          },
-          {
-            material: "Bitterberries",
-            value: 33,
-            image: "Bitterberries.png",
-          },
-          {
-            material: "Royal Jelly",
-            value: 33,
-            image: "RoyalJelly.png",
-          },
-        ],
-      },
-      {
-        material: "Turpentine",
-        value: 3,
-        image: "Turpentine.png",
-        subRecipe: [
-          {
-            material: "Super Smoothies",
-            value: 10,
-            image: "SuperSmoothie.png",
-          },
-          {
-            material: "Caustic Wax",
-            value: 10,
-            image: "CausticWax.png",
-          },
-          {
-            material: "Honeysuckle",
-            value: 1000,
-            image: "HoneySuckle.png",
-          },
-          {
-            material: "Star Jelly",
-            value: 100,
-            image: "StarJelly.png",
-          },
-        ],
-      },
-  }
+  coconut: [
+    { material: "Honey", value: 7500000000, image: "Honey.png" },
+    { material: "Coconuts", value: 500, image: "Coconut.png" },
+    {
+      material: "Tropical Drink",
+      value: 1500,
+      image: "TropicalDrink.png",
+      subRecipe: [
+        {
+          material: "Coconuts",
+          value: 10,
+          image: "Coconuts.png",
+        },
+        {
+          material: "Oil",
+          value: 2,
+          image: "Oil.png",
+        },
+        {
+          material: "Enzymes",
+          value: 2,
+          image: "Enzymes.png",
+        },
+      ],
+    },
+    {
+      material: "Purple Potion",
+      value: 200,
+      image: "PurplePotion.png",
+      subRecipe: [
+        {
+          material: "Neonberries",
+          value: 3,
+          image: "NeonBerries.png",
+        },
+        {
+          material: "Red Extract",
+          value: 3,
+          image: "RedExtract.png",
+        },
+        {
+          material: "Blue Extract",
+          value: 3,
+          image: "BlueExtract.png",
+        },
+        {
+          material: "Glue",
+          value: 3,
+          image: "Glue.png",
+        },
+      ],
+    },
+    {
+      material: "Hard Wax",
+      value: 200,
+      image: "HardWax.png",
+      subRecipe: [
+        {
+          material: "Soft Wax",
+          value: 3,
+          image: "SoftWax.png",
+        },
+        {
+          material: "Enzymes",
+          value: 3,
+          image: "Enzymes.png",
+        },
+        {
+          material: "Bitterberries",
+          value: 33,
+          image: "Bitterberries.png",
+        },
+        {
+          material: "Royal Jelly",
+          value: 33,
+          image: "RoyalJelly.png",
+        },
+      ],
+    },
+    {
+      material: "Turpentine",
+      value: 3,
+      image: "Turpentine.png",
+      subRecipe: [
+        {
+          material: "Super Smoothies",
+          value: 10,
+          image: "SuperSmoothie.png",
+        },
+        {
+          material: "Caustic Wax",
+          value: 10,
+          image: "CausticWax.png",
+        },
+        {
+          material: "Honeysuckle",
+          value: 1000,
+          image: "HoneySuckle.png",
+        },
+        {
+          material: "Star Jelly",
+          value: 100,
+          image: "StarJelly.png",
+        },
+      ],
+    }
+  ],
+}
+
 ];
   
 // BOOTS //
