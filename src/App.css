@@ -1504,5 +1504,30 @@ body::-webkit-scrollbar-thumb {
   .hive-slot-container > :nth-child(45),
   .hive-slot-container > :nth-child(50) {
     transform: translate(24%, 85%);
-  }
+  },
+  /* Style the footer element */
+footer {
+  background-color: black; /* Matches the inline style */
+  color: white; /* Text color within the footer */
+  padding: 20px; /* Add some padding for spacing */
+  text-align: center; /* Center the content horizontally */
+}
+
+/* Remove default margin from paragraphs for better layout control */
+footer p {
+  margin: 0;
+}
+
+/* Style the social media links */
+footer a {
+  text-decoration: none; /* Remove underline from links */
+  color: white; /* Text color for links (optional) */
+  display: inline-block; /* Display social icons side-by-side */
+  margin: 5px; /* Add spacing between icons */
+}
+
+/* Remove default padding from links for better icon display (optional) */
+footer a img {
+  padding: 0;
+}
 }
